@@ -2,7 +2,7 @@ import json
 import random
 import os
 
-input_path = "pseudo_from_B(train_A).json"
+input_path = "all_task_train_right_answer_then_wrong.json"
 with open(input_path, "r", encoding='utf-8') as f:
     data = json.load(f)
 

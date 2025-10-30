@@ -3,8 +3,8 @@ import re
 import os
 from typing import List, Dict
 
-INPUT_JSON_FILE = "new_response_Model_B_to_dataset_A.json"
-OUTPUT_JSON_FILE = "re-prompted_dataset.json"
+INPUT_JSON_FILE = "new_response_Model_A_to_dataset_B.json"
+OUTPUT_JSON_FILE = "reprompted_Model_A_to_dataset_B.json"
 CORRECT_PROMPT_DIR = "/home/Tenemin/Project/CasCoD/dataset/bbh/cot-ahp"
 INCORRECT_PROMPT_DIR = "/home/Tenemin/Project/CasCoD/dataset/bbh/cot-ccp"
 TASK_NAME_FIELD = "task_name" 

@@ -25,9 +25,9 @@ def split_data(input_path, f_A, f_B, split_ratio=0.5, seed=42):
     print(f" ├─ A set : {len(data_A)} samples → {os.path.abspath(f_A)}")
     print(f" └─ B set : {len(data_A)} samples → {os.path.abspath(f_B)}")
 
-input_path = "all_task_train_right_wronghint_answer.json"
-f_A = "all_task_train_right_wronghint_answer_C.json"
-f_B = "all_task_train_right_wronghint_answer_D.json"
+input_path = "all_task_train_wrong_answer_hint_right.json"
+f_A = "all_task_train_wrong_answer_hint_right_A.json"
+f_B = "all_task_train_wrong_answer_hint_right_B.json"
 
 split_data(
     input_path = input_path,
