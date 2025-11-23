@@ -1,6 +1,6 @@
 #!/bin/bash
 cd '../'
-model_name="meta-llama/Llama-3.2-1B" # path to llama 7b
+model_name="meta-llama/Llama-2-7b-hf" # path to llama 7b
 last_dirname="${model_name##*/}"
 refine_it=0 # no use
 dataset="bbh_llmst_dataset" 
@@ -30,7 +30,7 @@ mixed_precision=True
 val_batch_size=1
 freeze_layers=False
 num_freeze_layers=1
-quantization=False 
+quantization=True
 one_gpu=False
 save_model=True
 dist_checkpoint_root_folder="./output/fsdp/${last_dirname}_A" # will be used if using FSDP
@@ -57,7 +57,6 @@ repetition_penalty=1.0  # The parameter for repetition penalty. 1.0 means no pen
 length_penalty=1  # [optional] Exponential penalty to the length that is used with beam-based generation.
 max_padding_length=None  # the max padding length to be used with tokenizer padding the prompts.
 peft_model=None
-quantization=False
 enable_azure_content_safety=False  # Enable safety check with Azure content safety api
 enable_sensitive_topics=False  # Enable check for sensitive topics using AuditNLG APIs
 enable_salesforce_content_safety=False  # Enable safety check with Salesforce safety flan t5
@@ -70,8 +69,8 @@ mkdir -p "$dataset_dir"
 mkdir -p "$dataset_dir/${last_dirname}_A"
 log_file="$dataset_dir/${last_dirname}_A/log.txt"
 
-export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7"
-torchrun --nnodes 1 --nproc_per_node 8 --master-port 29506 ./finetuning.py \
+export CUDA_VISIBLE_DEVICES="0,1,2"
+torchrun --nnodes 1 --nproc_per_node 3 --master-port 29506 ./finetuning.py \
     --max_words $max_words \
     --enable_fsdp $enable_fsdp \
     --model_name "$model_name" \
