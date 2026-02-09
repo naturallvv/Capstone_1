@@ -1,6 +1,6 @@
 #!/bin/bash
 cd '../'
-model_name="meta-llama/Llama-2-7b-hf" # path to llama 7b
+model_name="meta-llama/Llama-3.2-1B" # path to llama 7b
 last_dirname="${model_name##*/}"
 refine_it=0 # no use
 dataset="bbh_llmst_dataset" 
@@ -10,7 +10,7 @@ output_dir="../slm/$save_type/${last_dirname}_A"
 mkdir -p "$output_dir"
 ckpt_continue=None
 max_words=1024
-num_epochs=15
+num_epochs=30
 batch_size_training=16
 gradient_accumulation_steps=4 
 num_workers_dataloader=8
@@ -30,7 +30,7 @@ mixed_precision=True
 val_batch_size=1
 freeze_layers=False
 num_freeze_layers=1
-quantization=True
+quantization=False
 one_gpu=False
 save_model=True
 dist_checkpoint_root_folder="./output/fsdp/${last_dirname}_A" # will be used if using FSDP

@@ -10,7 +10,7 @@ output_dir="../slm/$save_type/${last_dirname}_B"
 mkdir -p "$output_dir"
 ckpt_continue=None
 max_words=1024
-num_epochs=15
+num_epochs=30
 batch_size_training=16
 gradient_accumulation_steps=4 
 num_workers_dataloader=8

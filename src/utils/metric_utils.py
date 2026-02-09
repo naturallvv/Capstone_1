@@ -249,9 +249,9 @@ def compute_metrics(rank_model, rank_tokenizer, task_descs, task_names, teacher_
             "stu_right_score": right_scores[i],
             "question": model_inputs[i],
             "stu_response": stu_responses[i],
-            "stu_reward_score": stu_reward_scores[i],
+            "stu_reward_score": stu_reward_scores[i] if stu_reward_scores and i < len(stu_reward_scores) else None,
             "tea_response": teacher_responses[i], 
-            "tea_reward_score": tea_reward_scores[i],
+            "tea_reward_score": tea_reward_scores[i] if tea_reward_scores and i < len(tea_reward_scores) else None,
         })
 
     return results, details

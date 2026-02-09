@@ -36,7 +36,12 @@ from vllm import LLM, SamplingParams
 from src.model_checkpointing import load_fsdp_model_checkpoint
 import gc
 import torch
-from vllm.model_executor.parallel_utils.parallel_state import destroy_model_parallel
+from vllm.distributed.parallel_state import destroy_model_parallel
+
+from setproctitle import setproctitle
+
+
+setproctitle("Tenemin")
 
 def main(**kwargs):
     update_config((inference_config, ), **kwargs)
@@ -73,7 +78,7 @@ def main(**kwargs):
     model = AutoModelForCausalLM.from_pretrained(
         inference_config.model_name,
         return_dict=True,
-        load_in_8bit=inference_config.quantization,
+        load_in_8bit=False,
         device_map="auto",
         low_cpu_mem_usage=True,
     )
@@ -179,7 +184,7 @@ def main(**kwargs):
                 print("ckpt", ckpt)
                 available_gpus = os.environ['CUDA_VISIBLE_DEVICES'].split(',')
                 print("available gpus:", available_gpus)
-                model = LLM(ckpt, tensor_parallel_size=len(available_gpus), gpu_memory_utilization=0.95)
+                model = LLM(ckpt, tensor_parallel_size=len(available_gpus), gpu_memory_utilization=0.85)
                 macro_res = eval_inference(
                     model,
                     inference_config,

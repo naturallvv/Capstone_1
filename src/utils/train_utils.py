@@ -52,12 +52,15 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
     Returns: results dictionary containing average training and validation perplexity and loss
     """
     # Create a gradient scaler for fp16
+    # 안걸림
     if train_config.use_fp16 and train_config.enable_fsdp:
         scaler = ShardedGradScaler()
     elif train_config.use_fp16 and not train_config.enable_fsdp:
         scaler = torch.cuda.amp.GradScaler() 
+    # 여기 걸림
     if train_config.enable_fsdp:
         world_size = int(os.environ["WORLD_SIZE"]) 
+    # False --> nullcontext, nullcontext class는 아무 의미 없는 주석으로 정의되어있음
     autocast = torch.cuda.amp.autocast if train_config.use_fp16 else nullcontext
     train_prep = []
     train_loss = []
@@ -75,11 +78,13 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
     if ref_model:
         ref_model.eval()
 
+    # 여기서 1차 SFT인지 2차 KRSL인지에 따라 데이터를 다르게 가져감감
     krsl = False
     if 'llmweightst' in train_config.dataset:
         llmweightst_tool = LLMWeightSTTool(train_config, local_rank)
     elif 'llmscott' in train_config.dataset:
         llmscott_tool = LLMSCOTTTool(train_config, local_rank)
+    #2차 KRSL
     elif 'krsl' in train_config.dataset:
         krsl = True
         krsl_tool = MyKRSLTool(train_config, local_rank)
@@ -87,6 +92,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         llmcmt_tool = LLMCMTTool(train_config, local_rank)
     elif 'llmmt' in train_config.dataset:
         llmmt_tool = LLMMTTool(train_config, local_rank)
+    #1차 SFT
     elif 'llmst' in train_config.dataset or 'llmstepst' in train_config.dataset:
         llmst_tool = LLMSTTool(train_config, local_rank)
     elif 'bbh_dataset' in train_config.dataset:
@@ -94,10 +100,12 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
     else:
         raise ValueError('Unknown train_config.dataset')
 
+    #current_epoch로 체크포인트 학습 고려, finetuning.py에 기본 0으로 선언되어있음음
     for epoch in range(current_epoch, train_config.num_epochs):
         epoch_start_time = time.perf_counter()
         with MemoryTrace() as memtrace:  # track the memory usage
             model.train()
+            # 평가용 변수 초기화
             total_loss = 0.0
             total_rationale_loss = 0.0
             total_answer_loss = 0.0
@@ -120,6 +128,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                         'neg_answer_labels': batch['neg_answer_labels'],
                         'neg_answer_attention_mask': batch['neg_answer_attention_mask'],
                     }
+                #2차 KRSL
                 elif 'krsl' in dataset_config.dataset:
                     chosen_tokens = {
                         'chosen_input_ids': batch['chosen_input_ids'],
@@ -144,6 +153,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                         'llmrationale_answer_labels': batch['llmrationale_answer_labels'],
                         'llmrationale_answer_attention_mask': batch['llmrationale_answer_attention_mask']
                     }
+                #1차 SFT
                 elif 'llmst' in dataset_config.dataset or 'llmstepst' in dataset_config.dataset:
                     batch_ = {
                         'input_ids': batch['input_ids'],
@@ -161,25 +171,27 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                         'answer_labels': batch['answer_labels'],
                         'answer_attention_mask': batch['answer_attention_mask']
                     }
+                    # sft(코드 저자 주석)
                 else:
-                    ## sft
                     batch_ = {
                         'input_ids': batch['input_ids'],
                         'labels': batch['labels'],
                         'attention_mask': batch['attention_mask']
                     }
 
-
+                # 알아서 fp32, fp16혼합하여 사용
                 with autocast():
                     if 'llmweightst' in dataset_config.dataset:
                         loss, rationale_loss, answer_loss = llmweightst_tool.compute_loss(model, batch_)
                     elif 'llmscott' in dataset_config.dataset:
                         loss, rationale_loss, answer_loss = llmscott_tool.compute_loss(model, batch_)
+                    # 1차 SFT
                     elif 'llmst' in dataset_config.dataset or 'llmstepst' in train_config.dataset:
                         loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
                     elif 'llmmt' in dataset_config.dataset:
                         batch_combined = {**batch_rationale, **batch_answer}
                         loss, rationale_loss, answer_loss = llmmt_tool.compute_loss(model, batch_combined)
+                    # 2차 KRSL
                     elif 'krsl' in dataset_config.dataset:
                         batch_combined = {**chosen_tokens, **rejected_tokens,
                                           'chosen_weights': chosen_weights,
@@ -192,7 +204,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                         batch_combined = {**batch_rationale, **batch_rationale_answer}
                         loss, rationale_loss, answer_loss = llmcmt_tool.compute_loss(model, batch_combined)                    
                     else:
-                        # sft
+                        # sft(코드 저자 주석)
                         rationale_loss = torch.tensor(-1, dtype=torch.float32)
                         answer_loss = torch.tensor(-1, dtype=torch.float32)
                         loss = model(**to_cuda(batch_, train_config.enable_fsdp, local_rank)).loss
@@ -204,6 +216,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                 total_rationale_loss += rationale_loss.detach().float()
                 total_answer_loss += answer_loss.detach().float()
 
+                # 안걸림
                 if train_config.use_fp16:
                     # if fp16 is enabled, use gradient scaler to handle gradient update
                     scaler.scale(loss).backward()
@@ -212,6 +225,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                         scaler.update()
                         optimizer.zero_grad()
                         pbar.update(1)
+                #여기 걸림
                 else:
                     # regular backpropagation when fp16 is not used
                     loss.backward()
@@ -225,6 +239,8 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         epoch_end_time = time.perf_counter() - epoch_start_time
         epoch_times.append(epoch_end_time) 
 
+
+        # loss, perplexity 계산 부분 // 
         total_loss = torch.tensor(total_loss)
         # Reducing total_loss across all devices if there's more than one CUDA device
         if torch.cuda.device_count() > 1 and train_config.enable_fsdp:
@@ -246,6 +262,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         
         
         # print memory used
+        # 여기 걸림
         if train_config.enable_fsdp:
             if rank==0:
                 print(f"Max CUDA memory allocated was {memtrace.peak} GB")
@@ -260,6 +277,8 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
             print(f"Cuda Malloc retires : {memtrace.cuda_malloc_retires}")
             print(f"CPU Total Peak Memory consumed during the train (max): {memtrace.cpu_peaked + memtrace.cpu_begin} GB")
         
+
+        # 모델 세이브 하는 디렉토리 설정 (여기 바꿔야함)
         # Update the learning rate as needed
         lr_scheduler.step()
         # if train_config.ckpt_continue
@@ -285,6 +304,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
             model_root_dir = os.path.join(train_config.output_dir, 'std-lr=' + str(train_config.lr) + '-wd=' + str(train_config.weight_decay) + '-alpha=' + str(train_config.alpha) + 'train_data_name=' + train_dataset_name + '-' + train_config.dataset)
         train_result_file = os.path.join(model_root_dir, 'train_result.txt')
 
+        # train_config, inferece_config 생성하는 코드 수정해야함 (model_root_dir만 바꾸면 될지도)
         if True: 
             if rank == 0 and not os.path.exists(model_root_dir):
                 os.mkdir(model_root_dir)
@@ -302,7 +322,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                     json.dump(config_dict, config_file, indent=4)
                 print(f"Inference Config saved to {config_file_path}")
 
-            
+            #train_result 파일 생성 코드
             if rank == 0:
                 output_str = f"\nepoch={epoch + 1}, lr={lr_scheduler.get_last_lr()[0]}, train loss={train_epoch_loss}, train rationale loss={train_epoch_rationale_loss}, train answer loss={train_epoch_answer_loss}, train ppl={train_perplexity}"
                 
@@ -321,23 +341,26 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                     with open(train_result_file, 'w') as f:
                         f.write(output_str)
 
-
+            #모델 세이브 경로 생성
             model_dir = os.path.join(model_root_dir, 'epoch-' + str(epoch + 1))
             if rank == 0 and not os.path.exists(model_dir):
                 os.mkdir(model_dir)
 
+            # 안걸림
             if train_config.run_validation:
                 eval_ppl, eval_epoch_loss = evaluation(model, train_config, eval_dataloader, local_rank, tokenizer, model_root_dir)
+            #걸림
             else:
                 eval_ppl = -1
                 eval_epoch_loss = -1
             checkpoint_start_time = time.perf_counter()
 
-            # save model
+            # save model(모델 세이브 코드)
             if train_config.save_model:
                 if train_config.enable_fsdp:
                     dist.barrier()
 
+                #여기 걸림
                 if train_config.use_peft:
                     if train_config.enable_fsdp:
                         if rank==0:
@@ -345,10 +368,12 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                     else:
                         print(f"we are about to save the PEFT modules")
 
+                    #adapter만 저장
                     # ## saved with peft ckpt
                     if train_config.save_type == 'peft':
                         model.save_pretrained(model_dir)  
 
+                    #여기 걸림 adapter와 base model merge해서 full model 저장
                     ## saved with merged peft ckpt
                     elif train_config.save_type == 'hf':
                         save_merged_peft_model(model, train_config.model_name, model_dir)
@@ -463,7 +488,7 @@ def evaluation(model,train_config, eval_dataloader, local_rank, tokenizer, model
         world_size = int(os.environ["WORLD_SIZE"]) 
     model.eval()
     eval_preds = []
-    eval_loss = 0.0  # Initialize evaluation loss
+    eval_loss = 0.0  # Initialize evaluation loss/
     with MemoryTrace() as memtrace:
         for step, batch in enumerate(tqdm(eval_dataloader,colour="green", desc="evaluating Epoch")):
             if 'user_prompt' in batch.keys() and 'original_input' in batch.keys() and 'original_output' in batch.keys():

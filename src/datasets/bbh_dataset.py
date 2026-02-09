@@ -518,8 +518,6 @@ class KRSLDataset(Dataset):
                 self.weights = pickle.load(f)
             # print("load krsl weights")
             for i, ann in enumerate(tqdm(self.ann, colour='white', desc='load krsl weights')):
-                if ann['rouge_2'] > self.rouge2_below:
-                    continue
                 chosen_operations = []
                 for op in self.weights[i]['chosen_operations']:
                     if 'insert' not in op:

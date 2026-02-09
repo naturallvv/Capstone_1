@@ -1,6 +1,6 @@
 from transformers import (
     LlamaForCausalLM,
-    LlamaTokenizer,
+    AutoTokenizer,
     LlamaConfig,
     default_data_collator,
     TrainingArguments,
@@ -92,11 +92,11 @@ def assign_weights(s1_tokens, s2_tokens, s1_type):
     return s1_weights, operations
 
 def main():
-    data_file = './dataset/bbh/bbh_all_data/all_task_train_preference_with_answer_A.json'
-    model_name = "meta-llama/Llama-2-7b-hf"
+    data_file = '/home/Tenemin/Project/CasCoD/dataset/bbh/bbh_all_data/step_4_after_final_check_all_task_train_preference_with_answer_A.json'
+    model_name = "/home/Tenemin/Project/slm/hf/Llama-3.2-1B_A/std-lr=0.0002-wd=0.05-alpha=1train_data_name=all_task_train_right_wronghint_answer_A-bbh_llmst_dataset/load-from-epoch-15-std-lr=5e-06-rge2=1.01-wd=0-alpha=0.5-bbh_krsl_dataset/load-from-epoch-3-std-lr=5e-06-rge2=1.01-wd=0-alpha=0.5-bbh_krsl_dataset/load-from-epoch-2-std-lr=5e-06-rge2=1.01-wd=0-alpha=0.5-bbh_krsl_dataset/epoch-1"
     max_words = 1024
     # Load the tokenizer and add special tokens
-    tokenizer = LlamaTokenizer.from_pretrained(model_name, padding_side='left')
+    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side='left')
     tokenizer.add_special_tokens(
             {
                 "pad_token": "<PAD>",

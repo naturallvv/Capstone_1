@@ -48,6 +48,7 @@ class MyKRSLTool:
         self.train_config = train_config
         self.local_rank = local_rank
         self.ignore_index = -100
+        self.krsl_nll_threshold = train_config.krsl_nll_threshold
     
     def concatenated_inputs(self, batch):
         """Concatenate the chosen and rejected inputs into a single tensor.

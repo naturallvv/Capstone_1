@@ -1,4 +1,4 @@
-""" CUDA_VISIBLE_DEVICES=0,1,2 python labeling_A.py """
+""" CUDA_VISIBLE_DEVICES=0,1,2 python labeling.py """
 
 import os
 import json
