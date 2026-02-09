@@ -282,7 +282,12 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         # Update the learning rate as needed
         lr_scheduler.step()
         # if train_config.ckpt_continue
-        if train_config.refine_it > 0:
+                # if train_config.ckpt_continue
+        if train_config.stage != "none":  #스테이지 별 파일 경로 저장을 위해 수정 26.2.9
+            model_root_dir = os.path.join(     
+                train_config.output_dir, train_config.student, train_config.stage 
+            )    #스테이지 별 파일 경로 저장을 위해 수정 26.2.9
+        elif train_config.refine_it > 0:
             base_path = ''
             for sub_dir in train_config.ckpt_continue.split('/')[:-1]:
                 base_path = os.path.join(base_path, sub_dir)
@@ -307,7 +312,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         # train_config, inferece_config 생성하는 코드 수정해야함 (model_root_dir만 바꾸면 될지도)
         if True: 
             if rank == 0 and not os.path.exists(model_root_dir):
-                os.mkdir(model_root_dir)
+                os.makedirs(model_root_dir, exist_ok=True)    #스테이지 별 파일 경로 저장을 위해 수정 26.2.9
             
             if rank == 0:
                 config_dict = asdict(train_cfg_ins)

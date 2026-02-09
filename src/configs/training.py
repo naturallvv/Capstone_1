@@ -56,4 +56,6 @@ class train_config:
     krsl_pre_dataset: str="none"
     step_type: str='sentence_split'
     train_data_path: str='none'
+    stage: str = "none"      # "sft", "stage1", "stage2", "stage3", "stage4"
+    student: str = "none"    # "A", "B"
 
