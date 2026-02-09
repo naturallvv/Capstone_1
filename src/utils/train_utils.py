@@ -282,6 +282,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         # Update the learning rate as needed
         lr_scheduler.step()
         # if train_config.ckpt_continue
+            # if train_config.ckpt_continue
         if train_config.stage != "none":  #스테이지 별 파일 경로 저장을 위해 수정 26.2.9
             model_root_dir = os.path.join(     
                 train_config.output_dir, train_config.student, train_config.stage 

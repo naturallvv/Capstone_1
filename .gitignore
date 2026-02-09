@@ -1,0 +1,15 @@
+# ====================
+# Images
+# ====================
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+*.svg
+
+# ====================
+# Claude Code instructions
+# ====================
+CLAUDE.md

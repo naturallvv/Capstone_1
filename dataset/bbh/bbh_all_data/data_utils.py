@@ -1,8 +1,8 @@
-"""BBH data preprocessing utilities.
+"""BBH 데이터 전처리 유틸리티.
 
-Answer checking uses the metric_utils.py logic (multi-delimiter fallback chain).
-Consolidates functionality from accuracy.py, Change_prompt.py, Only_change_prompt.py,
-delete_response.py, pair.py, merge.py, and split_data.py into a single module.
+정답 체크는 metric_utils.py 로직(다중 delimiter 폴백 체인)을 사용한다.
+기존 accuracy.py, Change_prompt.py, Only_change_prompt.py, delete_response.py,
+pair.py, merge.py, split_data.py 기능을 하나의 모듈로 통합.
 """
 
 import json
@@ -14,11 +14,11 @@ import argparse
 
 
 # ============================================================
-# Answer checking (based on metric_utils.py logic)
+# 정답 체크 (metric_utils.py 로직 기반)
 # ============================================================
 
 def extract_answers_for_model(model_output):
-    """Extract (choice, content) from model output. From metric_utils.py."""
+    """모델 출력에서 (choice, content) 튜플을 추출한다. metric_utils.py 원본."""
     if model_output is None:
         return "none", "none"
     model_output = model_output.strip()
@@ -52,7 +52,7 @@ def extract_answers_for_model(model_output):
 
 
 def extract_answers_for_gt(original_output):
-    """Extract (choice, content) from ground truth text. From metric_utils.py."""
+    """정답 텍스트에서 (choice, content) 튜플을 추출한다. metric_utils.py 원본."""
     original_output = original_output.strip()
     original_output = original_output.rstrip(".")
     original_output = original_output.lower()
@@ -80,7 +80,7 @@ def extract_answers_for_gt(original_output):
 
 
 def decide(ground_truth: str, model_answer: str) -> bool:
-    """Judgment for formal_fallacies task. From metric_utils.py."""
+    """formal_fallacies 태스크 전용 판정 함수. metric_utils.py 원본."""
     if "invalid" in ground_truth:
         return "invalid" in model_answer
     else:
@@ -88,18 +88,18 @@ def decide(ground_truth: str, model_answer: str) -> bool:
 
 
 def extract_answer(text: str) -> str:
-    """Extract the answer portion from model response using a multi-delimiter fallback chain.
+    """다중 delimiter 폴백 체인으로 모델 응답에서 답변 부분만 추출한다.
 
-    Based on the 6-stage fallback chain from metric_utils.py compute_metrics():
+    metric_utils.py compute_metrics() 내부의 6단계 폴백 체인:
       1. "Therefore, the answer is"
       2. "[Answer Prediction]:"
-      3. "Answer:" (with Explanation separation)
-      4. "the answer is" (with Explanation separation)
+      3. "Answer:" (Explanation 분리 처리)
+      4. "the answer is" (Explanation 분리 처리)
       5. "\\n\\nA:"
       6. "### Response:"
 
     Returns:
-        Extracted answer string. Empty string on parse failure.
+        추출된 답변 문자열. 추출 실패 시 빈 문자열 반환.
     """
     if not text:
         return ""
@@ -127,14 +127,14 @@ def extract_answer(text: str) -> str:
 
 
 def check_answer(response: str, ground_truth: str, task_name: str = "") -> bool:
-    """Compare model response against ground truth.
+    """모델 응답과 정답을 비교한다.
 
-    1. Extract answer from model response via extract_answer()
-    2. Use decide() for formal_fallacies task
-    3. Otherwise: compare choice first, then content
+    1. extract_answer()로 모델 응답에서 답변 추출
+    2. formal_fallacies 태스크면 decide() 사용
+    3. 그 외: choice 비교 -> content 비교 순서
 
     Returns:
-        bool: Whether the answer is correct.
+        bool: 정답 여부
     """
     extracted = extract_answer(response)
 
@@ -150,22 +150,24 @@ def check_answer(response: str, ground_truth: str, task_name: str = "") -> bool:
     md_choice, md_content = extract_answers_for_model(copy.deepcopy(extracted))
 
     if md_choice and md_choice != "none" and gt_choice and gt_choice != "none":
+        # 선택지가 있으면 선택지끼리 비교
         return md_choice in gt_choice
     else:
+        # 선택지가 없으면 내용끼리 비교
         if md_content == "none" or md_content == "":
             return False
         return gt_content == md_content
 
 
 # ============================================================
-# Accuracy evaluation
+# 정확도 평가
 # ============================================================
 
 def evaluate_accuracy(input_json, response_field="response", answer_field="output",
                       task_field="task_name"):
-    """Evaluate accuracy of a JSON file with per-task breakdown and parse failure report.
+    """JSON 파일의 정확도를 평가한다. 태스크별 정확도 및 파싱 실패 리포트 포함.
 
-    Uses check_answer() based on metric_utils.py logic.
+    정답 체크에 metric_utils.py 기반 check_answer()를 사용한다.
     """
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -176,7 +178,7 @@ def evaluate_accuracy(input_json, response_field="response", answer_field="outpu
     failed_indices = []
     failed_samples = []
 
-    # Per-task accuracy counters
+    # 태스크별 정확도 집계용 딕셔너리
     task_total = {}
     task_correct = {}
 
@@ -185,9 +187,10 @@ def evaluate_accuracy(input_json, response_field="response", answer_field="outpu
         answer = item.get(answer_field, "").strip()
         task_name = item.get(task_field, "")
 
+        # 태스크별 총 개수 카운트
         task_total[task_name] = task_total.get(task_name, 0) + 1
 
-        # Attempt answer extraction
+        # 답변 추출 시도
         extracted = extract_answer(response)
         if not extracted and task_name != "formal_fallacies":
             skip_cnt += 1
@@ -206,7 +209,7 @@ def evaluate_accuracy(input_json, response_field="response", answer_field="outpu
 
     accuracy = correct_cnt / total if total > 0 else 0.0
 
-    # -------- Report --------
+    # -------- 결과 보고서 출력 --------
     print("\n========== Accuracy Report ==========")
     print(f"Total: {total}")
     print(f"Correct: {correct_cnt}")
@@ -214,7 +217,7 @@ def evaluate_accuracy(input_json, response_field="response", answer_field="outpu
     print(f"Accuracy: {accuracy:.4f}")
     print("=====================================")
 
-    # Per-task accuracy
+    # 태스크별 정확도 출력
     if task_total:
         print("\n----- Per-task Accuracy -----")
         for task in sorted(task_total.keys()):
@@ -223,7 +226,7 @@ def evaluate_accuracy(input_json, response_field="response", answer_field="outpu
             t_acc = t_correct / t_total if t_total > 0 else 0.0
             print(f"  {task}: {t_correct}/{t_total} = {t_acc:.4f}")
 
-    # Parse failure report
+    # 파싱 실패 리포트 출력
     if failed_indices:
         print(f"\nParse failures: {len(failed_indices)} items")
         print("First 5 failed indices:", failed_indices[:5])
@@ -247,14 +250,14 @@ def evaluate_accuracy(input_json, response_field="response", answer_field="outpu
 
 
 # ============================================================
-# Prompt transformation
+# 프롬프트 변환
 # ============================================================
 
 _template_cache = {}
 
 
 def load_template(path_dir: str, task_name: str) -> str | None:
-    """Load a template file (with caching)."""
+    """템플릿 파일을 로드한다. 캐시를 사용하여 중복 읽기를 방지."""
     key = f"{path_dir}|{task_name}"
     if key in _template_cache:
         return _template_cache[key]
@@ -280,9 +283,9 @@ def load_template(path_dir: str, task_name: str) -> str | None:
 def apply_ahp_ccp(input_json, output_json, ahp_dir, ccp_dir,
                    response_field="response", answer_field="output",
                    task_field="task_name", instruction_field="instruction"):
-    """Apply CCP template for correct answers, AHP for incorrect. Uses check_answer().
+    """정답이면 CCP, 오답이면 AHP 템플릿을 적용한다. check_answer() 사용.
 
-    Items with parse failures or missing templates are removed.
+    파싱 실패 또는 템플릿이 없는 항목은 결과에서 제거된다.
     """
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -309,7 +312,7 @@ def apply_ahp_ccp(input_json, output_json, ahp_dir, ccp_dir,
 
         is_correct = check_answer(response_text, gt_answer, task_name)
 
-        # Load template
+        # 정답/오답에 따라 템플릿 로드
         if is_correct:
             template = load_template(ccp_dir, task_name)
         else:
@@ -352,7 +355,7 @@ def apply_ahp_ccp(input_json, output_json, ahp_dir, ccp_dir,
 
 
 def replace_prompts(input_json, output_json, prompt_dir):
-    """CoT few-shot 프롬프트로 교체."""
+    """CoT few-shot 프롬프트로 교체한다."""
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
     if not isinstance(data, list):
@@ -402,7 +405,7 @@ def replace_prompts(input_json, output_json, prompt_dir):
 # ============================================================
 
 def clear_responses(input_json, output_json):
-    """response 필드 초기화 + task_discription 제거."""
+    """response 필드를 초기화하고 task_discription 필드를 제거한다."""
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -419,7 +422,7 @@ def clear_responses(input_json, output_json):
 
 
 def merge_json(file1, file2, output_file):
-    """두 JSON 배열 병합."""
+    """두 JSON 배열을 하나로 병합한다."""
     with open(file1, "r", encoding="utf-8") as f:
         data1 = json.load(f)
     with open(file2, "r", encoding="utf-8") as f:
@@ -433,7 +436,7 @@ def merge_json(file1, file2, output_file):
 
 
 def split_data(input_json, file_a, file_b, split_ratio=0.5, seed=42):
-    """데이터를 A/B로 랜덤 분할."""
+    """데이터를 A/B 두 세트로 랜덤 분할한다."""
     with open(input_json, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -457,11 +460,11 @@ def split_data(input_json, file_a, file_b, split_ratio=0.5, seed=42):
 
 
 def create_preference_pairs(pos_pos, pos_neg, neg_pos, neg_neg, output_file):
-    """EDIT용 chosen/rejected 선호도 쌍 생성.
+    """EDIT용 chosen/rejected 선호도 쌍을 생성한다.
 
     pos_pos + pos_neg -> chosen=pos_pos.response, rejected=pos_neg.response
     neg_pos + neg_neg -> chosen=neg_pos.response, rejected=neg_neg.response
-    매칭 기준: instruction 동일
+    매칭 기준: instruction 필드가 동일한 항목끼리 쌍을 이룸
     """
     PROMPT_TEMPLATE = "Task Description:\n{task_description}\nQ:{instruction}\n\nA:"
 
@@ -474,7 +477,7 @@ def create_preference_pairs(pos_pos, pos_neg, neg_pos, neg_neg, output_file):
     with open(neg_neg, "r", encoding="utf-8") as f:
         data_nn = json.load(f)
 
-    # instruction -> item 인덱스 맵 (O(n) 매칭)
+    # instruction 기준 딕셔너리 매핑 (O(n) 탐색)
     pn_map = {item["instruction"]: item for item in data_pn}
     nn_map = {item["instruction"]: item for item in data_nn}
 
@@ -507,48 +510,49 @@ def create_preference_pairs(pos_pos, pos_neg, neg_pos, neg_neg, output_file):
 
 
 # ============================================================
-# CLI
+# CLI (커맨드라인 인터페이스)
 # ============================================================
 
 def _build_parser():
+    """argparse 파서를 구성한다. 서브커맨드별로 인자를 정의."""
     parser = argparse.ArgumentParser(
         prog="data_utils",
         description="BBH data utilities (unified)",
     )
     sub = parser.add_subparsers(dest="command", required=True)
 
-    # --- accuracy ---
+    # --- 정확도 평가 ---
     p = sub.add_parser("accuracy", help="Evaluate accuracy")
     p.add_argument("--input-json", required=True)
     p.add_argument("--response-field", default="response")
     p.add_argument("--answer-field", default="output")
     p.add_argument("--task-field", default="task_name")
 
-    # --- ahp-ccp ---
+    # --- AHP/CCP 템플릿 적용 ---
     p = sub.add_parser("ahp-ccp", help="Apply AHP/CCP templates")
     p.add_argument("--input-json", required=True)
     p.add_argument("--output-json", required=True)
     p.add_argument("--ahp-dir", required=True)
     p.add_argument("--ccp-dir", required=True)
 
-    # --- replace-prompts ---
+    # --- 프롬프트 교체 ---
     p = sub.add_parser("replace-prompts", help="Replace prompts with CoT templates")
     p.add_argument("--input-json", required=True)
     p.add_argument("--output-json", required=True)
     p.add_argument("--prompt-dir", required=True)
 
-    # --- clear ---
+    # --- response 초기화 ---
     p = sub.add_parser("clear", help="Clear responses")
     p.add_argument("--input-json", required=True)
     p.add_argument("--output-json", required=True)
 
-    # --- merge ---
+    # --- JSON 병합 ---
     p = sub.add_parser("merge", help="Merge two JSON files")
     p.add_argument("--file1", required=True)
     p.add_argument("--file2", required=True)
     p.add_argument("--output", required=True)
 
-    # --- split ---
+    # --- 데이터 분할 ---
     p = sub.add_parser("split", help="Split data into A/B sets")
     p.add_argument("--input-json", required=True)
     p.add_argument("--file-a", required=True)
@@ -556,8 +560,8 @@ def _build_parser():
     p.add_argument("--split-ratio", type=float, default=0.5)
     p.add_argument("--seed", type=int, default=42)
 
-    # --- pair ---
-    p = sub.add_parser("pair", help="Create preference pairs for EDIT")
+    # --- 선호도 쌍 생성 ---
+    p = sub.add_parser("pair", help="EDIT용 선호도 쌍 생성")
     p.add_argument("--pos-pos", required=True)
     p.add_argument("--pos-neg", required=True)
     p.add_argument("--neg-pos", required=True)
