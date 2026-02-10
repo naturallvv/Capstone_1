@@ -151,7 +151,7 @@ for STUDENT in A B; do
     WORK="${PIPELINE_DIR}/stage${STAGE}/${STUDENT}"
     mkdir -p "$WORK"
 
-    # 로직에 문제 있음 CCP-AHP 추론때 모델 A가 아니라 모델 B 로드
+    # 로직에 문제 있음 전체 추론 과정에서 A모델을 호출해야하는데 B 모델을 호출 중가 아니라 모델 B 로드(수정함)
     if [ "$STUDENT" = "A" ]; then
         CROSS_MODEL_PATH="$MODEL_A"
         BEFORE_LABEL="$BEFORE_LABEL_A"
@@ -227,6 +227,7 @@ STAGE_DIR_B="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}"
 echo ""
 echo "[EVAL] 4개 벤치마크 평가 시작 (A,B 각 20 에폭 전부)..."
 
+#벤치마크 1에폭만 평가중 코드 수정 해야됌
 for BENCHMARK in $BENCHMARKS; do
     echo "  Student A - ${BENCHMARK}..."
     cd shell && ./run_eval.sh "${STAGE_DIR_A}/epoch-1" "$STAGE_DIR_A" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
