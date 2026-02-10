@@ -465,7 +465,7 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
         # remove peft model ckpt
         if train_config.use_peft and train_config.save_type == 'hf':
             for subdir in os.listdir(model_root_dir):
-                subdir_path = os.path.join(model_root_dir, subdir)
+                subdir_path = os.path.join(model_roo t_dir, subdir)
                 if os.path.isdir(subdir_path):
                     for file in os.listdir(subdir_path):
                         if not file.startswith('adapter'):
