@@ -35,9 +35,9 @@ PIPELINE_DIR="./dataset/bbh/bbh_all_data/pipeline/${MODEL_SHORT}"
 
 # 교차 라벨링용 입력 데이터 (CoT 프롬프트 적용 + response 초기화 완료)
 # Student A용: B모델이 A데이터를 라벨링
-BEFORE_LABEL_A="./dataset/bbh/bbh_all_data/before_pseudo_labeling_B(train_A,labeling_B).json"
+BEFORE_LABEL_A="./dataset/bbh/bbh_all_data/before_pseudo_labeling_A(train_B,labeling_A).json"
 # Student B용: A모델이 B데이터를 라벨링
-BEFORE_LABEL_B="./dataset/bbh/bbh_all_data/before_pseudo_labeling_A(train_B,labeling_A).json"
+BEFORE_LABEL_B="./dataset/bbh/bbh_all_data/before_pseudo_labeling_B(train_A,labeling_B).json"
 
 # 원본 학생별 학습 데이터 (final_check 참조용)
 ORIG_DATA_A="./dataset/bbh/bbh_all_data/all_task_train_right_wronghint_answer_A.json"
@@ -151,12 +151,13 @@ for STUDENT in A B; do
     WORK="${PIPELINE_DIR}/stage${STAGE}/${STUDENT}"
     mkdir -p "$WORK"
 
+    # 로직에 문제 있음 CCP-AHP 추론때 모델 A가 아니라 모델 B 로드
     if [ "$STUDENT" = "A" ]; then
-        CROSS_MODEL_PATH="$MODEL_B"
+        CROSS_MODEL_PATH="$MODEL_A"
         BEFORE_LABEL="$BEFORE_LABEL_A"
         ORIG_DATA="$ORIG_DATA_A"
     else
-        CROSS_MODEL_PATH="$MODEL_A"
+        CROSS_MODEL_PATH="$MODEL_B"
         BEFORE_LABEL="$BEFORE_LABEL_B"
         ORIG_DATA="$ORIG_DATA_B"
     fi
