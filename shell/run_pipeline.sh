@@ -151,15 +151,17 @@ for STUDENT in A B; do
     WORK="${PIPELINE_DIR}/stage${STAGE}/${STUDENT}"
     mkdir -p "$WORK"
 
-    # 로직에 문제 있음 전체 추론 과정에서 A모델을 호출해야하는데 B 모델을 호출 중가 아니라 모델 B 로드(수정함)
+    # 교차 라벨링: 각 모델이 상대 데이터(안 본 데이터)를 라벨링
+    # Model A (SFT: answer_A) → 추론: before_pseudo_labeling_A(train_B,labeling_A)
+    # Model B (SFT: answer_B) → 추론: before_pseudo_labeling_B(train_A,labeling_B)
     if [ "$STUDENT" = "A" ]; then
         CROSS_MODEL_PATH="$MODEL_A"
         BEFORE_LABEL="$BEFORE_LABEL_A"
-        ORIG_DATA="$ORIG_DATA_A"
+        ORIG_DATA="$ORIG_DATA_B"
     else
         CROSS_MODEL_PATH="$MODEL_B"
         BEFORE_LABEL="$BEFORE_LABEL_B"
-        ORIG_DATA="$ORIG_DATA_B"
+        ORIG_DATA="$ORIG_DATA_A"
     fi
 
     # 2-1. 교차 추론 (기존 before_pseudo_labeling 데이터 사용)
