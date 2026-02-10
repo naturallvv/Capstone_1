@@ -1,96 +1,101 @@
+"""초기추론 + CCP/AHP 재추론 결과를 chosen/rejected 쌍으로 병합.
+
+초기 추론이 정답이면 chosen=초기, rejected=재추론.
+초기 추론이 오답이면 chosen=재추론, rejected=초기.
+정답 비교는 metric_utils의 논문 저자 파서를 사용한다.
+"""
+
 import json
-import re
+import copy
 import argparse
+import sys
+
+sys.path.append(".")
+from src.utils.metric_utils import extract_answers_for_model, extract_answers_for_gt
 
 
-# ---------------------------------------------------------
-# robust parser for "Therefore, the answer is ..."
-# ---------------------------------------------------------
-def parse_answer(text: str) -> str | None:
+def extract_raw_answer(text):
+    """compute_metrics()의 답 추출 로직 (metric_utils.py L127-146)."""
     if not text:
         return None
+    if "Therefore, the answer is" in text:
+        return text.split("Therefore, the answer is")[-1].split(".")[0].strip()
+    elif "[Answer Prediction]:" in text:
+        return text.split("[Answer Prediction]:")[-1].split(".")[0].strip()
+    elif "Answer:" in text and "Explanation" not in text:
+        return text.split("Answer:")[1].split(".")[0].strip()
+    elif "Answer:" in text and "Explanation" in text:
+        return text.split("Explanation")[0].split("Answer:")[-1].split(".")[0].strip()
+    elif "The answer is" in text and "Explanation" in text:
+        return text.split("Explanation")[0].split("The answer is")[-1].split(".")[0].strip()
+    elif "\n\nA:" in text:
+        return text.split("\n\nA:")[1].split(".")[0].strip()
+    elif "### Response:" in text:
+        return text.split("### Response:")[1].split(".")[0].strip()
+    elif "the answer is" in text:
+        return text.split("the answer is")[1].split(".")[0].strip()
+    return None
 
-    pattern = r"Therefore,?\s*the answer is\s*(.*?)(?=Therefore,?\s*the answer is|$)"
-    matches = list(re.finditer(pattern, text, flags=re.IGNORECASE | re.DOTALL))
-    if not matches:
-        return None
 
-    raw = matches[-1].group(1)
-    raw = raw.split("\n")[0]
-    cleaned = raw.strip().strip(" .,:;\"'()[]{}")
-    return cleaned if cleaned else None
+def check_correct(response_text, gt_text):
+    """compute_metrics()의 정답 비교 로직 (metric_utils.py L153-198)."""
+    raw = extract_raw_answer(response_text)
+    if raw is None:
+        return False
 
-# ---------------------------------------------------------
-# merge function
-# ---------------------------------------------------------
+    md_choice, md_content = extract_answers_for_model(copy.deepcopy(raw))
+    gt_choice, gt_content = extract_answers_for_gt(copy.deepcopy(gt_text))
+
+    if md_choice != "none" and gt_choice != "none":
+        return md_choice in gt_choice
+    else:
+        if md_content == "none" or md_content == "":
+            return False
+        return gt_content == md_content
+
+
 def merge(first_json, second_json, output_json):
     with open(first_json, "r", encoding="utf-8") as f:
         first_data = json.load(f)
-
     with open(second_json, "r", encoding="utf-8") as f:
         second_data = json.load(f)
 
     if len(first_data) != len(second_data):
-        print("❌ 두 JSON 파일의 데이터 길이가 다릅니다.")
+        print("두 JSON 파일의 데이터 길이가 다릅니다.")
         return
 
     merged = []
-
-    for idx, (item1, item2) in enumerate(zip(first_data, second_data)):
-        instruction = item1.get("instruction", "")
-        input_text = instruction if instruction else ""
-
+    for item1, item2 in zip(first_data, second_data):
+        input_text = item1.get("instruction", "")
         gt_answer = str(item1.get("output", "")).strip()
 
-        # 첫 번째 추론 결과에서 정답 파싱
-        pred_first = parse_answer(item1.get("response", ""))
-
-        # 정답 여부 판단
-        norm_first = pred_first.lower().strip(" .,:;\"'()[]{}") if pred_first else None
-        norm_gt = gt_answer.lower().strip(" .,:;\"'()[]{}")
-
-        is_correct = (norm_first == norm_gt)
-
-        # -------------------------------
-        # 🔥 정오답에 따라 chosen/rejected 결정
-        # -------------------------------
-        resp_first  = item1.get("response", "").strip()
+        resp_first = item1.get("response", "").strip()
         resp_second = item2.get("response", "").strip()
 
+        is_correct = check_correct(resp_first, gt_answer)
+
         if is_correct:
-            chosen = resp_first
-            rejected = resp_second
+            chosen, rejected = resp_first, resp_second
         else:
-            chosen = resp_second
-            rejected = resp_first
+            chosen, rejected = resp_second, resp_first
 
         merged.append({
             "input": input_text,
             "chosen": chosen,
-            "rejected": rejected
+            "rejected": rejected,
         })
 
-    # 저장
     with open(output_json, "w", encoding="utf-8") as f:
         json.dump(merged, f, ensure_ascii=False, indent=2)
 
-    print(f"✅ 병합 완료! 저장 경로 → {output_json}")
+    print(f"병합 완료: {output_json} ({len(merged)}건)")
 
 
-# ---------------------------------------------------------
-# CLI
-# ---------------------------------------------------------
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="초기추론 + CCP/AHP 추론 결과 병합기")
-
+    parser = argparse.ArgumentParser(description="초기추론 + CCP/AHP 추론 결과 병합")
     parser.add_argument("--first-json", required=True, help="초기 추론 JSON")
     parser.add_argument("--second-json", required=True, help="CCP/AHP 재추론 JSON")
     parser.add_argument("--output-json", required=True, help="병합 결과 저장 JSON")
-
     args = parser.parse_args()
 
-    merge(
-        first_json=args.first_json,
-        second_json=args.second_json,
-        output_json=args.output_json
-    )
+    merge(args.first_json, args.second_json, args.output_json)

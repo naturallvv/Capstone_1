@@ -102,8 +102,8 @@ mkdir -p "$log_dir"
 log_file="${log_dir}/log.txt"
 
 # ==================== Run ====================
-export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7"
-torchrun --nnodes 1 --nproc_per_node 8 --master-port 29828 ./finetuning.py \
+export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7,8,9"
+torchrun --nnodes 1 --nproc_per_node 10 --master-port 29828 ./finetuning.py \
     --max_words $max_words \
     --enable_fsdp $enable_fsdp \
     --model_name "$model_name" \
