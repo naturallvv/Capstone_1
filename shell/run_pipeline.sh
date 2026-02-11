@@ -29,6 +29,7 @@ MODEL_SHORT="${MODEL_NAME##*/}"
 
 # SFT는 무조건 epoch 15 사용, KRSL은 20 에폭 학습 후 eval로 best epoch 자동 선택
 SFT_LOAD_EPOCH=15
+KRSL_NUM_EPOCHS=20
 
 # 파이프라인 중간 파일 저장 베이스 경로
 PIPELINE_DIR="./dataset/bbh/bbh_all_data/pipeline/${MODEL_SHORT}"
@@ -108,11 +109,22 @@ if [ "$STAGE" -eq 1 ]; then
     echo "[SFT] 학습 (Stage 1 전용)"
     echo "============================================"
 
-    echo "  SFT Student A..."
-    cd shell && ./run_sft.sh "$MODEL_NAME" A && cd ../
+    SFT_A_PATH="../slm/hf/${MODEL_SHORT}/A/sft/epoch-${SFT_LOAD_EPOCH}"
+    SFT_B_PATH="../slm/hf/${MODEL_SHORT}/B/sft/epoch-${SFT_LOAD_EPOCH}"
 
-    echo "  SFT Student B..."
-    cd shell && ./run_sft.sh "$MODEL_NAME" B && cd ../
+    if [ -d "$SFT_A_PATH" ]; then
+        echo "  [SKIP] SFT Student A (${SFT_A_PATH} 이미 존재)"
+    else
+        echo "  SFT Student A..."
+        cd shell && ./run_sft.sh "$MODEL_NAME" A && cd ../
+    fi
+
+    if [ -d "$SFT_B_PATH" ]; then
+        echo "  [SKIP] SFT Student B (${SFT_B_PATH} 이미 존재)"
+    else
+        echo "  SFT Student B..."
+        cd shell && ./run_sft.sh "$MODEL_NAME" B && cd ../
+    fi
 fi
 
 # ==================== 모델 경로 결정 ====================
@@ -165,46 +177,70 @@ for STUDENT in A B; do
     fi
 
     # 2-1. 교차 추론 (기존 before_pseudo_labeling 데이터 사용)
-    echo "  [2-1] 교차 추론 (모델: ${CROSS_MODEL_PATH})..."
-    python "$LABELING" \
-        --model-name "$CROSS_MODEL_PATH" \
-        --input-json "$BEFORE_LABEL" \
-        --output-json "${WORK}/after_labeling.json"
+    if [ -f "${WORK}/after_labeling.json" ]; then
+        echo "  [SKIP] 2-1 교차 추론 (결과 파일 존재)"
+    else
+        echo "  [2-1] 교차 추론 (모델: ${CROSS_MODEL_PATH})..."
+        python "$LABELING" \
+            --model-name "$CROSS_MODEL_PATH" \
+            --input-json "$BEFORE_LABEL" \
+            --output-json "${WORK}/after_labeling.json"
+    fi
 
     # 2-2. 정오답 분류 + CCP/AHP 프롬프트 적용
-    echo "  [2-2] AHP/CCP 프롬프트 적용..."
-    python "$DATA_UTILS" ahp-ccp \
-        --input-json "${WORK}/after_labeling.json" \
-        --output-json "${WORK}/after_ahp_ccp.json" \
-        --ahp-dir "$AHP_DIR" \
-        --ccp-dir "$CCP_DIR"
+    if [ -f "${WORK}/after_ahp_ccp.json" ]; then
+        echo "  [SKIP] 2-2 AHP/CCP 프롬프트 적용 (결과 파일 존재)"
+    else
+        echo "  [2-2] AHP/CCP 프롬프트 적용..."
+        python "$DATA_UTILS" ahp-ccp \
+            --input-json "${WORK}/after_labeling.json" \
+            --output-json "${WORK}/after_ahp_ccp.json" \
+            --ahp-dir "$AHP_DIR" \
+            --ccp-dir "$CCP_DIR"
+    fi
 
     # 2-3. CCP/AHP 프롬프트로 재추론
-    echo "  [2-3] CCP/AHP 재추론..."
-    python "$LABELING" \
-        --model-name "$CROSS_MODEL_PATH" \
-        --input-json "${WORK}/after_ahp_ccp.json" \
-        --output-json "${WORK}/after_relabeling.json"
+    if [ -f "${WORK}/after_relabeling.json" ]; then
+        echo "  [SKIP] 2-3 CCP/AHP 재추론 (결과 파일 존재)"
+    else
+        echo "  [2-3] CCP/AHP 재추론..."
+        python "$LABELING" \
+            --model-name "$CROSS_MODEL_PATH" \
+            --input-json "${WORK}/after_ahp_ccp.json" \
+            --output-json "${WORK}/after_relabeling.json"
+    fi
 
     # 2-4. 듀얼 데이터셋 생성
-    echo "  [2-4] 듀얼 데이터셋 생성..."
-    python "$PAIR_SCRIPT" \
-        --first-json "${WORK}/after_labeling.json" \
-        --second-json "${WORK}/after_relabeling.json" \
-        --output-json "${WORK}/paired.json"
+    if [ -f "${WORK}/paired.json" ]; then
+        echo "  [SKIP] 2-4 듀얼 데이터셋 생성 (결과 파일 존재)"
+    else
+        echo "  [2-4] 듀얼 데이터셋 생성..."
+        python "$PAIR_SCRIPT" \
+            --first-json "${WORK}/after_labeling.json" \
+            --second-json "${WORK}/after_relabeling.json" \
+            --output-json "${WORK}/paired.json"
+    fi
 
     # 2-5. 필터링
-    echo "  [2-5] 필터링..."
-    python "$FINAL_CHECK" \
-        --input-json "${WORK}/paired.json" \
-        --reference-json "$ORIG_DATA" \
-        --output-json "${WORK}/filtered.json"
+    if [ -f "${WORK}/filtered.json" ]; then
+        echo "  [SKIP] 2-5 필터링 (결과 파일 존재)"
+    else
+        echo "  [2-5] 필터링..."
+        python "$FINAL_CHECK" \
+            --input-json "${WORK}/paired.json" \
+            --reference-json "$ORIG_DATA" \
+            --output-json "${WORK}/filtered.json"
+    fi
 
     # 2-6. 편집 거리 계산
-    echo "  [2-6] 편집 거리 계산..."
-    python "$EDIT_DIS" \
-        --data-file "${WORK}/filtered.json" \
-        --model-name "$MODEL_NAME"
+    if [ -f "${WORK}/filtered_precal.pkl" ]; then
+        echo "  [SKIP] 2-6 편집 거리 계산 (결과 파일 존재)"
+    else
+        echo "  [2-6] 편집 거리 계산..."
+        python "$EDIT_DIS" \
+            --data-file "${WORK}/filtered.json" \
+            --model-name "$MODEL_NAME"
+    fi
 
     echo "  ---- Student ${STUDENT} 데이터 준비 완료 ----"
 done
@@ -213,14 +249,25 @@ done
 WORK_A="${PIPELINE_DIR}/stage${STAGE}/A"
 WORK_B="${PIPELINE_DIR}/stage${STAGE}/B"
 
-echo ""
-echo "[KRSL] Student A 학습 (epoch-${LOAD_EPOCH_A} 로드)..."
-cd shell && ./run_krsl.sh "$MODEL_NAME" A "$STAGE" "$LOAD_EPOCH_A" \
-    "${WORK_A}/filtered.json" "${WORK_A}/filtered_precal.pkl" && cd ../
+KRSL_A_FINAL="../slm/hf/${MODEL_SHORT}/A/stage${STAGE}/epoch-${KRSL_NUM_EPOCHS}"
+KRSL_B_FINAL="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}/epoch-${KRSL_NUM_EPOCHS}"
 
-echo "[KRSL] Student B 학습 (epoch-${LOAD_EPOCH_B} 로드)..."
-cd shell && ./run_krsl.sh "$MODEL_NAME" B "$STAGE" "$LOAD_EPOCH_B" \
-    "${WORK_B}/filtered.json" "${WORK_B}/filtered_precal.pkl" && cd ../
+echo ""
+if [ -d "$KRSL_A_FINAL" ]; then
+    echo "[SKIP] KRSL Student A (${KRSL_A_FINAL} 이미 존재)"
+else
+    echo "[KRSL] Student A 학습 (epoch-${LOAD_EPOCH_A} 로드)..."
+    cd shell && ./run_krsl.sh "$MODEL_NAME" A "$STAGE" "$LOAD_EPOCH_A" \
+        "${WORK_A}/filtered.json" "${WORK_A}/filtered_precal.pkl" && cd ../
+fi
+
+if [ -d "$KRSL_B_FINAL" ]; then
+    echo "[SKIP] KRSL Student B (${KRSL_B_FINAL} 이미 존재)"
+else
+    echo "[KRSL] Student B 학습 (epoch-${LOAD_EPOCH_B} 로드)..."
+    cd shell && ./run_krsl.sh "$MODEL_NAME" B "$STAGE" "$LOAD_EPOCH_B" \
+        "${WORK_B}/filtered.json" "${WORK_B}/filtered_precal.pkl" && cd ../
+fi
 
 # ==================== eval (4개 벤치마크 × A,B 전 에폭) ====================
 STAGE_DIR_A="../slm/hf/${MODEL_SHORT}/A/stage${STAGE}"
@@ -229,13 +276,22 @@ STAGE_DIR_B="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}"
 echo ""
 echo "[EVAL] 4개 벤치마크 평가 시작 (A,B 각 20 에폭 전부)..."
 
-#벤치마크 1에폭만 평가중 코드 수정 해야됌
 for BENCHMARK in $BENCHMARKS; do
-    echo "  Student A - ${BENCHMARK}..."
-    cd shell && ./run_eval.sh "${STAGE_DIR_A}/epoch-1" "$STAGE_DIR_A" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
+    EVAL_RESULT_A="${STAGE_DIR_A}/results/${BENCHMARK}/epoch-1-eval_result.json"
+    if [ -f "$EVAL_RESULT_A" ]; then
+        echo "  [SKIP] Student A - ${BENCHMARK} (결과 파일 존재)"
+    else
+        echo "  Student A - ${BENCHMARK}..."
+        cd shell && ./run_eval.sh "${STAGE_DIR_A}/epoch-1" "$STAGE_DIR_A" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
+    fi
 
-    echo "  Student B - ${BENCHMARK}..."
-    cd shell && ./run_eval.sh "${STAGE_DIR_B}/epoch-1" "$STAGE_DIR_B" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
+    EVAL_RESULT_B="${STAGE_DIR_B}/results/${BENCHMARK}/epoch-1-eval_result.json"
+    if [ -f "$EVAL_RESULT_B" ]; then
+        echo "  [SKIP] Student B - ${BENCHMARK} (결과 파일 존재)"
+    else
+        echo "  Student B - ${BENCHMARK}..."
+        cd shell && ./run_eval.sh "${STAGE_DIR_B}/epoch-1" "$STAGE_DIR_B" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
+    fi
 done
 
 # ==================== best epoch 선택 ====================

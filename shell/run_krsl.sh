@@ -52,8 +52,8 @@ output_dir="../slm/${save_type}/${MODEL_SHORT}"
 ckpt_continue=None
 max_words=1024
 num_epochs=20
-batch_size_training=16
-gradient_accumulation_steps=4
+batch_size_training=8
+gradient_accumulation_steps=8
 num_workers_dataloader=1
 
 use_peft=True
