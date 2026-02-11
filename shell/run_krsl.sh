@@ -52,8 +52,35 @@ output_dir="../slm/${save_type}/${MODEL_SHORT}"
 ckpt_continue=None
 max_words=1024
 num_epochs=20
-batch_size_training=8
-gradient_accumulation_steps=8
+
+# ==================== 모델 크기별 배치 사이즈 자동 설정 ====================
+PARAM_SIZE=$(echo "$MODEL_NAME" | grep -oiE '[0-9]+\.?[0-9]*b' | tail -1 | sed 's/[bB]$//')
+
+if [ -z "$PARAM_SIZE" ]; then
+    if echo "$MODEL_NAME" | grep -qi 'phi-4' && ! echo "$MODEL_NAME" | grep -qi 'mini'; then
+        PARAM_SIZE="14"
+    elif echo "$MODEL_NAME" | grep -qi 'phi-4.*mini\|phi-4-mini'; then
+        PARAM_SIZE="4"
+    elif echo "$MODEL_NAME" | grep -qi 'tinyllama'; then
+        PARAM_SIZE="1"
+    else
+        PARAM_SIZE="1"
+    fi
+fi
+
+# ≤3B: bs=8/ga=8, 4~8B: bs=4/ga=16, 13B+: bs=2/ga=32
+SIZE_CAT=$(echo "$PARAM_SIZE" | awk '{if ($1 >= 13) print "large"; else if ($1 >= 4) print "medium"; else print "small"}')
+if [ "$SIZE_CAT" = "large" ]; then
+    batch_size_training=2
+    gradient_accumulation_steps=32
+elif [ "$SIZE_CAT" = "medium" ]; then
+    batch_size_training=4
+    gradient_accumulation_steps=16
+else
+    batch_size_training=8
+    gradient_accumulation_steps=8
+fi
+echo "  [KRSL] 모델 크기: ${PARAM_SIZE}B (${SIZE_CAT}) → batch=${batch_size_training}, grad_accum=${gradient_accumulation_steps}"
 num_workers_dataloader=1
 
 use_peft=True

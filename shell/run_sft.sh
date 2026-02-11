@@ -23,8 +23,35 @@ mkdir -p "$output_dir"
 ckpt_continue=None
 max_words=1024
 num_epochs=15
-batch_size_training=16
-gradient_accumulation_steps=4
+
+# ==================== 모델 크기별 배치 사이즈 자동 설정 ====================
+PARAM_SIZE=$(echo "$MODEL_NAME" | grep -oiE '[0-9]+\.?[0-9]*b' | tail -1 | sed 's/[bB]$//')
+
+if [ -z "$PARAM_SIZE" ]; then
+    if echo "$MODEL_NAME" | grep -qi 'phi-4' && ! echo "$MODEL_NAME" | grep -qi 'mini'; then
+        PARAM_SIZE="14"
+    elif echo "$MODEL_NAME" | grep -qi 'phi-4.*mini\|phi-4-mini'; then
+        PARAM_SIZE="4"
+    elif echo "$MODEL_NAME" | grep -qi 'tinyllama'; then
+        PARAM_SIZE="1"
+    else
+        PARAM_SIZE="1"
+    fi
+fi
+
+# ≤3B: bs=16/ga=4, 4~8B: bs=8/ga=8, 13B+: bs=4/ga=16
+SIZE_CAT=$(echo "$PARAM_SIZE" | awk '{if ($1 >= 13) print "large"; else if ($1 >= 4) print "medium"; else print "small"}')
+if [ "$SIZE_CAT" = "large" ]; then
+    batch_size_training=4
+    gradient_accumulation_steps=16
+elif [ "$SIZE_CAT" = "medium" ]; then
+    batch_size_training=8
+    gradient_accumulation_steps=8
+else
+    batch_size_training=16
+    gradient_accumulation_steps=4
+fi
+echo "  [SFT] 모델 크기: ${PARAM_SIZE}B (${SIZE_CAT}) → batch=${batch_size_training}, grad_accum=${gradient_accumulation_steps}"
 num_workers_dataloader=8
 lr=2e-4
 weight_decay=0.05
