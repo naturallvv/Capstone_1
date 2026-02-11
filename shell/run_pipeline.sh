@@ -6,9 +6,32 @@
 # Usage: ./run_pipeline.sh [MODEL_NAME] [STAGE]
 # Example:
 #   ./run_pipeline.sh "meta-llama/Llama-3.2-1B" 1   # SFT + Stage 1
-#   ./run_pipeline.sh "meta-llama/Llama-3.2-1B" 2   # Stage 2 (이전 best epoch 자동 읽기)
+#   ./run_pipeline.sh "meta-llama/Llama-3.2-1B" 2   # Stage 2
 #   ./run_pipeline.sh "meta-llama/Llama-3.2-1B" 3   # Stage 3
 #   ./run_pipeline.sh "meta-llama/Llama-3.2-1B" 4   # Stage 4
+#
+# ==================== 실험 대상 모델 목록 (17개) ====================
+# Llama 3.2
+#   "meta-llama/Llama-3.2-1B"
+#   "meta-llama/Llama-3.2-3B"
+# Llama 3.1
+#   "meta-llama/Llama-3.1-8B"
+#   "meta-llama/Llama-2-13b-hf"
+# TinyLlama
+#   "TinyLlama/TinyLlama_v1.1"
+# Mistral 3
+#   "mistralai/Ministral-3-3B-Base-2512"
+#   "mistralai/Ministral-3-8B-Base-2512"
+#   "mistralai/Ministral-3-14B-Base-2512"
+# Qwen 3
+#   "Qwen/Qwen3-0.6B"
+#   "Qwen/Qwen3-1.7B"
+#   "Qwen/Qwen3-4B"
+#   "Qwen/Qwen3-8B"
+#   "Qwen/Qwen3-14B"
+# Phi 3
+#   "microsoft/Phi-4-mini-instruct"
+#   "microsoft/phi-4"
 
 set -e  # 에러 발생 시 즉시 종료
 
@@ -155,17 +178,24 @@ else
     echo "  이전 스테이지(stage${PREV_STAGE}) best epoch: A=${LOAD_EPOCH_A}, B=${LOAD_EPOCH_B}"
 fi
 
-# ==================== 데이터 준비 (교차 라벨링) ====================
-for STUDENT in A B; do
-    echo ""
-    echo "---- Stage ${STAGE}, Student ${STUDENT} 데이터 준비 ----"
+# ==================== 데이터 준비 (교차 라벨링, A/B 병렬) ====================
+# GPU를 반씩 나눠서 A, B 동시 추론
+DATA_GPU_A="0,1,2,3,4"
+DATA_GPU_B="5,6,7,8,9"
 
-    WORK="${PIPELINE_DIR}/stage${STAGE}/${STUDENT}"
+run_student_data_prep() {
+    local STUDENT=$1
+    local GPU_DEVICES=$2
+
+    export CUDA_VISIBLE_DEVICES="$GPU_DEVICES"
+
+    echo ""
+    echo "---- Stage ${STAGE}, Student ${STUDENT} 데이터 준비 (GPU: ${GPU_DEVICES}) ----"
+
+    local WORK="${PIPELINE_DIR}/stage${STAGE}/${STUDENT}"
     mkdir -p "$WORK"
 
-    # 교차 라벨링: 각 모델이 상대 데이터(안 본 데이터)를 라벨링
-    # Model A (SFT: answer_A) → 추론: before_pseudo_labeling_A(train_B,labeling_A)
-    # Model B (SFT: answer_B) → 추론: before_pseudo_labeling_B(train_A,labeling_B)
+    local CROSS_MODEL_PATH BEFORE_LABEL ORIG_DATA
     if [ "$STUDENT" = "A" ]; then
         CROSS_MODEL_PATH="$MODEL_A"
         BEFORE_LABEL="$BEFORE_LABEL_A"
@@ -176,11 +206,11 @@ for STUDENT in A B; do
         ORIG_DATA="$ORIG_DATA_A"
     fi
 
-    # 2-1. 교차 추론 (기존 before_pseudo_labeling 데이터 사용)
+    # 2-1. 교차 추론
     if [ -f "${WORK}/after_labeling.json" ]; then
-        echo "  [SKIP] 2-1 교차 추론 (결과 파일 존재)"
+        echo "  [${STUDENT}] [SKIP] 2-1 교차 추론 (결과 파일 존재)"
     else
-        echo "  [2-1] 교차 추론 (모델: ${CROSS_MODEL_PATH})..."
+        echo "  [${STUDENT}] [2-1] 교차 추론 (모델: ${CROSS_MODEL_PATH})..."
         python "$LABELING" \
             --model-name "$CROSS_MODEL_PATH" \
             --input-json "$BEFORE_LABEL" \
@@ -189,9 +219,9 @@ for STUDENT in A B; do
 
     # 2-2. 정오답 분류 + CCP/AHP 프롬프트 적용
     if [ -f "${WORK}/after_ahp_ccp.json" ]; then
-        echo "  [SKIP] 2-2 AHP/CCP 프롬프트 적용 (결과 파일 존재)"
+        echo "  [${STUDENT}] [SKIP] 2-2 AHP/CCP 프롬프트 적용 (결과 파일 존재)"
     else
-        echo "  [2-2] AHP/CCP 프롬프트 적용..."
+        echo "  [${STUDENT}] [2-2] AHP/CCP 프롬프트 적용..."
         python "$DATA_UTILS" ahp-ccp \
             --input-json "${WORK}/after_labeling.json" \
             --output-json "${WORK}/after_ahp_ccp.json" \
@@ -201,9 +231,9 @@ for STUDENT in A B; do
 
     # 2-3. CCP/AHP 프롬프트로 재추론
     if [ -f "${WORK}/after_relabeling.json" ]; then
-        echo "  [SKIP] 2-3 CCP/AHP 재추론 (결과 파일 존재)"
+        echo "  [${STUDENT}] [SKIP] 2-3 CCP/AHP 재추론 (결과 파일 존재)"
     else
-        echo "  [2-3] CCP/AHP 재추론..."
+        echo "  [${STUDENT}] [2-3] CCP/AHP 재추론..."
         python "$LABELING" \
             --model-name "$CROSS_MODEL_PATH" \
             --input-json "${WORK}/after_ahp_ccp.json" \
@@ -212,9 +242,9 @@ for STUDENT in A B; do
 
     # 2-4. 듀얼 데이터셋 생성
     if [ -f "${WORK}/paired.json" ]; then
-        echo "  [SKIP] 2-4 듀얼 데이터셋 생성 (결과 파일 존재)"
+        echo "  [${STUDENT}] [SKIP] 2-4 듀얼 데이터셋 생성 (결과 파일 존재)"
     else
-        echo "  [2-4] 듀얼 데이터셋 생성..."
+        echo "  [${STUDENT}] [2-4] 듀얼 데이터셋 생성..."
         python "$PAIR_SCRIPT" \
             --first-json "${WORK}/after_labeling.json" \
             --second-json "${WORK}/after_relabeling.json" \
@@ -223,9 +253,9 @@ for STUDENT in A B; do
 
     # 2-5. 필터링
     if [ -f "${WORK}/filtered.json" ]; then
-        echo "  [SKIP] 2-5 필터링 (결과 파일 존재)"
+        echo "  [${STUDENT}] [SKIP] 2-5 필터링 (결과 파일 존재)"
     else
-        echo "  [2-5] 필터링..."
+        echo "  [${STUDENT}] [2-5] 필터링..."
         python "$FINAL_CHECK" \
             --input-json "${WORK}/paired.json" \
             --reference-json "$ORIG_DATA" \
@@ -234,16 +264,35 @@ for STUDENT in A B; do
 
     # 2-6. 편집 거리 계산
     if [ -f "${WORK}/filtered_precal.pkl" ]; then
-        echo "  [SKIP] 2-6 편집 거리 계산 (결과 파일 존재)"
+        echo "  [${STUDENT}] [SKIP] 2-6 편집 거리 계산 (결과 파일 존재)"
     else
-        echo "  [2-6] 편집 거리 계산..."
+        echo "  [${STUDENT}] [2-6] 편집 거리 계산..."
         python "$EDIT_DIS" \
             --data-file "${WORK}/filtered.json" \
             --model-name "$MODEL_NAME"
     fi
 
     echo "  ---- Student ${STUDENT} 데이터 준비 완료 ----"
-done
+}
+
+echo ""
+echo "[데이터 준비] A(GPU ${DATA_GPU_A}), B(GPU ${DATA_GPU_B}) 병렬 시작..."
+
+run_student_data_prep A "$DATA_GPU_A" &
+DATA_PID_A=$!
+
+run_student_data_prep B "$DATA_GPU_B" &
+DATA_PID_B=$!
+
+# 두 프로세스 완료 대기
+DATA_FAIL=0
+wait $DATA_PID_A || DATA_FAIL=$((DATA_FAIL + 1))
+wait $DATA_PID_B || DATA_FAIL=$((DATA_FAIL + 1))
+if [ $DATA_FAIL -gt 0 ]; then
+    echo "ERROR: 데이터 준비 실패 (${DATA_FAIL}개)"
+    exit 1
+fi
+echo "[데이터 준비] A, B 모두 완료."
 
 # ==================== KRSL 학습 ====================
 WORK_A="${PIPELINE_DIR}/stage${STAGE}/A"
