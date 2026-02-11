@@ -269,30 +269,50 @@ else
         "${WORK_B}/filtered.json" "${WORK_B}/filtered_precal.pkl" && cd ../
 fi
 
-# ==================== eval (4개 벤치마크 × A,B 전 에폭) ====================
+# ==================== eval (4개 벤치마크 × A,B 병렬 평가) ====================
 STAGE_DIR_A="../slm/hf/${MODEL_SHORT}/A/stage${STAGE}"
 STAGE_DIR_B="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}"
 
 echo ""
-echo "[EVAL] 4개 벤치마크 평가 시작 (A,B 각 20 에폭 전부)..."
+echo "[EVAL] 4개 벤치마크 평가 시작 (GPU 0~7 병렬)..."
 
-for BENCHMARK in $BENCHMARKS; do
-    EVAL_RESULT_A="${STAGE_DIR_A}/results/${BENCHMARK}/epoch-1-eval_result.json"
-    if [ -f "$EVAL_RESULT_A" ]; then
-        echo "  [SKIP] Student A - ${BENCHMARK} (결과 파일 존재)"
+EVAL_PIDS=()
+GPU_IDX=0
+
+for STUDENT_DIR in "$STAGE_DIR_A" "$STAGE_DIR_B"; do
+    if [ "$STUDENT_DIR" = "$STAGE_DIR_A" ]; then
+        STUDENT_LABEL="A"
     else
-        echo "  Student A - ${BENCHMARK}..."
-        cd shell && ./run_eval.sh "${STAGE_DIR_A}/epoch-1" "$STAGE_DIR_A" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
+        STUDENT_LABEL="B"
     fi
 
-    EVAL_RESULT_B="${STAGE_DIR_B}/results/${BENCHMARK}/epoch-1-eval_result.json"
-    if [ -f "$EVAL_RESULT_B" ]; then
-        echo "  [SKIP] Student B - ${BENCHMARK} (결과 파일 존재)"
-    else
-        echo "  Student B - ${BENCHMARK}..."
-        cd shell && ./run_eval.sh "${STAGE_DIR_B}/epoch-1" "$STAGE_DIR_B" "$BENCHMARK" $EVAL_GPU $EVAL_PORT && cd ../
-    fi
+    for BENCHMARK in $BENCHMARKS; do
+        EVAL_RESULT="${STUDENT_DIR}/results/${BENCHMARK}/epoch-1-eval_result.json"
+        if [ -f "$EVAL_RESULT" ]; then
+            echo "  [SKIP] Student ${STUDENT_LABEL} - ${BENCHMARK} (결과 파일 존재)"
+        else
+            EVAL_PORT_CUR=$((EVAL_PORT + GPU_IDX))
+            echo "  Student ${STUDENT_LABEL} - ${BENCHMARK} (GPU ${GPU_IDX}, Port ${EVAL_PORT_CUR})..."
+            (cd shell && ./run_eval.sh "${STUDENT_DIR}/epoch-1" "$STUDENT_DIR" "$BENCHMARK" $GPU_IDX $EVAL_PORT_CUR) &
+            EVAL_PIDS+=($!)
+        fi
+        GPU_IDX=$((GPU_IDX + 1))
+    done
 done
+
+# 모든 병렬 평가 완료 대기
+if [ ${#EVAL_PIDS[@]} -gt 0 ]; then
+    echo "  ${#EVAL_PIDS[@]}개 평가 작업 병렬 실행 중, 완료 대기..."
+    EVAL_FAIL=0
+    for PID in "${EVAL_PIDS[@]}"; do
+        wait $PID || EVAL_FAIL=$((EVAL_FAIL + 1))
+    done
+    if [ $EVAL_FAIL -gt 0 ]; then
+        echo "ERROR: ${EVAL_FAIL}개 평가 작업 실패"
+        exit 1
+    fi
+    echo "  모든 평가 완료."
+fi
 
 # ==================== best epoch 선택 ====================
 BEST_EPOCH_A=$(find_best_epoch "$STAGE_DIR_A")
