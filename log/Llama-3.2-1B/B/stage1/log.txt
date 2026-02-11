@@ -1,0 +1,591 @@
+W0210 18:42:42.343000 413548 site-packages/torch/distributed/run.py:803] 
+W0210 18:42:42.343000 413548 site-packages/torch/distributed/run.py:803] *****************************************
+W0210 18:42:42.343000 413548 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0210 18:42:42.343000 413548 site-packages/torch/distributed/run.py:803] *****************************************
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 5
+rank 5
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 9
+rank 9
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 7
+rank 7
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 6
+rank 6
+world size 10
+local rank 4
+rank 4
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 2
+rank 2
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 0
+rank 0
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 1
+rank 1
+world size 10
+local rank 8
+rank 8
+world size 10
+The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 3
+rank 3
+world size 10
+Clearing GPU cache for all ranks
+--> Running with torch dist debug set to detail
+load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  21%|[37m██        [0m| 297/1442 [00:00<00:00, 2967.36it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:  42%|[37m████▏     [0m| 600/1442 [00:00<00:00, 2999.41it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  62%|[37m██████▏   [0m| 901/1442 [00:00<00:00, 3002.54it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:  20%|[37m██        [0m| 290/1442 [00:00<00:00, 2899.44it/s]load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  83%|[37m████████▎ [0m| 1202/1442 [00:00<00:00, 2967.92it/s]load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-1B/B/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2989.34it/s]
+load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  41%|[37m████▏     [0m| 596/1442 [00:00<00:00, 2991.60it/s]load krsl weights:  21%|[37m██        [0m| 304/1442 [00:00<00:00, 3039.60it/s]load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  21%|[37m██        [0m| 300/1442 [00:00<00:00, 2996.39it/s]load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  20%|[37m██        [0m| 292/1442 [00:00<00:00, 2915.73it/s]load krsl weights:  15%|[37m█▍        [0m| 214/1442 [00:00<00:00, 2131.17it/s]load krsl weights:  62%|[37m██████▏   [0m| 896/1442 [00:00<00:00, 2981.45it/s]load krsl weights:  43%|[37m████▎     [0m| 616/1442 [00:00<00:00, 3085.63it/s]load krsl weights:  20%|[37m██        [0m| 295/1442 [00:00<00:00, 2944.41it/s]load krsl weights:  42%|[37m████▏     [0m| 603/1442 [00:00<00:00, 3012.08it/s]load krsl weights:  15%|[37m█▍        [0m| 213/1442 [00:00<00:00, 2129.88it/s]load krsl weights:  41%|[37m████▏     [0m| 596/1442 [00:00<00:00, 2983.04it/s]load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  30%|[37m██▉       [0m| 428/1442 [00:00<00:00, 2131.27it/s]load krsl weights:  83%|[37m████████▎ [0m| 1201/1442 [00:00<00:00, 3006.99it/s]load krsl weights:  64%|[37m██████▍   [0m| 927/1442 [00:00<00:00, 3095.39it/s]load krsl weights:   0%|[37m          [0m| 0/1442 [00:00<?, ?it/s]load krsl weights:  42%|[37m████▏     [0m| 603/1442 [00:00<00:00, 3021.18it/s]load krsl weights:  63%|[37m██████▎   [0m| 905/1442 [00:00<00:00, 3005.87it/s]load krsl weights:  30%|[37m██▉       [0m| 427/1442 [00:00<00:00, 2135.53it/s]load krsl weights:  62%|[37m██████▏   [0m| 896/1442 [00:00<00:00, 2989.20it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2998.05it/s]
+load krsl weights:  15%|[37m█▍        [0m| 215/1442 [00:00<00:00, 2142.54it/s]load krsl weights:  45%|[37m████▍     [0m| 642/1442 [00:00<00:00, 2095.44it/s]load krsl weights:  86%|[37m████████▌ [0m| 1239/1442 [00:00<00:00, 3103.83it/s]load krsl weights:  15%|[37m█▍        [0m| 214/1442 [00:00<00:00, 2136.39it/s]load krsl weights:  63%|[37m██████▎   [0m| 909/1442 [00:00<00:00, 3035.35it/s]load krsl weights:  84%|[37m████████▍ [0m| 1212/1442 [00:00<00:00, 3028.02it/s]load krsl weights:  44%|[37m████▍     [0m| 641/1442 [00:00<00:00, 2127.84it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 3092.14it/s]
+--> Training Set Length = 1442
+load krsl weights:  83%|[37m████████▎ [0m| 1198/1442 [00:00<00:00, 2997.90it/s]load krsl weights:  30%|[37m██▉       [0m| 430/1442 [00:00<00:00, 2080.90it/s]load krsl weights:  60%|[37m█████▉    [0m| 860/1442 [00:00<00:00, 2125.12it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 3030.27it/s]
+load krsl weights:  30%|[37m██▉       [0m| 428/1442 [00:00<00:00, 2138.04it/s]load krsl weights:  84%|[37m████████▍ [0m| 1216/1442 [00:00<00:00, 3045.88it/s]load krsl weights:  60%|[37m█████▉    [0m| 859/1442 [00:00<00:00, 2146.28it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2994.21it/s]
+load krsl weights:  44%|[37m████▍     [0m| 639/1442 [00:00<00:00, 2049.94it/s]load krsl weights:  75%|[37m███████▍  [0m| 1078/1442 [00:00<00:00, 2144.04it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 3034.15it/s]
+load krsl weights:  45%|[37m████▍     [0m| 642/1442 [00:00<00:00, 2128.51it/s]load krsl weights:  75%|[37m███████▍  [0m| 1077/1442 [00:00<00:00, 2157.83it/s]load krsl weights:  65%|[37m██████▍   [0m| 933/1442 [00:00<00:00, 2393.50it/s]load krsl weights:  90%|[37m████████▉ [0m| 1293/1442 [00:00<00:00, 2133.09it/s]load krsl weights:  60%|[37m█████▉    [0m| 860/1442 [00:00<00:00, 2146.40it/s]load krsl weights:  90%|[37m████████▉ [0m| 1294/1442 [00:00<00:00, 2159.69it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2123.35it/s]
+load krsl weights:  84%|[37m████████▍ [0m| 1217/1442 [00:00<00:00, 2550.70it/s]load krsl weights:  75%|[37m███████▍  [0m| 1077/1442 [00:00<00:00, 2154.43it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2145.43it/s]
+load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2423.65it/s]
+load krsl weights:  90%|[37m████████▉ [0m| 1294/1442 [00:00<00:00, 2157.55it/s]load krsl weights: 100%|[37m██████████[0m| 1442/1442 [00:00<00:00, 2144.26it/s]
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+--> Model ../slm/hf/Llama-3.2-1B/B/sft/epoch-15
+
+--> ../slm/hf/Llama-3.2-1B/B/sft/epoch-15 has 1235.8144 Million params
+
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+bFloat16 enabled for mixed precision - using bfSixteen policy
+to fsdp
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+train cfg ckpt_continue: None
+trainable params: 6,815,744 || all params: 1,242,630,144 || trainable%: 0.5485
+to fsdp
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.1412455141544342):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.11072893440723419):   0%|[34m          [0m| 0/2 [00:19<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.13237373530864716):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.19125577807426453):   0%|[34m          [0m| 0/2 [00:19<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.14751507341861725):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.17996399104595184):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.14964935183525085):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.14960509538650513):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.14298707246780396):   0%|[34m          [0m| 0/2 [00:19<?, ?it/s]Training Epoch: 1/20, step 0/10 completed (loss: 0.12665854394435883):   0%|[34m          [0m| 0/2 [00:20<?, ?it/s][rank3]: Traceback (most recent call last):
+[rank3]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank3]:     fire.Fire(main)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank3]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank3]:     component, remaining_args = _CallAndUpdateTrace(
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank3]:     component = fn(*varargs, **kwargs)
+[rank3]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank3]:     results = train(
+[rank3]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank3]:     loss.backward()
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank3]:     torch.autograd.backward(
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank3]:     _engine_run_backward(
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank3]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 3 has a total capacity of 47.54 GiB of which 9.19 GiB is free. Including non-PyTorch memory, this process has 38.34 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank6]:     fire.Fire(main)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank6]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank6]:     component, remaining_args = _CallAndUpdateTrace(
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank6]:     component = fn(*varargs, **kwargs)
+[rank6]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank6]:     results = train(
+[rank6]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank6]:     loss.backward()
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank6]:     torch.autograd.backward(
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank6]:     _engine_run_backward(
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank6]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank6]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 6 has a total capacity of 47.54 GiB of which 9.20 GiB is free. Including non-PyTorch memory, this process has 38.33 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank2]:     fire.Fire(main)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank2]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank2]:     component, remaining_args = _CallAndUpdateTrace(
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank2]:     component = fn(*varargs, **kwargs)
+[rank2]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank2]:     results = train(
+[rank2]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank2]:     loss.backward()
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank2]:     torch.autograd.backward(
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank2]:     _engine_run_backward(
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank2]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 2 has a total capacity of 47.54 GiB of which 9.21 GiB is free. Including non-PyTorch memory, this process has 38.32 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank1]:     fire.Fire(main)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank1]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank1]:     component, remaining_args = _CallAndUpdateTrace(
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank1]:     component = fn(*varargs, **kwargs)
+[rank1]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank1]:     results = train(
+[rank1]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank1]:     loss.backward()
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank1]:     torch.autograd.backward(
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank1]:     _engine_run_backward(
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank1]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 1 has a total capacity of 47.54 GiB of which 9.20 GiB is free. Including non-PyTorch memory, this process has 38.33 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank8]:     fire.Fire(main)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank8]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank8]:     component, remaining_args = _CallAndUpdateTrace(
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank8]:     component = fn(*varargs, **kwargs)
+[rank8]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank8]:     results = train(
+[rank8]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank8]:     loss.backward()
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank8]:     torch.autograd.backward(
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank8]:     _engine_run_backward(
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank8]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank8]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 8 has a total capacity of 47.54 GiB of which 9.19 GiB is free. Including non-PyTorch memory, this process has 38.34 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank5]:     fire.Fire(main)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank5]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank5]:     component, remaining_args = _CallAndUpdateTrace(
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank5]:     component = fn(*varargs, **kwargs)
+[rank5]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank5]:     results = train(
+[rank5]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank5]:     loss.backward()
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank5]:     torch.autograd.backward(
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank5]:     _engine_run_backward(
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank5]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank5]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 5 has a total capacity of 47.54 GiB of which 9.21 GiB is free. Including non-PyTorch memory, this process has 38.32 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank4]:     fire.Fire(main)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank4]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank4]:     component, remaining_args = _CallAndUpdateTrace(
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank4]:     component = fn(*varargs, **kwargs)
+[rank4]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank4]:     results = train(
+[rank4]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank4]:     loss.backward()
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank4]:     torch.autograd.backward(
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank4]:     _engine_run_backward(
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank4]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 4 has a total capacity of 47.54 GiB of which 9.20 GiB is free. Including non-PyTorch memory, this process has 38.33 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank7]:     fire.Fire(main)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank7]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank7]:     component, remaining_args = _CallAndUpdateTrace(
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank7]:     component = fn(*varargs, **kwargs)
+[rank7]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank7]:     results = train(
+[rank7]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank7]:     loss.backward()
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank7]:     torch.autograd.backward(
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank7]:     _engine_run_backward(
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank7]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank7]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 7 has a total capacity of 47.54 GiB of which 9.21 GiB is free. Including non-PyTorch memory, this process has 38.32 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank9]:     fire.Fire(main)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank9]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank9]:     component, remaining_args = _CallAndUpdateTrace(
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank9]:     component = fn(*varargs, **kwargs)
+[rank9]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank9]:     results = train(
+[rank9]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank9]:     loss.backward()
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank9]:     torch.autograd.backward(
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank9]:     _engine_run_backward(
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank9]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank9]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 9 has a total capacity of 47.54 GiB of which 9.20 GiB is free. Including non-PyTorch memory, this process has 38.33 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank0]:     fire.Fire(main)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank0]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank0]:     component, remaining_args = _CallAndUpdateTrace(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank0]:     component = fn(*varargs, **kwargs)
+[rank0]:   File "/home/Tenemin/Project/CasCoD/./finetuning.py", line 336, in main
+[rank0]:     results = train(
+[rank0]:   File "/home/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 231, in train
+[rank0]:     loss.backward()
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/_tensor.py", line 625, in backward
+[rank0]:     torch.autograd.backward(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/__init__.py", line 354, in backward
+[rank0]:     _engine_run_backward(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+[rank0]:     return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 15.66 GiB. GPU 0 has a total capacity of 47.54 GiB of which 9.21 GiB is free. Including non-PyTorch memory, this process has 38.32 GiB memory in use. Of the allocated memory 29.24 GiB is allocated by PyTorch, and 8.65 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Training Epoch: 1/20, step 0/10 completed (loss: 0.19125577807426453):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.1412455141544342):   0%|[34m          [0m| 0/2 [00:28<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.14751507341861725):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.11072893440723419):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.14960509538650513):   0%|[34m          [0m| 0/2 [00:28<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.17996399104595184):   0%|[34m          [0m| 0/2 [00:28<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.13237373530864716):   0%|[34m          [0m| 0/2 [00:28<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.14964935183525085):   0%|[34m          [0m| 0/2 [00:28<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.14298707246780396):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]
+Training Epoch: 1/20, step 0/10 completed (loss: 0.12665854394435883):   0%|[34m          [0m| 0/2 [00:29<?, ?it/s]
+W0210 18:43:23.121000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413704 closing signal SIGTERM
+W0210 18:43:23.122000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413705 closing signal SIGTERM
+W0210 18:43:23.122000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413706 closing signal SIGTERM
+W0210 18:43:23.122000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413708 closing signal SIGTERM
+W0210 18:43:23.123000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413709 closing signal SIGTERM
+W0210 18:43:23.123000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413710 closing signal SIGTERM
+W0210 18:43:23.123000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413711 closing signal SIGTERM
+W0210 18:43:23.124000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413712 closing signal SIGTERM
+W0210 18:43:23.124000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 413713 closing signal SIGTERM
+E0210 18:43:23.818000 413548 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 3 (pid: 413707) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
+Traceback (most recent call last):
+  File "/home/Tenemin/miniconda3/envs/myenv/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/run.py", line 936, in main
+    run(args)
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/run.py", line 927, in run
+    elastic_launch(
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 156, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 293, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-02-10_18:43:23
+  host      : node1.cluster.local
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 413707)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
