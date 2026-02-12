@@ -173,8 +173,8 @@ if __name__ == "__main__":
 
     # inference config
     parser.add_argument("--max-new-tokens", type=int, default=512)
-    parser.add_argument("--batch-size", type=int, default=8)
-    parser.add_argument("--num-workers", type=int, default=24)
+    parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument("--num-workers", type=int, default=64)
 
     parser.add_argument("--do-sample", type=bool, default=True)
     parser.add_argument("--temperature", type=float, default=1.0)
