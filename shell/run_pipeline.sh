@@ -380,6 +380,19 @@ if [ ${#EVAL_PIDS[@]} -gt 0 ]; then
     echo "  모든 평가 완료."
 fi
 
+# ==================== best epoch 선택 ====================
+BEST_EPOCH_A=$(find_best_epoch "$STAGE_DIR_A")
+BEST_EPOCH_B=$(find_best_epoch "$STAGE_DIR_B")
+
+echo ""
+echo "============================================"
+echo "Stage ${STAGE} 완료: ${MODEL_SHORT}"
+echo "  Best epoch (4벤치마크 평균): A=epoch-${BEST_EPOCH_A}, B=epoch-${BEST_EPOCH_B}"
+echo "  모델 A: ${STAGE_DIR_A}/epoch-${BEST_EPOCH_A}"
+echo "  모델 B: ${STAGE_DIR_B}/epoch-${BEST_EPOCH_B}"
+echo "  다음 스테이지: ./run_pipeline.sh \"${MODEL_NAME}\" $((STAGE + 1))"
+echo "============================================"
+
 # ==================== KRSL 체크포인트 정리: best epoch만 남기고 삭제 ====================
 echo ""
 echo "[정리] Stage ${STAGE} 체크포인트: best epoch만 남기고 삭제..."
@@ -392,7 +405,7 @@ for STUDENT in A B; do
         S_DIR=$STAGE_DIR_B
     fi
 
-    if [ "$BEST_EP" -eq -1 ]; then
+    if [ -z "$BEST_EP" ] || [ "$BEST_EP" -eq -1 ]; then
         echo "  [경고] Student ${STUDENT}: best epoch을 찾을 수 없어 정리 건너뜀"
         continue
     fi
@@ -407,16 +420,3 @@ for STUDENT in A B; do
     done
 done
 echo "[정리] 완료."
-
-# ==================== best epoch 선택 ====================
-BEST_EPOCH_A=$(find_best_epoch "$STAGE_DIR_A")
-BEST_EPOCH_B=$(find_best_epoch "$STAGE_DIR_B")
-
-echo ""
-echo "============================================"
-echo "Stage ${STAGE} 완료: ${MODEL_SHORT}"
-echo "  Best epoch (4벤치마크 평균): A=epoch-${BEST_EPOCH_A}, B=epoch-${BEST_EPOCH_B}"
-echo "  모델 A: ${STAGE_DIR_A}/epoch-${BEST_EPOCH_A}"
-echo "  모델 B: ${STAGE_DIR_B}/epoch-${BEST_EPOCH_B}"
-echo "  다음 스테이지: ./run_pipeline.sh \"${MODEL_NAME}\" $((STAGE + 1))"
-echo "============================================"
