@@ -148,6 +148,23 @@ if [ "$STAGE" -eq 1 ]; then
         echo "  SFT Student B..."
         cd shell && ./run_sft.sh "$MODEL_NAME" B && cd ../
     fi
+
+    # SFT 체크포인트 정리: epoch-${SFT_LOAD_EPOCH}만 남기고 삭제
+    echo ""
+    echo "[정리] SFT 체크포인트: epoch-${SFT_LOAD_EPOCH}만 남기고 삭제..."
+    for STUDENT in A B; do
+        SFT_BASE="../slm/hf/${MODEL_SHORT}/${STUDENT}/sft"
+        if [ -d "$SFT_BASE" ]; then
+            for EPOCH_DIR in "$SFT_BASE"/epoch-*; do
+                [ -d "$EPOCH_DIR" ] || continue
+                EPOCH_NAME=$(basename "$EPOCH_DIR")
+                if [ "$EPOCH_NAME" != "epoch-${SFT_LOAD_EPOCH}" ]; then
+                    echo "  [삭제] ${STUDENT}/sft/${EPOCH_NAME}"
+                    rm -rf "$EPOCH_DIR"
+                fi
+            done
+        fi
+    done
 fi
 
 # ==================== 모델 경로 결정 ====================
@@ -362,6 +379,34 @@ if [ ${#EVAL_PIDS[@]} -gt 0 ]; then
     fi
     echo "  모든 평가 완료."
 fi
+
+# ==================== KRSL 체크포인트 정리: best epoch만 남기고 삭제 ====================
+echo ""
+echo "[정리] Stage ${STAGE} 체크포인트: best epoch만 남기고 삭제..."
+for STUDENT in A B; do
+    if [ "$STUDENT" = "A" ]; then
+        BEST_EP=$BEST_EPOCH_A
+        S_DIR=$STAGE_DIR_A
+    else
+        BEST_EP=$BEST_EPOCH_B
+        S_DIR=$STAGE_DIR_B
+    fi
+
+    if [ "$BEST_EP" -eq -1 ]; then
+        echo "  [경고] Student ${STUDENT}: best epoch을 찾을 수 없어 정리 건너뜀"
+        continue
+    fi
+
+    for EPOCH_DIR in "$S_DIR"/epoch-*; do
+        [ -d "$EPOCH_DIR" ] || continue
+        EPOCH_NAME=$(basename "$EPOCH_DIR")
+        if [ "$EPOCH_NAME" != "epoch-${BEST_EP}" ]; then
+            echo "  [삭제] ${STUDENT}/stage${STAGE}/${EPOCH_NAME}"
+            rm -rf "$EPOCH_DIR"
+        fi
+    done
+done
+echo "[정리] 완료."
 
 # ==================== best epoch 선택 ====================
 BEST_EPOCH_A=$(find_best_epoch "$STAGE_DIR_A")
