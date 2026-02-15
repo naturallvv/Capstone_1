@@ -45,6 +45,7 @@ use_fast_kernels=False
 peft_model=None
 
 # ==================== 실행 ====================
+export TORCHINDUCTOR_CACHE_DIR="$HOME/.cache/torchinductor"
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export RANK=0
 export LOCAL_RANK=0
