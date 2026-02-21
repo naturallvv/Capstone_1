@@ -381,7 +381,10 @@ def train(model, train_dataloader,eval_dataloader, tokenizer, optimizer, lr_sche
                     #여기 걸림 adapter와 base model merge해서 full model 저장
                     ## saved with merged peft ckpt
                     elif train_config.save_type == 'hf':
-                        save_merged_peft_model(model, train_config.model_name, model_dir)
+                        if rank == 0:
+                            save_merged_peft_model(model, train_config.model_name, model_dir)
+                        if train_config.enable_fsdp:
+                            dist.barrier()
 
                     if train_config.enable_fsdp:
                         if rank==0: 

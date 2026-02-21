@@ -94,7 +94,7 @@ def main(**kwargs):
             # model = BetterTransformer.transform(model)   
         except ImportError:
             print("Module 'optimum' not found. Please install 'optimum' it before proceeding.")
-    if inference_config.load_type == 'peft':
+    if inference_conf  ig.load_type == 'peft':
         model_root = os.path.join(inference_config.saved_model_dir, inference_config.dataset)
         ckpt_dirs = get_subdirectories(model_root)
         for ckpt in sorted(ckpt_dirs):
