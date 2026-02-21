@@ -198,33 +198,41 @@ def load_fsdp_model_checkpoint(model, ckpt):
     model.load_state_dict(model_checkpoint)
     
 
-def save_merged_peft_model(model, base_model, output_dir):
+def save_merged_peft_model(model, base_model, output_dir, rank=0, enable_fsdp=False):
+    # 어댑터 저장: FSDP 가중치 수집을 위해 모든 rank가 참여해야 함
     model.save_pretrained(output_dir)
-    model_temp = AutoModelForCausalLM.from_pretrained(
-        base_model,
-        load_in_8bit=False,
-        torch_dtype=torch.float16,
-        device_map="cpu",
-        offload_folder="tmp", 
-    )
-    model_temp = PeftModel.from_pretrained(
-        model_temp, 
-        output_dir, 
-        torch_dtype=torch.float16,
-        device_map="cpu",
-        offload_folder="tmp",
-    )
-    
 
-    tokenizer = AutoTokenizer.from_pretrained(
-        base_model
-    )
-    model_temp = model_temp.merge_and_unload()
-    model_temp.save_pretrained(output_dir)
-    tokenizer.save_pretrained(output_dir)
-    del model_temp
-    del tokenizer
-    torch.cuda.empty_cache()
+    # 머지 작업: rank 0에서만 실행 (레이스 컨디션 방지)
+    if rank == 0:
+        model_temp = AutoModelForCausalLM.from_pretrained(
+            base_model,
+            load_in_8bit=False,
+            torch_dtype=torch.float16,
+            device_map="cpu",
+            offload_folder="tmp",
+        )
+        model_temp = PeftModel.from_pretrained(
+            model_temp,
+            output_dir,
+            torch_dtype=torch.float16,
+            device_map="cpu",
+            offload_folder="tmp",
+        )
+
+        tokenizer = AutoTokenizer.from_pretrained(
+            base_model
+        )
+        model_temp = model_temp.merge_and_unload()
+        model_temp.save_pretrained(output_dir)
+        tokenizer.save_pretrained(output_dir)
+        del model_temp
+        del tokenizer
+        torch.cuda.empty_cache()
+
+    # rank 0 머지 완료까지 대기
+    if enable_fsdp:
+        import torch.distributed as dist
+        dist.barrier()
 
 def load_peft_model_then_save(peft_model_ckpt, base_model, output_dir):
     model_temp = AutoModelForCausalLM.from_pretrained(
