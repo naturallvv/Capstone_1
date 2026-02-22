@@ -74,26 +74,23 @@ def main(**kwargs):
 
     rank_model = None
     rank_tokenizer = None
-    # model = load_model(inference_config.model_name, inference_config.quantization)
-    model = AutoModelForCausalLM.from_pretrained(
-        inference_config.model_name,
-        return_dict=True,
-        load_in_8bit=False,
-        device_map="auto",
-        low_cpu_mem_usage=True,
-    )
-    if inference_config.use_fast_kernels:
-        """
-        Setting 'use_fast_kernels' will enable
-        using of Flash Attention or Xformer memory-efficient kernels 
-        based on the hardware being used. This would speed up inference when used for batched inputs.
-        """
-        try:
-            from optimum.bettertransformer import BetterTransformer
-            model = model.to_bettertransformer()
-            # model = BetterTransformer.transform(model)   
-        except ImportError:
-            print("Module 'optimum' not found. Please install 'optimum' it before proceeding.")
+    # hf(vLLM) 경로에서는 base 모델을 GPU에 올리지 않음 (vLLM이 자체 로드)
+    if inference_config.load_type != 'hf':
+        model = AutoModelForCausalLM.from_pretrained(
+            inference_config.model_name,
+            return_dict=True,
+            load_in_8bit=False,
+            device_map="auto",
+            low_cpu_mem_usage=True,
+        )
+        if inference_config.use_fast_kernels:
+            try:
+                from optimum.bettertransformer import BetterTransformer
+                model = model.to_bettertransformer()
+            except ImportError:
+                print("Module 'optimum' not found. Please install 'optimum' it before proceeding.")
+    else:
+        model = None
     if inference_config.load_type == 'peft':
         model_root = os.path.join(inference_config.saved_model_dir, inference_config.dataset)
         ckpt_dirs = get_subdirectories(model_root)
