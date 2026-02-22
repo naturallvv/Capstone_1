@@ -3,9 +3,14 @@
 import os
 import json
 import torch
+import sys
 from torch.utils.data import Dataset, DataLoader
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from tqdm import tqdm
+
+ # ✅ 추가: 프로젝트 루트 경로 추가
+sys.path.append(os.path.join(os.path.dirname(__file__), '../../..'))
+from src.utils.tokenizer_utils import setup_tokenizer, resize_model_embeddings
 
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
@@ -22,23 +27,33 @@ class PromptDataset(Dataset):
 def load_model(model_name, quantization=False):
     print(f"[1] 모델 로드 중: {model_name}")
 
-    tokenizer = AutoTokenizer.from_pretrained(
-        model_name,
-        padding_side="left",
-        truncation_side="left",
-        trust_remote_code=True,
-        use_fast=True
-    )
-    tokenizer.pad_token = tokenizer.eos_token
+    # ✅ 새 코드
+    print("\n" + "="*60)
+    print("🔧 Setting up tokenizer...")
+    print("="*60)
+    tokenizer, model_family = setup_tokenizer(model_name, padding_side='left')
+    print("="*60 + "\n")
+
+    # truncation_side는 별도 설정 (setup_tokenizer에 없으므로)
+    tokenizer.truncation_side = "left"
+
+    # Quantization 설정
+    quantization_config = None
+    if quantization:
+        from transformers import BitsAndBytesConfig
+        quantization_config = BitsAndBytesConfig(load_in_8bit=True)
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="auto",
         torch_dtype="auto",
-        load_in_8bit=quantization,
         low_cpu_mem_usage=True,
         trust_remote_code=True
     )
+    # ✅ 추가: embedding 크기 조정
+    print("\n🔧 Checking token embeddings...")
+    model = resize_model_embeddings(model, tokenizer, model_family)
+    print("="*60 + "\n")
     model.eval()
 
     print("[2] 모델 로드 완료")

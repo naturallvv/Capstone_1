@@ -202,7 +202,7 @@ def save_merged_peft_model(model, base_model, output_dir):
     model.save_pretrained(output_dir)
     model_temp = AutoModelForCausalLM.from_pretrained(
         base_model,
-        load_in_8bit=False,
+       # load_in_8bit=False,
         torch_dtype=torch.float16,
         device_map="cpu",
         offload_folder="tmp", 
@@ -229,7 +229,7 @@ def save_merged_peft_model(model, base_model, output_dir):
 def load_peft_model_then_save(peft_model_ckpt, base_model, output_dir):
     model_temp = AutoModelForCausalLM.from_pretrained(
         base_model,
-        load_in_8bit=False,
+        #load_in_8bit=False,
         torch_dtype="auto",
         device_map="cpu",
         offload_folder="tmp", 

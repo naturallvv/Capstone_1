@@ -42,6 +42,7 @@ from src.utils.train_utils import (
     print_model_size,
     get_policies
 )
+from src.utils.tokenizer_utils import setup_tokenizer, resize_model_embeddings
 
 from setproctitle import setproctitle
 
@@ -56,6 +57,7 @@ def main(**kwargs):
     train_cfg_ins = train_config()
     inference_cfg_ins = inference_config()
     update_config((train_cfg_ins, inference_cfg_ins), **kwargs)
+
 
     # Set the seeds for reproducibility
     torch.cuda.manual_seed(train_config.seed)
@@ -79,12 +81,11 @@ def main(**kwargs):
 
     # Load the tokenizer and add special tokens
     # pretrain tokenizer load
-    tokenizer = AutoTokenizer.from_pretrained(train_config.model_name, padding_side='left')
-    tokenizer.add_special_tokens(
-            {
-                "pad_token": "<PAD>",
-            }
-        )
+    print("\n" + "="*60)
+    print("🔧 Setting up tokenizer...")
+    print("="*60)
+    tokenizer, model_family = setup_tokenizer(train_config.model_name, padding_side='left')
+    print("="*60 + "\n")
     dataset_config = generate_dataset_config(train_config, kwargs)
 
      # Load and preprocess the dataset for training and validation
@@ -178,11 +179,12 @@ def main(**kwargs):
                             "please install latest nightly.")
         if rank == 0:
             model = AutoModelForCausalLM.from_pretrained(
-                train_config.model_name,
-                load_in_8bit=True if train_config.quantization else None,
-                device_map="auto" if train_config.quantization else None,
-                use_cache=use_cache,
-            )
+            train_config.model_name,
+            use_cache=use_cache,
+            torch_dtype=torch.bfloat16,   # ✅ 1
+            low_cpu_mem_usage=True,       # ✅ 2
+        )
+
         else:
             llama_config = AutoConfig.from_pretrained(train_config.model_name)
             llama_config.use_cache = use_cache
@@ -192,18 +194,17 @@ def main(**kwargs):
     else:
         model = AutoModelForCausalLM.from_pretrained(
             train_config.model_name,
-            # None
-            load_in_8bit=True if train_config.quantization else None,
-            # None
-            device_map="auto" if train_config.quantization else None,
             use_cache=use_cache,
         )
+        
+        # Embedding layer 크기 조정
+        print("\n🔧 Checking token embeddings...")
+        model = resize_model_embeddings(model, tokenizer, model_family)
+        print("="*60 + "\n")
         # 안걸림
         if 'dpo' in train_config.dataset:
             ref_model = AutoModelForCausalLM.from_pretrained(
                 train_config.ref_model_name,
-                load_in_8bit=True if train_config.quantization else None,
-                device_map="auto" if train_config.quantization else None,
                 use_cache=use_cache,
             )
         # 여기 걸림
@@ -255,10 +256,10 @@ def main(**kwargs):
         elif train_config.ckpt_continue is not None and not os.path.exists(os.path.join(train_config.ckpt_continue, 'adapter_model.bin')):
             model = AutoModelForCausalLM.from_pretrained(
                 train_config.ckpt_continue,
-                load_in_8bit=True if train_config.quantization else None,
-                device_map="auto" if train_config.quantization else None,
                 use_cache=use_cache,
             )
+            model = resize_model_embeddings(model, tokenizer, model_family)
+            
             peft_config = generate_peft_config(train_config, kwargs)
             model = get_peft_model(model, peft_config)
             current_epoch = int(train_config.ckpt_continue.split('/')[-1].split('-')[-1])

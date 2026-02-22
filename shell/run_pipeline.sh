@@ -19,10 +19,8 @@
 #   "meta-llama/Llama-2-13b-hf"
 # TinyLlama
 #   "TinyLlama/TinyLlama_v1.1"
-# Mistral 3
-#   "mistralai/Ministral-3-3B-Base-2512"
-#   "mistralai/Ministral-3-8B-Base-2512"
-#   "mistralai/Ministral-3-14B-Base-2512"
+# Mistral
+#   "mistralai/Mistral-7B-v0.1"
 # Qwen 3
 #   "Qwen/Qwen3-0.6B"
 #   "Qwen/Qwen3-1.7B"
@@ -34,6 +32,9 @@
 #   "microsoft/phi-4"
 
 set -e  # 에러 발생 시 즉시 종료
+
+export HF_HUB_DISABLE_TELEMETRY=1
+export TRANSFORMERS_VERBOSITY=error
 
 cd '../'  # 프로젝트 루트로 이동 (run_sft.sh, run_krsl.sh와 동일)
 
@@ -49,7 +50,7 @@ fi
 MODEL_NAME="$1"
 STAGE="$2"
 MODEL_SHORT="${MODEL_NAME##*/}"
-
+ 
 # SFT는 무조건 epoch 15 사용, KRSL은 20 에폭 학습 후 eval로 best epoch 자동 선택
 SFT_LOAD_EPOCH=15
 KRSL_NUM_EPOCHS=20
