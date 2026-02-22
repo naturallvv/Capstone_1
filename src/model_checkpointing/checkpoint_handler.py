@@ -199,10 +199,15 @@ def load_fsdp_model_checkpoint(model, ckpt):
     
 
 def save_merged_peft_model(model, base_model, output_dir, rank=0, enable_fsdp=False):
-    # 어댑터 저장: FSDP 가중치 수집을 위해 모든 rank가 참여해야 함
-    model.save_pretrained(output_dir)
+    # 어댑터 저장: 모든 rank가 FSDP state_dict 수집에 참여하되,
+    # is_main_process=False로 rank 0만 실제 파일을 쓰게 함 (동시 쓰기 race condition 방지)
+    model.save_pretrained(output_dir, is_main_process=(rank == 0))
 
-    # 머지 작업: rank 0에서만 실행 (레이스 컨디션 방지)
+    # 모든 rank의 저장 완료 대기
+    if enable_fsdp:
+        dist.barrier()
+
+    # 머지 작업: rank 0에서만 실행
     if rank == 0:
         model_temp = AutoModelForCausalLM.from_pretrained(
             base_model,
@@ -231,7 +236,6 @@ def save_merged_peft_model(model, base_model, output_dir, rank=0, enable_fsdp=Fa
 
     # rank 0 머지 완료까지 대기
     if enable_fsdp:
-        import torch.distributed as dist
         dist.barrier()
 
 def load_peft_model_then_save(peft_model_ckpt, base_model, output_dir):
