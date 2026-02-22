@@ -6,18 +6,24 @@
 cd '../'
 
 # ==================== Arguments ====================
-MODEL_NAME=${1:-"meta-llama/Llama-3.2-1B"}
-STUDENT=${2:-"A"}
-STAGE_NUM=${3:-1}
-PREV_EPOCH=${4:-15}
+if [ $# -lt 4 ]; then
+    echo "Usage: ./run_krsl.sh [MODEL_NAME] [STUDENT] [STAGE_NUM] [PREV_EPOCH] [KRSL_DATA] [KRSL_WEIGHT]"
+    echo "Example: ./run_krsl.sh \"TinyLlama/TinyLlama_v1.1\" A 1 15 \"./data.json\" \"./weight.pkl\""
+    exit 1
+fi
+
+MODEL_NAME="$1"      # 필수 인자 (기본값 제거)
+STUDENT="$2"         # 필수 인자 (기본값 제거)
+STAGE_NUM="$3"       # 필수 인자 (기본값 제거)
+PREV_EPOCH="$4"      # 필수 인자 (기본값 제거)
 MODEL_SHORT="${MODEL_NAME##*/}"
 
-# ==================== Previous stage model path ====================
+# ==================== Checkpoint path ====================
 if [ "$STAGE_NUM" -eq 1 ]; then
-    model_name="../slm/hf/${MODEL_SHORT}/${STUDENT}/sft/epoch-${PREV_EPOCH}"
+    checkpoint_path="../slm/hf/${MODEL_SHORT}/${STUDENT}/sft/epoch-${PREV_EPOCH}"
 else
     PREV_STAGE=$((STAGE_NUM - 1))
-    model_name="../slm/hf/${MODEL_SHORT}/${STUDENT}/stage${PREV_STAGE}/epoch-${PREV_EPOCH}"
+    checkpoint_path="../slm/hf/${MODEL_SHORT}/${STUDENT}/stage${PREV_STAGE}/epoch-${PREV_EPOCH}"
 fi
 
 stage="stage${STAGE_NUM}"
@@ -49,9 +55,8 @@ dpo_loss_type='sigmoid' # for dpo, no use
 refine_it=0
 save_type="hf"
 output_dir="../slm/${save_type}/${MODEL_SHORT}"
-ckpt_continue=None
+ckpt_continue="$checkpoint_path"  # ← 수정: None → checkpoint_path
 max_words=1024
-num_epochs=20
 
 # ==================== 모델 크기별 배치 사이즈 자동 설정 ====================
 PARAM_SIZE=$(echo "$MODEL_NAME" | grep -oiE '[0-9]+\.?[0-9]*b' | tail -1 | sed 's/[bB]$//')
@@ -129,11 +134,11 @@ mkdir -p "$log_dir"
 log_file="${log_dir}/log.txt"
 
 # ==================== Run ====================
-export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7,8,9"
-torchrun --nnodes 1 --nproc_per_node 10 --master-port 29828 ./finetuning.py \
+export CUDA_VISIBLE_DEVICES="2,3,4,5,6"
+torchrun --nnodes 1 --nproc_per_node 5 --master-port 29828 ./finetuning.py \
     --max_words $max_words \
     --enable_fsdp $enable_fsdp \
-    --model_name "$model_name" \
+    --model_name "$MODEL_NAME" \
     --low_cpu_fsdp $low_cpu_fsdp \
     --run_validation $run_validation \
     --batch_size_training $batch_size_training \

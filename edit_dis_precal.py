@@ -4,7 +4,7 @@
 --data-file, --model-name, --max-words 를 CLI 인자로 받는다.
 출력: 입력 파일의 .json → _precal.pkl 자동 변환.
 """
-
+import sys  # ✅ 추가
 from transformers import AutoTokenizer
 import json
 import torch
@@ -14,6 +14,10 @@ import pickle
 import argparse
 import os
 
+# ✅ 추가: 프로젝트 루트 경로 추가
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+from src.datasets.utils import custom_tokenize
+from src.utils.tokenizer_utils import setup_tokenizer  # ✅ 추가 (resize는 필요 없음, 추론 안함)
 
 def levenshtein_operations_tokens(s1_tokens, s2_tokens):
     # 공통 접두사 최적화
@@ -91,9 +95,12 @@ def main():
     model_name = args.model_name
     max_words = args.max_words
 
-    # 토크나이저 로드
-    tokenizer = AutoTokenizer.from_pretrained(model_name, padding_side='left')
-    tokenizer.add_special_tokens({"pad_token": "<PAD>"})
+    # ✅ 새 코드
+    print("\n" + "="*60)
+    print("🔧 Setting up tokenizer...")
+    print("="*60)
+    tokenizer, model_family = setup_tokenizer(model_name, padding_side='left')
+    print("="*60 + "\n")
 
     with open(data_file, "r", encoding="utf-8") as json_file:
         data = json.load(json_file)

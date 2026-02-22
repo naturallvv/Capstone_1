@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-
+from typing import Optional
 
 @dataclass
 class inference_config:
-    model_name: str="PATH/to/LLAMA/7B"
+    model_name: Optional[str] = None
     peft_model: str=None,
     quantization: bool=False,
     max_words: int=150

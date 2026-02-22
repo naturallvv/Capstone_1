@@ -6,8 +6,14 @@
 cd '../'
 
 # ==================== Arguments ====================
-MODEL_NAME=${1:-"meta-llama/Llama-3.2-1B"}
-STUDENT=${2:-"A"}
+if [ $# -lt 2 ]; then
+    echo "Usage: ./run_sft.sh [MODEL_NAME] [STUDENT]"
+    echo "Example: ./run_sft.sh \"TinyLlama/TinyLlama_v1.1\" A"
+    exit 1
+fi
+
+MODEL_NAME="$1"      # 필수 인자
+STUDENT="$2"         # 필수 인자
 MODEL_SHORT="${MODEL_NAME##*/}"
 
 # ==================== Training Config ====================
@@ -104,8 +110,8 @@ mkdir -p "$log_dir"
 log_file="${log_dir}/log.txt"
 
 # ==================== Run ====================
-export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7,8,9"
-torchrun --nnodes 1 --nproc_per_node 10 --master-port 29506 ./finetuning.py \
+export CUDA_VISIBLE_DEVICES="4,5,6"
+torchrun --nnodes 1 --nproc_per_node 3 --master-port 29506 ./finetuning.py \
     --max_words $max_words \
     --enable_fsdp $enable_fsdp \
     --model_name "$model_name" \

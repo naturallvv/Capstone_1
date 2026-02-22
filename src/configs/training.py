@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-
+from typing import Optional
 
 @dataclass
 class train_config:
-    model_name: str="PATH/to/LLAMA/7B"
+    model_name: Optional[str] = None
     enable_fsdp: bool=False
     low_cpu_fsdp: bool=False
     run_validation: bool=True
