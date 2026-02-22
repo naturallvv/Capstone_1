@@ -48,7 +48,8 @@ def load_model(model_name, quantization=False):
         device_map="auto",
         torch_dtype="auto",
         low_cpu_mem_usage=True,
-        trust_remote_code=True
+        trust_remote_code=True,
+        quantization_config=quantization_config
     )
     # ✅ 추가: embedding 크기 조정
     print("\n🔧 Checking token embeddings...")

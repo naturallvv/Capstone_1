@@ -195,8 +195,9 @@ def main(**kwargs):
         model = AutoModelForCausalLM.from_pretrained(
             train_config.model_name,
             use_cache=use_cache,
+            torch_dtype=torch.bfloat16,
         )
-        
+
         # Embedding layer 크기 조정
         print("\n🔧 Checking token embeddings...")
         model = resize_model_embeddings(model, tokenizer, model_family)
@@ -257,6 +258,7 @@ def main(**kwargs):
             model = AutoModelForCausalLM.from_pretrained(
                 train_config.ckpt_continue,
                 use_cache=use_cache,
+                torch_dtype=torch.bfloat16,
             )
             model = resize_model_embeddings(model, tokenizer, model_family)
             

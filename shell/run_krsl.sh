@@ -18,12 +18,12 @@ STAGE_NUM="$3"       # 필수 인자 (기본값 제거)
 PREV_EPOCH="$4"      # 필수 인자 (기본값 제거)
 MODEL_SHORT="${MODEL_NAME##*/}"
 
-# ==================== Checkpoint path ====================
+# ==================== Previous stage model path ====================
 if [ "$STAGE_NUM" -eq 1 ]; then
-    checkpoint_path="../slm/hf/${MODEL_SHORT}/${STUDENT}/sft/epoch-${PREV_EPOCH}"
+    model_name="../slm/hf/${MODEL_SHORT}/${STUDENT}/sft/epoch-${PREV_EPOCH}"
 else
     PREV_STAGE=$((STAGE_NUM - 1))
-    checkpoint_path="../slm/hf/${MODEL_SHORT}/${STUDENT}/stage${PREV_STAGE}/epoch-${PREV_EPOCH}"
+    model_name="../slm/hf/${MODEL_SHORT}/${STUDENT}/stage${PREV_STAGE}/epoch-${PREV_EPOCH}"
 fi
 
 stage="stage${STAGE_NUM}"
@@ -55,8 +55,9 @@ dpo_loss_type='sigmoid' # for dpo, no use
 refine_it=0
 save_type="hf"
 output_dir="../slm/${save_type}/${MODEL_SHORT}"
-ckpt_continue="$checkpoint_path"  # ← 수정: None → checkpoint_path
+ckpt_continue=None
 max_words=1024
+num_epochs=20
 
 # ==================== 모델 크기별 배치 사이즈 자동 설정 ====================
 PARAM_SIZE=$(echo "$MODEL_NAME" | grep -oiE '[0-9]+\.?[0-9]*b' | tail -1 | sed 's/[bB]$//')
@@ -134,11 +135,11 @@ mkdir -p "$log_dir"
 log_file="${log_dir}/log.txt"
 
 # ==================== Run ====================
-export CUDA_VISIBLE_DEVICES="2,3,4,5,6"
-torchrun --nnodes 1 --nproc_per_node 5 --master-port 29828 ./finetuning.py \
+export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7,8,9"
+torchrun --nnodes 1 --nproc_per_node 10 --master-port 29828 ./finetuning.py \
     --max_words $max_words \
     --enable_fsdp $enable_fsdp \
-    --model_name "$MODEL_NAME" \
+    --model_name "$model_name" \
     --low_cpu_fsdp $low_cpu_fsdp \
     --run_validation $run_validation \
     --batch_size_training $batch_size_training \

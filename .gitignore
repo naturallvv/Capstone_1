@@ -12,7 +12,10 @@
 # ====================
 # Claude Code instructions
 # ====================
-CLAUDE.md__pycache__/
-*.pyc
+CLAUDE.md
+
+# ====================
+# Python
+# ====================
 __pycache__/
 *.pyc
