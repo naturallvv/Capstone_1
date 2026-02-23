@@ -118,12 +118,42 @@ print(best_epoch)
 "
 }
 
+# ==================== 유틸: 스테이지 완료 여부 확인 (eval 결과 기반) ====================
+is_stage_complete() {
+    local STAGE_NUM="$1"
+    local STAGE_DIR_CHK_A="../slm/hf/${MODEL_SHORT}/A/stage${STAGE_NUM}"
+    local STAGE_DIR_CHK_B="../slm/hf/${MODEL_SHORT}/B/stage${STAGE_NUM}"
+
+    # A, B 모두 find_best_epoch이 유효해야 완료
+    local EP_A=$(find_best_epoch "$STAGE_DIR_CHK_A")
+    local EP_B=$(find_best_epoch "$STAGE_DIR_CHK_B")
+
+    if [ "$EP_A" -gt 0 ] 2>/dev/null && [ "$EP_B" -gt 0 ] 2>/dev/null; then
+        return 0  # 완료
+    else
+        return 1  # 미완료
+    fi
+}
+
 echo "============================================"
 echo "Pipeline: ${MODEL_SHORT}, Stage ${STAGE}"
 echo "  SFT load epoch:  ${SFT_LOAD_EPOCH} (고정)"
 echo "  KRSL epochs:     20 (학습 후 eval로 best 자동 선택)"
 echo "  Pipeline dir:    ${PIPELINE_DIR}"
 echo "============================================"
+
+# ==================== 스테이지 완료 확인 (eval 결과 기반) ====================
+if is_stage_complete "$STAGE"; then
+    echo ""
+    echo "[SKIP] Stage ${STAGE} 이미 완료 (eval 결과 존재)"
+    STAGE_DIR_A="../slm/hf/${MODEL_SHORT}/A/stage${STAGE}"
+    STAGE_DIR_B="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}"
+    BEST_EPOCH_A=$(find_best_epoch "$STAGE_DIR_A")
+    BEST_EPOCH_B=$(find_best_epoch "$STAGE_DIR_B")
+    echo "  Best epoch: A=epoch-${BEST_EPOCH_A}, B=epoch-${BEST_EPOCH_B}"
+    echo "============================================"
+    exit 0
+fi
 
 # ==================== Stage 1이면 SFT 먼저 실행 ====================
 if [ "$STAGE" -eq 1 ]; then
@@ -312,23 +342,35 @@ fi
 echo "[데이터 준비] A, B 모두 완료."
 
 # ==================== KRSL 학습 ====================
+# 스킵 조건: epoch 디렉토리 존재 + eval 결과 존재 (둘 다 만족해야 스킵)
+# epoch만 있고 eval 없으면 = 학습 중간에 끊긴 것 → 다시 학습
 WORK_A="${PIPELINE_DIR}/stage${STAGE}/A"
 WORK_B="${PIPELINE_DIR}/stage${STAGE}/B"
 
-KRSL_A_FINAL="../slm/hf/${MODEL_SHORT}/A/stage${STAGE}/epoch-${KRSL_NUM_EPOCHS}"
-KRSL_B_FINAL="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}/epoch-${KRSL_NUM_EPOCHS}"
+KRSL_DIR_A="../slm/hf/${MODEL_SHORT}/A/stage${STAGE}"
+KRSL_DIR_B="../slm/hf/${MODEL_SHORT}/B/stage${STAGE}"
+
+# 해당 학생의 KRSL 학습+eval이 모두 완료되었는지 확인
+is_krsl_done() {
+    local DIR="$1"
+    # epoch 디렉토리가 1개라도 있어야 함
+    ls -d "${DIR}"/epoch-* >/dev/null 2>&1 || return 1
+    # eval 결과도 있어야 함 (4개 벤치마크 중 1개라도)
+    ls "${DIR}"/results/*/epoch-*-eval_result.json >/dev/null 2>&1 || return 1
+    return 0
+}
 
 echo ""
-if [ -d "$KRSL_A_FINAL" ]; then
-    echo "[SKIP] KRSL Student A (${KRSL_A_FINAL} 이미 존재)"
+if is_krsl_done "$KRSL_DIR_A"; then
+    echo "[SKIP] KRSL Student A (학습+eval 완료: ${KRSL_DIR_A})"
 else
     echo "[KRSL] Student A 학습 (epoch-${LOAD_EPOCH_A} 로드)..."
     cd shell && ./run_krsl.sh "$MODEL_NAME" A "$STAGE" "$LOAD_EPOCH_A" \
         "${WORK_A}/filtered.json" "${WORK_A}/filtered_precal.pkl" && cd ../
 fi
 
-if [ -d "$KRSL_B_FINAL" ]; then
-    echo "[SKIP] KRSL Student B (${KRSL_B_FINAL} 이미 존재)"
+if is_krsl_done "$KRSL_DIR_B"; then
+    echo "[SKIP] KRSL Student B (학습+eval 완료: ${KRSL_DIR_B})"
 else
     echo "[KRSL] Student B 학습 (epoch-${LOAD_EPOCH_B} 로드)..."
     cd shell && ./run_krsl.sh "$MODEL_NAME" B "$STAGE" "$LOAD_EPOCH_B" \
