@@ -1,7 +1,7 @@
-W0222 07:34:51.398000 3488124 site-packages/torch/distributed/run.py:803] 
-W0222 07:34:51.398000 3488124 site-packages/torch/distributed/run.py:803] *****************************************
-W0222 07:34:51.398000 3488124 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0222 07:34:51.398000 3488124 site-packages/torch/distributed/run.py:803] *****************************************
+W0223 05:31:20.006000 833352 site-packages/torch/distributed/run.py:803] 
+W0223 05:31:20.006000 833352 site-packages/torch/distributed/run.py:803] *****************************************
+W0223 05:31:20.006000 833352 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0223 05:31:20.006000 833352 site-packages/torch/distributed/run.py:803] *****************************************
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   from pkg_resources import packaging
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
@@ -42,6 +42,27 @@ W0222 07:34:51.398000 3488124 site-packages/torch/distributed/run.py:803] ******
   from torch.distributed._shard.checkpoint import (
 /ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
   from torch.distributed._shard.checkpoint import (
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 6
+rank 6
+world size 10
 Warning: unknown parameter fsdp_activation_checkpointing
 Warning: unknown parameter pure_bf16
 Warning: unknown parameter optimizer
@@ -62,69 +83,6 @@ Warning: unknown parameter enable_salesforce_content_safety
 Warning: unknown parameter max_padding_length
 local rank 4
 rank 4
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 8
-rank 8
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 1
-rank 1
-world size 10
-local rank 9
-rank 9
 world size 10
 Warning: unknown parameter fsdp_activation_checkpointing
 Warning: unknown parameter pure_bf16
@@ -165,8 +123,8 @@ Warning: unknown parameter enable_azure_content_safety
 Warning: unknown parameter enable_sensitive_topics
 Warning: unknown parameter enable_salesforce_content_safety
 Warning: unknown parameter max_padding_length
-local rank 7
-rank 7
+local rank 8
+rank 8
 world size 10
 Warning: unknown parameter fsdp_activation_checkpointing
 Warning: unknown parameter pure_bf16
@@ -186,8 +144,29 @@ Warning: unknown parameter enable_azure_content_safety
 Warning: unknown parameter enable_sensitive_topics
 Warning: unknown parameter enable_salesforce_content_safety
 Warning: unknown parameter max_padding_length
-local rank 6
-rank 6
+local rank 9
+rank 9
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 1
+rank 1
 world size 10
 Warning: unknown parameter fsdp_activation_checkpointing
 Warning: unknown parameter pure_bf16
@@ -210,6 +189,9 @@ Warning: unknown parameter max_padding_length
 local rank 0
 rank 0
 world size 10
+Clearing GPU cache for all ranks
+--> Running with torch dist debug set to detail
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
 Warning: unknown parameter fsdp_activation_checkpointing
 Warning: unknown parameter pure_bf16
 Warning: unknown parameter optimizer
@@ -231,9 +213,34 @@ Warning: unknown parameter max_padding_length
 local rank 2
 rank 2
 world size 10
-Clearing GPU cache for all ranks
---> Running with torch dist debug set to detail
-Warning: unknown parameter fsdp_activation_checkpointing
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:  16%|[37m█▋        [0m| 204/1254 [00:00<00:00, 2039.49it/s]load krsl weights:  18%|[37m█▊        [0m| 220/1254 [00:00<00:00, 2197.93it/s]load krsl weights:  18%|[37m█▊        [0m| 223/1254 [00:00<00:00, 2226.78it/s]Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 7
+rank 7
+world size 10
+load krsl weights:  12%|[37m█▏        [0m| 149/1254 [00:00<00:00, 1485.93it/s]load krsl weights:  17%|[37m█▋        [0m| 207/1254 [00:00<00:00, 2068.30it/s]load krsl weights:  12%|[37m█▏        [0m| 150/1254 [00:00<00:00, 1496.61it/s]load krsl weights:  12%|[37m█▏        [0m| 151/1254 [00:00<00:00, 1507.61it/s]load krsl weights:  41%|[37m████      [0m| 509/1254 [00:00<00:00, 2631.41it/s]load krsl weights:  42%|[37m████▏     [0m| 526/1254 [00:00<00:00, 2703.08it/s]Warning: unknown parameter fsdp_activation_checkpointing
 Warning: unknown parameter pure_bf16
 Warning: unknown parameter optimizer
 Warning: unknown parameter peft_model
@@ -254,100 +261,18 @@ Warning: unknown parameter max_padding_length
 local rank 5
 rank 5
 world size 10
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:  17%|[37m█▋        [0m| 212/1254 [00:00<00:00, 2116.08it/s]load krsl weights:  18%|[37m█▊        [0m| 223/1254 [00:00<00:00, 2228.00it/s]load krsl weights:  16%|[37m█▌        [0m| 200/1254 [00:00<00:00, 1998.54it/s]load krsl weights:  16%|[37m█▌        [0m| 196/1254 [00:00<00:00, 1956.08it/s]load krsl weights:  16%|[37m█▌        [0m| 200/1254 [00:00<00:00, 1979.59it/s]load krsl weights:  16%|[37m█▌        [0m| 202/1254 [00:00<00:00, 2014.01it/s]load krsl weights:  16%|[37m█▌        [0m| 201/1254 [00:00<00:00, 2006.95it/s]load krsl weights:  16%|[37m█▌        [0m| 202/1254 [00:00<00:00, 2019.24it/s]load krsl weights:  15%|[37m█▌        [0m| 193/1254 [00:00<00:00, 1928.35it/s]load krsl weights:  41%|[37m████▏     [0m| 518/1254 [00:00<00:00, 2668.07it/s]load krsl weights:  42%|[37m████▏     [0m| 532/1254 [00:00<00:00, 2734.27it/s]load krsl weights:  40%|[37m████      [0m| 507/1254 [00:00<00:00, 2627.36it/s]load krsl weights:  39%|[37m███▉      [0m| 489/1254 [00:00<00:00, 2524.10it/s]load krsl weights:  40%|[37m████      [0m| 503/1254 [00:00<00:00, 2593.19it/s]load krsl weights:  40%|[37m████      [0m| 507/1254 [00:00<00:00, 2622.18it/s]load krsl weights:  41%|[37m████      [0m| 508/1254 [00:00<00:00, 2629.25it/s]load krsl weights:  41%|[37m████      [0m| 510/1254 [00:00<00:00, 2642.42it/s]load krsl weights:  39%|[37m███▉      [0m| 493/1254 [00:00<00:00, 2555.66it/s]load krsl weights:  66%|[37m██████▌   [0m| 829/1254 [00:00<00:00, 2868.12it/s]load krsl weights:  67%|[37m██████▋   [0m| 839/1254 [00:00<00:00, 2885.13it/s]load krsl weights:  65%|[37m██████▌   [0m| 821/1254 [00:00<00:00, 2858.97it/s]load krsl weights:  63%|[37m██████▎   [0m| 796/1254 [00:00<00:00, 2772.17it/s]load krsl weights:  65%|[37m██████▌   [0m| 817/1254 [00:00<00:00, 2840.68it/s]load krsl weights:  65%|[37m██████▌   [0m| 818/1254 [00:00<00:00, 2843.45it/s]load krsl weights:  65%|[37m██████▍   [0m| 812/1254 [00:00<00:00, 2813.24it/s]load krsl weights:  66%|[37m██████▌   [0m| 823/1254 [00:00<00:00, 2863.47it/s]load krsl weights:  64%|[37m██████▍   [0m| 804/1254 [00:00<00:00, 2805.09it/s]load krsl weights:  91%|[37m█████████ [0m| 1137/1254 [00:00<00:00, 2948.07it/s]load krsl weights:  91%|[37m█████████ [0m| 1138/1254 [00:00<00:00, 2924.93it/s]load krsl weights:  90%|[37m█████████ [0m| 1130/1254 [00:00<00:00, 2949.06it/s]load krsl weights:  88%|[37m████████▊ [0m| 1101/1254 [00:00<00:00, 2879.12it/s]load krsl weights:  90%|[37m████████▉ [0m| 1125/1254 [00:00<00:00, 2931.65it/s]load krsl weights:  90%|[37m████████▉ [0m| 1123/1254 [00:00<00:00, 2922.44it/s]load krsl weights:  90%|[37m█████████ [0m| 1129/1254 [00:00<00:00, 2940.27it/s]load krsl weights:  88%|[37m████████▊ [0m| 1105/1254 [00:00<00:00, 2857.98it/s]load krsl weights:  88%|[37m████████▊ [0m| 1107/1254 [00:00<00:00, 2892.60it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2848.60it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2856.22it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2843.15it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2827.25it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2845.10it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2783.34it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2828.50it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2797.69it/s]
-load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2790.81it/s]
+load krsl weights:  42%|[37m████▏     [0m| 528/1254 [00:00<00:00, 2709.56it/s]load krsl weights:  29%|[37m██▉       [0m| 363/1254 [00:00<00:00, 1867.92it/s]load krsl weights:  40%|[37m████      [0m| 507/1254 [00:00<00:00, 2611.30it/s]load krsl weights:  29%|[37m██▉       [0m| 364/1254 [00:00<00:00, 1873.22it/s]load krsl weights:  29%|[37m██▉       [0m| 367/1254 [00:00<00:00, 1888.84it/s]load krsl weights:  65%|[37m██████▍   [0m| 810/1254 [00:00<00:00, 2803.25it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:  66%|[37m██████▌   [0m| 828/1254 [00:00<00:00, 2846.13it/s]load krsl weights:  66%|[37m██████▋   [0m| 833/1254 [00:00<00:00, 2862.23it/s]load krsl weights:  46%|[37m████▌     [0m| 573/1254 [00:00<00:00, 1973.18it/s]load krsl weights:  65%|[37m██████▍   [0m| 815/1254 [00:00<00:00, 2822.85it/s]load krsl weights:  46%|[37m████▌     [0m| 576/1254 [00:00<00:00, 1983.78it/s]load krsl weights:  46%|[37m████▋     [0m| 580/1254 [00:00<00:00, 1998.69it/s]load krsl weights:  89%|[37m████████▉ [0m| 1120/1254 [00:00<00:00, 2918.11it/s]load krsl weights:  91%|[37m█████████ [0m| 1142/1254 [00:00<00:00, 2960.71it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:  91%|[37m█████████ [0m| 1139/1254 [00:00<00:00, 2939.47it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2812.39it/s]
+load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2852.28it/s]
 --> Training Set Length = 1254
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
-load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:  12%|[37m█▏        [0m| 153/1254 [00:00<00:00, 1529.80it/s]load krsl weights:  29%|[37m██▉       [0m| 369/1254 [00:00<00:00, 1898.80it/s]load krsl weights:  46%|[37m████▋     [0m| 583/1254 [00:00<00:00, 2005.83it/s]load krsl weights:  64%|[37m██████▍   [0m| 802/1254 [00:00<00:00, 2076.84it/s]load krsl weights:  81%|[37m████████▏ [0m| 1022/1254 [00:00<00:00, 2120.14it/s]load krsl weights:  99%|[37m█████████▉[0m| 1241/1254 [00:00<00:00, 2143.64it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2060.83it/s]
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:24<00:24, 24.47s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.98s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.95s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.96s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:26<00:26, 26.98s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:32<00:00, 14.59s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:32<00:00, 16.45s/it]
-train cfg ckpt_continue: None
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.69s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.89s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.70s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.69s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.69s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.69s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:32<00:00, 14.61s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:32<00:00, 16.09s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.69s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.89s/it]train cfg ckpt_continue: None
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.70s/it]
-Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 14.88s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:33<00:00, 16.69s/it]
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
---> Model ../slm/hf/Llama-3.2-3B/A/sft/epoch-15
-
---> ../slm/hf/Llama-3.2-3B/A/sft/epoch-15 has 3212.749824 Million params
-
-train cfg ckpt_continue: None
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-to fsdp
-trainable params: 18,350,080 || all params: 3,231,099,904 || trainable%: 0.5679
-bFloat16 enabled for mixed precision - using bfSixteen policy
-to fsdp
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/2 [00:00<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.03909749537706375):   0%|[34m          [0m| 0/2 [00:25<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.0300113707780838):   0%|[34m          [0m| 0/2 [00:25<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.035319045186042786):   0%|[34m          [0m| 0/2 [00:26<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.04707367345690727):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.052873317152261734):   0%|[34m          [0m| 0/2 [00:26<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.03148417919874191):   0%|[34m          [0m| 0/2 [00:26<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.05365770310163498):   0%|[34m          [0m| 0/2 [00:25<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.06014644354581833):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.03961120918393135):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]Training Epoch: 1/20, step 0/16 completed (loss: 0.03914499655365944):   0%|[34m          [0m| 0/2 [00:27<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.021384138613939285):   0%|[34m          [0m| 0/2 [00:47<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.036976441740989685):   0%|[34m          [0m| 0/2 [00:47<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.04729050397872925):   0%|[34m          [0m| 0/2 [00:48<?, ?it/s] Training Epoch: 1/20, step 1/16 completed (loss: 0.03221641108393669):   0%|[34m          [0m| 0/2 [00:46<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.024317704141139984):   0%|[34m          [0m| 0/2 [00:46<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.03393784910440445):   0%|[34m          [0m| 0/2 [00:48<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.06693030148744583):   0%|[34m          [0m| 0/2 [00:48<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.02781136892735958):   0%|[34m          [0m| 0/2 [00:48<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.04841044545173645):   0%|[34m          [0m| 0/2 [00:48<?, ?it/s]Training Epoch: 1/20, step 1/16 completed (loss: 0.05587862432003021):   0%|[34m          [0m| 0/2 [00:48<?, ?it/s]Training Epoch: 1/20, step 2/16 completed (loss: 0.02669469825923443):   0%|[34m          [0m| 0/2 [01:10<?, ?it/s]Training Epoch: 1/20, step 2/16 completed (loss: 0.0245412215590477):   0%|[34m          [0m| 0/2 [01:10<?, ?it/s] Training Epoch: 1/20, step 2/16 completed (loss: 0.054943401366472244):   0%|[34m          [0m| 0/2 [01:10<?, ?it/s]Training Epoch: 1/20, step 2/16 completed (loss: 0.05202436074614525):   0%|[34m          [0m| 0/2 [01:10<?, ?it/s]Training Epoch: 1/20, step 2/16 completed (loss: 0.07210604101419449):   0%|[34m          [0m| 0/2 [01:08<?, ?it/s] Training Epoch: 1/20, step 2/16 completed (loss: 0.04793958365917206):   0%|[34m          [0m| 0/2 [01:10<?, ?it/s]Training Epoch: 1/20, step 2/16 completed (loss: 0.02436763048171997):   0%|[34m          [0m| 0/2 [01:09<?, ?it/s] Training Epoch: 1/20, step 2/16 completed (loss: 0.06462231278419495):   0%|[34m          [0m| 0/2 [01:09<?, ?it/s] Training Epoch: 1/20, step 2/16 completed (loss: 0.03629593178629875):   0%|[34m          [0m| 0/2 [01:08<?, ?it/s]Training Epoch: 1/20, step 2/16 completed (loss: 0.06858612596988678):   0%|[34m          [0m| 0/2 [01:10<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.03724011033773422):   0%|[34m          [0m| 0/2 [01:31<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.05610060691833496):   0%|[34m          [0m| 0/2 [01:32<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.030951062217354774):   0%|[34m          [0m| 0/2 [01:30<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.02865150012075901):   0%|[34m          [0m| 0/2 [01:31<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.04951460286974907):   0%|[34m          [0m| 0/2 [01:32<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.04296403005719185):   0%|[34m          [0m| 0/2 [01:30<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.05580936744809151):   0%|[34m          [0m| 0/2 [01:32<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.048631761223077774):   0%|[34m          [0m| 0/2 [01:32<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.07492832094430923):   0%|[34m          [0m| 0/2 [01:32<?, ?it/s]Training Epoch: 1/20, step 3/16 completed (loss: 0.03364589065313339):   0%|[34m          [0m| 0/2 [01:32<?, ?it/s] Training Epoch: 1/20, step 4/16 completed (loss: 0.03627970069646835):   0%|[34m          [0m| 0/2 [01:54<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.04148407652974129):   0%|[34m          [0m| 0/2 [01:52<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.03530595451593399):   0%|[34m          [0m| 0/2 [01:54<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.06202267110347748):   0%|[34m          [0m| 0/2 [01:54<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.03743699938058853):   0%|[34m          [0m| 0/2 [01:54<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.038134265691041946):   0%|[34m          [0m| 0/2 [01:52<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.02632785215973854):   0%|[34m          [0m| 0/2 [01:54<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.022995028644800186):   0%|[34m          [0m| 0/2 [01:53<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.022474046796560287):   0%|[34m          [0m| 0/2 [01:53<?, ?it/s]Training Epoch: 1/20, step 4/16 completed (loss: 0.041024528443813324):   0%|[34m          [0m| 0/2 [01:54<?, ?it/s]
+load krsl weights:  63%|[37m██████▎   [0m| 787/1254 [00:00<00:00, 2036.31it/s]load krsl weights:  89%|[37m████████▉ [0m| 1114/1254 [00:00<00:00, 2886.08it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2843.31it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]load krsl weights:  63%|[37m██████▎   [0m| 787/1254 [00:00<00:00, 2031.65it/s]load krsl weights:  64%|[37m██████▎   [0m| 799/1254 [00:00<00:00, 2070.86it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2796.20it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]load krsl weights:  18%|[37m█▊        [0m| 220/1254 [00:00<00:00, 2195.58it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]load krsl weights:  80%|[37m███████▉  [0m| 1001/1254 [00:00<00:00, 2072.42it/s]load krsl weights:  80%|[37m████████  [0m| 1006/1254 [00:00<00:00, 2085.49it/s]load krsl weights:  81%|[37m████████  [0m| 1018/1254 [00:00<00:00, 2111.06it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:  42%|[37m████▏     [0m| 525/1254 [00:00<00:00, 2694.50it/s]load krsl weights:  96%|[37m█████████▋[0m| 1209/1254 [00:00<00:00, 2061.14it/s]load krsl weights:  98%|[37m█████████▊[0m| 1226/1254 [00:00<00:00, 2121.30it/s]load krsl weights:  99%|[37m█████████▊[0m| 1236/1254 [00:00<00:00, 2132.63it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2000.80it/s]
+load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2050.66it/s]
+load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2035.38it/s]
+load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:  66%|[37m██████▋   [0m| 832/1254 [00:00<00:00, 2864.83it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]The tokenizer you are loading from '../slm/hf/Llama-3.2-3B/A/sft/epoch-15' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+load krsl weights:  17%|[37m█▋        [0m| 216/1254 [00:00<00:00, 2156.25it/s]load krsl weights:  90%|[37m█████████ [0m| 1133/1254 [00:00<00:00, 2921.95it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2838.58it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]load krsl weights:  42%|[37m████▏     [0m| 527/1254 [00:00<00:00, 2712.98it/s]load krsl weights:   0%|[37m          [0m| 0/1254 [00:00<?, ?it/s]load krsl weights:  67%|[37m██████▋   [0m| 840/1254 [00:00<00:00, 2899.25it/s]load krsl weights:  10%|[37m█         [0m| 130/1254 [00:00<00:00, 1297.51it/s]load krsl weights:  92%|[37m█████████▏[0m| 1152/1254 [00:00<00:00, 2984.17it/s]load krsl weights:  27%|[37m██▋       [0m| 344/1254 [00:00<00:00, 1791.11it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 2887.28it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]load krsl weights:  44%|[37m████▍     [0m| 553/1254 [00:00<00:00, 1925.59it/s]load krsl weights:  61%|[37m██████▏   [0m| 769/1254 [00:00<00:00, 2017.80it/s]load krsl weights:  79%|[37m███████▊  [0m| 986/1254 [00:00<00:00, 2069.25it/s]load krsl weights:  96%|[37m█████████▌[0m| 1202/1254 [00:00<00:00, 2098.49it/s]load krsl weights: 100%|[37m██████████[0m| 1254/1254 [00:00<00:00, 1999.96it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]

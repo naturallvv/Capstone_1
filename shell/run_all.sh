@@ -6,6 +6,20 @@
 #   ./run_all.sh "meta-llama/Llama-3.2-3B"       # Stage 1부터
 #   ./run_all.sh "meta-llama/Llama-3.2-3B" 3     # Stage 3부터
 
+# ./run_all.sh "meta-llama/Llama-3.2-1B"
+# ./run_all.sh "meta-llama/Llama-3.2-3B"
+# ./run_all.sh "meta-llama/Llama-3.1-8B"
+# ./run_all.sh "meta-llama/Llama-2-13b-hf"
+# ./run_all.sh "TinyLlama/TinyLlama_v1.1"
+# ./run_all.sh "mistralai/Mistral-7B-v0.1"
+# ./run_all.sh "Qwen/Qwen3-0.6B"
+# ./run_all.sh "Qwen/Qwen3-1.7B"
+# ./run_all.sh "Qwen/Qwen3-4B"
+# ./run_all.sh "Qwen/Qwen3-8B"
+# ./run_all.sh "Qwen/Qwen3-14B"
+# ./run_all.sh "microsoft/Phi-4-mini-instruct"
+# ./run_all.sh "microsoft/phi-4"
+
 set -e
 
 MODEL_NAME=${1:?"Usage: ./run_all.sh MODEL_NAME [START_STAGE]"}
