@@ -1,0 +1,378 @@
+W0224 15:31:34.416000 3401169 site-packages/torch/distributed/run.py:803] 
+W0224 15:31:34.416000 3401169 site-packages/torch/distributed/run.py:803] *****************************************
+W0224 15:31:34.416000 3401169 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0224 15:31:34.416000 3401169 site-packages/torch/distributed/run.py:803] *****************************************
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 2
+rank 2
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 8
+rank 8
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 4
+rank 4
+world size 10
+local rank 1
+rank 1
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 7
+rank 7
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 5
+rank 5
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 0
+rank 0
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 3
+rank 3
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 6
+rank 6
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 9
+rank 9
+world size 10
+Clearing GPU cache for all ranks
+--> Running with torch dist debug set to detail
+--> Training Set Length = 2603
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.43s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.41s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.42s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.42s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.42s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.42s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.42s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.43s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.48s/it]Fetching 5 files:  20%|██        | 1/5 [01:17<05:09, 77.49s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.39s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.41s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.40s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.40s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.40s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.41s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.40s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.40s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.43s/it]Fetching 5 files:  40%|████      | 2/5 [01:21<01:43, 34.46s/it]Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.74s/it]Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.74s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.36s/it]
+Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.37s/it]
+Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.36s/it]
+Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.74s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.36s/it]
+Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.37s/it]
+Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.76s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.37s/it]
+Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.76s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.37s/it]
+Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.77s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.38s/it]
+Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.76s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.37s/it]
+Fetching 5 files:  60%|██████    | 3/5 [01:21<00:37, 18.79s/it]Fetching 5 files: 100%|██████████| 5/5 [01:21<00:00, 16.39s/it]
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:16,  4.13s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.90s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.98s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.93s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  5.00s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  5.00s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.93s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.93s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.94s/it]Loading checkpoint shards:  20%|██        | 1/5 [00:04<00:19,  4.97s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:06<00:09,  3.19s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.78s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.77s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.75s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.74s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.75s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.75s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.78s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.81s/it]Loading checkpoint shards:  40%|████      | 2/5 [00:07<00:11,  3.80s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:09<00:05,  2.90s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:11<00:02,  2.51s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.55s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.57s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.56s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.56s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.55s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.57s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.57s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.56s/it]Loading checkpoint shards:  60%|██████    | 3/5 [00:11<00:07,  3.56s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:11<00:00,  1.89s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:11<00:00,  2.38s/it]
+--> Model Qwen/Qwen3-8B
+
+--> Qwen/Qwen3-8B has 8190.73536 Million params
+
+train cfg ckpt_continue: None
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+bFloat16 enabled for mixed precision - using bfSixteen policy
+to fsdp
+Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.12s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.13s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.13s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.14s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.13s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.13s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.12s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.13s/it]Loading checkpoint shards:  80%|████████  | 4/5 [00:13<00:03,  3.13s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.94s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.94s/it]
+
+Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.39s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.94s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.95s/it]
+
+Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.96s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.95s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.94s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.39s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.38s/it]Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.95s/it]
+Loading checkpoint shards: 100%|██████████| 5/5 [00:14<00:00,  2.94s/it]
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+trainable params: 30,670,848 || all params: 8,221,406,208 || trainable%: 0.3731
+to fsdp
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 359, in <module>
+[rank0]:     fire.Fire(main)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank0]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank0]:     component, remaining_args = _CallAndUpdateTrace(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank0]:     component = fn(*varargs, **kwargs)
+[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 286, in main
+[rank0]:     model = FSDP(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 494, in __init__
+[rank0]:     _init_param_handle_from_module(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/_init_utils.py", line 622, in _init_param_handle_from_module
+[rank0]:     _init_param_handle_from_params(state, managed_params, fully_sharded_module)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/_init_utils.py", line 634, in _init_param_handle_from_params
+[rank0]:     handle = FlatParamHandle(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/_flat_param.py", line 588, in __init__
+[rank0]:     self._init_flat_param_and_metadata(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/_flat_param.py", line 753, in _init_flat_param_and_metadata
+[rank0]:     self.flat_param: FlatParameter = self.flatten_tensors_into_flat_param(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/_flat_param.py", line 875, in flatten_tensors_into_flat_param
+[rank0]:     flat_param_data = self.flatten_tensors(tensors, aligned_numel)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/_flat_param.py", line 867, in flatten_tensors
+[rank0]:     return torch.cat(flat_tensors, dim=0)
+[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 30.51 GiB. GPU 0 has a total capacity of 47.54 GiB of which 16.75 GiB is free. Including non-PyTorch memory, this process has 30.78 GiB memory in use. Of the allocated memory 30.52 GiB is allocated by PyTorch, and 3.10 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[rank0]:[W224 15:33:33.662617211 ProcessGroupNCCL.cpp:1524] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0224 15:33:34.207000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401325 closing signal SIGTERM
+W0224 15:33:34.210000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401326 closing signal SIGTERM
+W0224 15:33:34.211000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401327 closing signal SIGTERM
+W0224 15:33:34.211000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401328 closing signal SIGTERM
+W0224 15:33:34.212000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401329 closing signal SIGTERM
+W0224 15:33:34.212000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401330 closing signal SIGTERM
+W0224 15:33:34.213000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401331 closing signal SIGTERM
+W0224 15:33:34.213000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401332 closing signal SIGTERM
+W0224 15:33:34.213000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 3401333 closing signal SIGTERM
+E0224 15:33:35.259000 3401169 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 0 (pid: 3401324) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
+Traceback (most recent call last):
+  File "/home/Tenemin/miniconda3/envs/myenv/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/run.py", line 936, in main
+    run(args)
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/run.py", line 927, in run
+    elastic_launch(
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 156, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 293, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-02-24_15:33:34
+  host      : node1.cluster.local
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3401324)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

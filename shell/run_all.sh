@@ -6,10 +6,10 @@
 #   ./run_all.sh "meta-llama/Llama-3.2-3B"       # Stage 1부터
 #   ./run_all.sh "meta-llama/Llama-3.2-3B" 3     # Stage 3부터
 
-# ./run_all.sh "meta-llama/Llama-3.2-1B"
-# ./run_all.sh "meta-llama/Llama-3.2-3B"
-# ./run_all.sh "meta-llama/Llama-3.1-8B"
-# ./run_all.sh "meta-llama/Llama-2-13b-hf"
+# ./run_all.sh "meta-llama/Llama-3.2-1B" 완
+# ./run_all.sh "meta-llama/Llama-3.2-3B" 완
+# ./run_all.sh "meta-llama/Llama-3.1-8B" 진행 중(11번 서버)
+# ./run_all.sh "meta-llama/Llama-2-13b-hf" 진행중(13번 서버)
 # ./run_all.sh "TinyLlama/TinyLlama_v1.1"
 # ./run_all.sh "mistralai/Mistral-7B-v0.1"
 # ./run_all.sh "Qwen/Qwen3-0.6B"
