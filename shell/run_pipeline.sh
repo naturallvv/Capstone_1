@@ -227,8 +227,8 @@ fi
 
 # ==================== 데이터 준비 (교차 라벨링, A/B 병렬) ====================
 # GPU를 반씩 나눠서 A, B 동시 추론
-DATA_GPU_A="0,1,2,3,4"
-DATA_GPU_B="5,6,7,8,9"
+DATA_GPU_A="0,1,2"
+DATA_GPU_B="3,4,5"
 
 run_student_data_prep() {
     local STUDENT=$1
