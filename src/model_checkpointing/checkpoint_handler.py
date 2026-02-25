@@ -199,9 +199,12 @@ def load_fsdp_model_checkpoint(model, ckpt):
     
 
 def save_merged_peft_model(model, base_model, output_dir, rank=0, enable_fsdp=False):
-    # 어댑터 저장: 모든 rank가 FSDP state_dict 수집에 참여하되,
-    # is_main_process=False로 rank 0만 실제 파일을 쓰게 함 (동시 쓰기 race condition 방지)
-    model.save_pretrained(output_dir, is_main_process=(rank == 0))
+    # FSDP 사용 시 state_dict를 CPU로 offload하여 GPU OOM 방지 (13B+ 모델 대응)
+    if enable_fsdp:
+        with FSDP.state_dict_type(model, StateDictType.FULL_STATE_DICT, fullstate_save_policy):
+            model.save_pretrained(output_dir, is_main_process=(rank == 0))
+    else:
+        model.save_pretrained(output_dir, is_main_process=(rank == 0))
 
     # 모든 rank의 저장 완료 대기
     if enable_fsdp:
