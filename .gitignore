@@ -13,3 +13,9 @@
 # Claude Code instructions
 # ====================
 CLAUDE.md
+
+# ====================
+# Python
+# ====================
+__pycache__/
+*.pyc
