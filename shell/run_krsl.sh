@@ -49,8 +49,28 @@ dpo_loss_type='sigmoid' # for dpo, no use
 refine_it=0
 save_type="hf"
 output_dir="../slm/${save_type}/${MODEL_SHORT}"
-ckpt_continue=None
 max_words=1024
+
+# ==================== 체크포인트 자동 탐색 (중단된 학습 이어가기) ====================
+KRSL_CKPT_DIR="${output_dir}/${STUDENT}/${stage}"
+LATEST_EPOCH=-1
+if [ -d "$KRSL_CKPT_DIR" ]; then
+    for d in "$KRSL_CKPT_DIR"/epoch-*; do
+        [ -d "$d" ] || continue
+        EP=$(basename "$d" | sed 's/epoch-//')
+        if [ "$EP" -gt "$LATEST_EPOCH" ] 2>/dev/null; then
+            LATEST_EPOCH=$EP
+        fi
+    done
+fi
+
+if [ "$LATEST_EPOCH" -gt 0 ] 2>/dev/null; then
+    ckpt_continue="${KRSL_CKPT_DIR}/epoch-${LATEST_EPOCH}"
+    echo "  [KRSL] 체크포인트 발견: epoch-${LATEST_EPOCH}부터 이어서 학습"
+else
+    ckpt_continue=None
+    echo "  [KRSL] 체크포인트 없음: 처음부터 학습"
+fi
 num_epochs=20
 
 # ==================== 모델 크기별 배치 사이즈 자동 설정 ====================
