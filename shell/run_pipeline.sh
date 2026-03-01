@@ -78,6 +78,25 @@ PAIR_SCRIPT="./dataset/bbh/bbh_all_data/pair_student_inference.py"
 FINAL_CHECK="./dataset/bbh/bbh_all_data/final_check.py"
 EDIT_DIS="./edit_dis_precal.py"
 
+# ==================== 모델 크기별 라벨링 배치 사이즈 자동 설정 ====================
+PARAM_SIZE=$(echo "$MODEL_NAME" | grep -oiE '[0-9]+\.?[0-9]*b' | tail -1 | sed 's/[bB]$//')
+
+if [ -z "$PARAM_SIZE" ]; then
+    if echo "$MODEL_NAME" | grep -qi 'phi-4' && ! echo "$MODEL_NAME" | grep -qi 'mini'; then
+        PARAM_SIZE="14"
+    elif echo "$MODEL_NAME" | grep -qi 'phi-4.*mini\|phi-4-mini'; then
+        PARAM_SIZE="4"
+    elif echo "$MODEL_NAME" | grep -qi 'tinyllama'; then
+        PARAM_SIZE="1"
+    else
+        PARAM_SIZE="1"
+    fi
+fi
+
+# ≤3B: 64, 4~8B: 32, 9B+: 16
+LABEL_BATCH=$(echo "$PARAM_SIZE" | awk '{if ($1 >= 9) print 16; else if ($1 >= 4) print 32; else print 64}')
+echo "  [라벨링] 모델 크기: ${PARAM_SIZE}B → batch_size=${LABEL_BATCH}"
+
 # 평가 GPU/포트 설정
 EVAL_GPU=0
 EVAL_PORT=56543
@@ -261,7 +280,8 @@ run_student_data_prep() {
         python "$LABELING" \
             --model-name "$CROSS_MODEL_PATH" \
             --input-json "$BEFORE_LABEL" \
-            --output-json "${WORK}/after_labeling.json"
+            --output-json "${WORK}/after_labeling.json" \
+            --batch-size $LABEL_BATCH
     fi
 
     # 2-2. 정오답 분류 + CCP/AHP 프롬프트 적용
@@ -284,7 +304,8 @@ run_student_data_prep() {
         python "$LABELING" \
             --model-name "$CROSS_MODEL_PATH" \
             --input-json "${WORK}/after_ahp_ccp.json" \
-            --output-json "${WORK}/after_relabeling.json"
+            --output-json "${WORK}/after_relabeling.json" \
+            --batch-size $LABEL_BATCH
     fi
 
     # 2-4. 듀얼 데이터셋 생성
