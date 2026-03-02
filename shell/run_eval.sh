@@ -46,6 +46,7 @@ peft_model=None
 
 # ==================== 실행 ====================
 export TORCHINDUCTOR_CACHE_DIR="$HOME/.cache/torchinductor"
+export VLLM_ALLOW_LONG_MAX_MODEL_LEN=1
 export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export RANK=0
 export LOCAL_RANK=0
