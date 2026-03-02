@@ -152,7 +152,7 @@ def main(**kwargs):
             ckpt = inference_config.model_name
             available_gpus = os.environ['CUDA_VISIBLE_DEVICES'].split(',')
             print("available gpus:", available_gpus)
-            model = LLM(ckpt, tensor_parallel_size=len(available_gpus), max_model_len=32768)
+            model = LLM(ckpt, tensor_parallel_size=len(available_gpus))
             macro_res = eval_inference(
                 model,
                 inference_config,
@@ -181,7 +181,7 @@ def main(**kwargs):
                 print("ckpt", ckpt)
                 available_gpus = os.environ['CUDA_VISIBLE_DEVICES'].split(',')
                 print("available gpus:", available_gpus)
-                model = LLM(ckpt, tensor_parallel_size=len(available_gpus), gpu_memory_utilization=0.85, max_model_len=32768)
+                model = LLM(ckpt, tensor_parallel_size=len(available_gpus), gpu_memory_utilization=0.85)
                 macro_res = eval_inference(
                     model,
                     inference_config,
