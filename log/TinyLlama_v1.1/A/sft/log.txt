@@ -1,0 +1,323 @@
+W0302 09:29:33.098000 1631615 site-packages/torch/distributed/run.py:803] 
+W0302 09:29:33.098000 1631615 site-packages/torch/distributed/run.py:803] *****************************************
+W0302 09:29:33.098000 1631615 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0302 09:29:33.098000 1631615 site-packages/torch/distributed/run.py:803] *****************************************
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 2
+rank 2
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 0
+rank 0
+world size 10
+Clearing GPU cache for all ranks
+--> Running with torch dist debug set to detail
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 8
+rank 8
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 3
+rank 3
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 7
+rank 7
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 9
+rank 9
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 5
+rank 5
+world size 10
+local rank 4
+rank 4
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 6
+rank 6
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 1
+rank 1
+world size 10
+--> Training Set Length = 2603
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+--> Model TinyLlama/TinyLlama_v1.1
+
+--> TinyLlama/TinyLlama_v1.1 has 1100.048384 Million params
+
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+train cfg ckpt_continue: None
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+to fsdp
+train cfg ckpt_continue: None
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+bFloat16 enabled for mixed precision - using bfSixteen policy
+to fsdp
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+trainable params: 9,011,200 || all params: 1,109,059,584 || trainable%: 0.8125
+to fsdp
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]
