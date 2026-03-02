@@ -61,7 +61,7 @@ def find_majority_answer_text(text_list):
 
     return result_text
 
-def eval_inference(model, inference_config, eval_dataloader, local_rank, tokenizer, model_dir, train_config=None, infer_cfg_ins=None, rank_model=None, rank_tokenizer=None):
+def eval_inference(model, inference_config, eval_dataloader, local_rank, tokenizer, model_dir, train_config=None, infer_cfg_ins=None, rank_model=None, rank_tokenizer=None, max_model_len=None):
     ### only support single gpu 
     """
     evaluation + inference
@@ -88,6 +88,7 @@ def eval_inference(model, inference_config, eval_dataloader, local_rank, tokeniz
     task_names = []
     sample_para = None
     stop_tokens = ["---", "```output"]
+    truncate_prompt_tokens = max_model_len - inference_config.max_new_tokens if max_model_len else None
     if inference_config.sc_cot:
         sample_para = SamplingParams(
             temperature=inference_config.temperature,
@@ -95,7 +96,8 @@ def eval_inference(model, inference_config, eval_dataloader, local_rank, tokeniz
             top_k=inference_config.top_k,
             max_tokens=inference_config.max_new_tokens,
             n=1,
-            stop=stop_tokens
+            stop=stop_tokens,
+            truncate_prompt_tokens=truncate_prompt_tokens
         )
     else:
         if inference_config.do_sample is True:
@@ -105,7 +107,8 @@ def eval_inference(model, inference_config, eval_dataloader, local_rank, tokeniz
                 top_k=inference_config.top_k,
                 max_tokens=inference_config.max_new_tokens,
                 n=1,
-                stop=stop_tokens
+                stop=stop_tokens,
+                truncate_prompt_tokens=truncate_prompt_tokens
             )
         else:
             sample_para = SamplingParams(
@@ -114,7 +117,8 @@ def eval_inference(model, inference_config, eval_dataloader, local_rank, tokeniz
                 top_k=-1,
                 max_tokens=inference_config.max_new_tokens,
                 n=1,
-                stop=stop_tokens
+                stop=stop_tokens,
+                truncate_prompt_tokens=truncate_prompt_tokens
             )
     with MemoryTrace() as memtrace:
         for step, batch in enumerate(tqdm(eval_dataloader,colour="green", desc="evaluating Epoch")):

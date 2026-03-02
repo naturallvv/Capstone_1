@@ -152,18 +152,21 @@ def main(**kwargs):
             ckpt = inference_config.model_name
             available_gpus = os.environ['CUDA_VISIBLE_DEVICES'].split(',')
             print("available gpus:", available_gpus)
-            model = LLM(ckpt, tensor_parallel_size=len(available_gpus))
+            model_cfg = AutoConfig.from_pretrained(ckpt)
+            max_model_len = model_cfg.max_position_embeddings
+            model = LLM(ckpt, tensor_parallel_size=len(available_gpus), max_model_len=max_model_len)
             macro_res = eval_inference(
                 model,
                 inference_config,
                 eval_dataloader,
-                local_rank="cuda",  
+                local_rank="cuda",
                 tokenizer=tokenizer,
                 model_dir=ckpt,
                 train_config=None,
                 infer_cfg_ins=infer_cfg_ins,
                 rank_model=rank_model,
-                rank_tokenizer=rank_tokenizer
+                rank_tokenizer=rank_tokenizer,
+                max_model_len=max_model_len
             )
             print("macro_res:", macro_res)      
             destroy_model_parallel()
@@ -181,18 +184,21 @@ def main(**kwargs):
                 print("ckpt", ckpt)
                 available_gpus = os.environ['CUDA_VISIBLE_DEVICES'].split(',')
                 print("available gpus:", available_gpus)
-                model = LLM(ckpt, tensor_parallel_size=len(available_gpus), gpu_memory_utilization=0.85)
+                model_cfg = AutoConfig.from_pretrained(ckpt)
+                max_model_len = model_cfg.max_position_embeddings
+                model = LLM(ckpt, tensor_parallel_size=len(available_gpus), gpu_memory_utilization=0.85, max_model_len=max_model_len)
                 macro_res = eval_inference(
                     model,
                     inference_config,
                     eval_dataloader,
-                    local_rank="cuda", 
+                    local_rank="cuda",
                     tokenizer=tokenizer,
                     model_dir=ckpt,
                     train_config=None,
                     infer_cfg_ins=infer_cfg_ins,
                     rank_model=rank_model,
-                    rank_tokenizer=rank_tokenizer
+                    rank_tokenizer=rank_tokenizer,
+                    max_model_len=max_model_len
                 )
                 print("macro_res:", macro_res)
                 
