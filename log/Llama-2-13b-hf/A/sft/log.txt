@@ -1,0 +1,333 @@
+W0302 18:31:28.285000 4028912 site-packages/torch/distributed/run.py:803] 
+W0302 18:31:28.285000 4028912 site-packages/torch/distributed/run.py:803] *****************************************
+W0302 18:31:28.285000 4028912 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0302 18:31:28.285000 4028912 site-packages/torch/distributed/run.py:803] *****************************************
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/home/Tenemin/Capstone_1/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 3
+rank 3
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 2
+rank 2
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 8
+rank 8
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 6
+rank 6
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 4
+rank 4
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 0
+rank 0
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 5
+rank 5
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 7
+rank 7
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 1
+rank 1
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 9
+rank 9
+world size 10
+Clearing GPU cache for all ranks
+--> Running with torch dist debug set to detail
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]--> Training Set Length = 2603
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:06<00:13,  6.82s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:17,  8.89s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:17,  8.89s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:17,  8.84s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:17,  8.85s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:17,  8.81s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:20, 10.43s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:21, 10.51s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:09<00:19,  9.70s/it]Loading checkpoint shards:  33%|███▎      | 1/3 [00:10<00:21, 10.51s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:15<00:07,  7.76s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:19<00:09,  9.79s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:18<00:09,  9.45s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:18<00:09,  9.13s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:19<00:09,  9.82s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:18<00:09,  9.15s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:19<00:09,  9.48s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:18<00:09,  9.13s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:18<00:09,  9.15s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:19<00:09,  9.82s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.24s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.49s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  7.44s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  8.15s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:23<00:00,  7.26s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:23<00:00,  7.88s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.07s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.60s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  7.47s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  8.18s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.30s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.12s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.62s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.63s/it]
+
+Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.13s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:22<00:00,  7.65s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  7.48s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:24<00:00,  8.17s/it]
+Loading checkpoint shards: 100%|██████████| 3/3 [00:23<00:00,  7.16s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:23<00:00,  7.67s/it]
+--> Model meta-llama/Llama-2-13b-hf
+
+--> meta-llama/Llama-2-13b-hf has 13015.86432 Million params
+
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+bFloat16 enabled for mixed precision - using bfSixteen policy
+to fsdp
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+trainable params: 52,428,800 || all params: 13,068,293,120 || trainable%: 0.4012
+to fsdp
+--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
+/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(
+Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.026400107890367508):   0%|[34m          [0m| 0/4 [00:54<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.05340074747800827):   0%|[34m          [0m| 0/4 [00:56<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.039346951991319656):   0%|[34m          [0m| 0/4 [01:00<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.04859945923089981):   0%|[34m          [0m| 0/4 [00:36<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.04352768510580063):   0%|[34m          [0m| 0/4 [00:50<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.046553049236536026):   0%|[34m          [0m| 0/4 [00:49<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.03824448212981224):   0%|[34m          [0m| 0/4 [00:40<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.0537194162607193):   0%|[34m          [0m| 0/4 [00:50<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.051336273550987244):   0%|[34m          [0m| 0/4 [00:50<?, ?it/s]Training Epoch: 1/15, step 0/66 completed (loss: 0.042637042701244354):   0%|[34m          [0m| 0/4 [00:47<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.027766186743974686):   0%|[34m          [0m| 0/4 [01:15<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.061169158667325974):   0%|[34m          [0m| 0/4 [01:25<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.041548728942871094):   0%|[34m          [0m| 0/4 [01:25<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.02430904656648636):   0%|[34m          [0m| 0/4 [01:22<?, ?it/s] Training Epoch: 1/15, step 1/66 completed (loss: 0.027112536132335663):   0%|[34m          [0m| 0/4 [01:25<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.03740132972598076):   0%|[34m          [0m| 0/4 [01:34<?, ?it/s] Training Epoch: 1/15, step 1/66 completed (loss: 0.05662726238369942):   0%|[34m          [0m| 0/4 [01:29<?, ?it/s] Training Epoch: 1/15, step 1/66 completed (loss: 0.04326214641332626):   0%|[34m          [0m| 0/4 [01:31<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.030923927202820778):   0%|[34m          [0m| 0/4 [01:24<?, ?it/s]Training Epoch: 1/15, step 1/66 completed (loss: 0.04020322114229202):   0%|[34m          [0m| 0/4 [01:10<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.03710157051682472):   0%|[34m          [0m| 0/4 [01:45<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.04285604506731033):   0%|[34m          [0m| 0/4 [01:59<?, ?it/s] Training Epoch: 1/15, step 2/66 completed (loss: 0.04989881068468094):   0%|[34m          [0m| 0/4 [02:05<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.020329158753156662):   0%|[34m          [0m| 0/4 [01:59<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.045555125921964645):   0%|[34m          [0m| 0/4 [01:57<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.05643824487924576):   0%|[34m          [0m| 0/4 [02:00<?, ?it/s] Training Epoch: 1/15, step 2/66 completed (loss: 0.03362830728292465):   0%|[34m          [0m| 0/4 [02:09<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.06376355141401291):   0%|[34m          [0m| 0/4 [01:50<?, ?it/s] Training Epoch: 1/15, step 2/66 completed (loss: 0.05190476030111313):   0%|[34m          [0m| 0/4 [02:04<?, ?it/s]Training Epoch: 1/15, step 2/66 completed (loss: 0.04007553309202194):   0%|[34m          [0m| 0/4 [01:59<?, ?it/s] Training Epoch: 1/15, step 3/66 completed (loss: 0.04229968041181564):   0%|[34m          [0m| 0/4 [02:34<?, ?it/s] Training Epoch: 1/15, step 3/66 completed (loss: 0.038762759417295456):   0%|[34m          [0m| 0/4 [02:35<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.03815643861889839):   0%|[34m          [0m| 0/4 [02:25<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.039218492805957794):   0%|[34m          [0m| 0/4 [02:20<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.043246034532785416):   0%|[34m          [0m| 0/4 [02:35<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.047417089343070984):   0%|[34m          [0m| 0/4 [02:44<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.06015682965517044):   0%|[34m          [0m| 0/4 [02:39<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.03495853766798973):   0%|[34m          [0m| 0/4 [02:40<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.03986354172229767):   0%|[34m          [0m| 0/4 [02:34<?, ?it/s]Training Epoch: 1/15, step 3/66 completed (loss: 0.02968316338956356):   0%|[34m          [0m| 0/4 [02:32<?, ?it/s] Training Epoch: 1/15, step 4/66 completed (loss: 0.052804090082645416):   0%|[34m          [0m| 0/4 [03:19<?, ?it/s]Training Epoch: 1/15, step 4/66 completed (loss: 0.05237635597586632):   0%|[34m          [0m| 0/4 [03:10<?, ?it/s] Training Epoch: 1/15, step 4/66 completed (loss: 0.04366180673241615):   0%|[34m          [0m| 0/4 [03:00<?, ?it/s]Training Epoch: 1/15, step 4/66 completed (loss: 0.0523105189204216):   0%|[34m          [0m| 0/4 [03:10<?, ?it/s]  Training Epoch: 1/15, step 4/66 completed (loss: 0.03830738738179207):   0%|[34m          [0m| 0/4 [03:09<?, ?it/s]Training Epoch: 1/15, step 4/66 completed (loss: 0.04542873054742813):   0%|[34m          [0m| 0/4 [03:14<?, ?it/s]Training Epoch: 1/15, step 4/66 completed (loss: 0.06249264255166054):   0%|[34m          [0m| 0/4 [02:55<?, ?it/s] Training Epoch: 1/15, step 4/66 completed (loss: 0.042516887187957764):   0%|[34m          [0m| 0/4 [03:07<?, ?it/s]Training Epoch: 1/15, step 4/66 completed (loss: 0.07991640269756317):   0%|[34m          [0m| 0/4 [03:16<?, ?it/s]Training Epoch: 1/15, step 4/66 completed (loss: 0.03761625662446022):   0%|[34m          [0m| 0/4 [03:10<?, ?it/s]Training Epoch: 1/15, step 5/66 completed (loss: 0.0528225414454937):   0%|[34m          [0m| 0/4 [03:31<?, ?it/s] Training Epoch: 1/15, step 5/66 completed (loss: 0.02999543957412243):   0%|[34m          [0m| 0/4 [03:45<?, ?it/s]Training Epoch: 1/15, step 5/66 completed (loss: 0.046492334455251694):   0%|[34m          [0m| 0/4 [03:35<?, ?it/s]Training Epoch: 1/15, step 5/66 completed (loss: 0.03688289225101471):   0%|[34m          [0m| 0/4 [03:42<?, ?it/s] Training Epoch: 1/15, step 5/66 completed (loss: 0.04765009507536888):   0%|[34m          [0m| 0/4 [03:54<?, ?it/s] Training Epoch: 1/15, step 5/66 completed (loss: 0.03429795801639557):   0%|[34m          [0m| 0/4 [03:45<?, ?it/s]Training Epoch: 1/15, step 5/66 completed (loss: 0.06085272133350372):   0%|[34m          [0m| 0/4 [03:51<?, ?it/s]Training Epoch: 1/15, step 5/66 completed (loss: 0.070132777094841):   0%|[34m          [0m| 0/4 [03:45<?, ?it/s]  Training Epoch: 1/15, step 5/66 completed (loss: 0.05303037166595459):   0%|[34m          [0m| 0/4 [03:44<?, ?it/s]Training Epoch: 1/15, step 5/66 completed (loss: 0.02995128184556961):   0%|[34m          [0m| 0/4 [03:49<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.03374956175684929):   0%|[34m          [0m| 0/4 [04:20<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.0812922865152359):   0%|[34m          [0m| 0/4 [04:06<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.04236217215657234):   0%|[34m          [0m| 0/4 [04:26<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.057569973170757294):   0%|[34m          [0m| 0/4 [04:10<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.049524374306201935):   0%|[34m          [0m| 0/4 [04:20<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.060193851590156555):   0%|[34m          [0m| 0/4 [04:19<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.0445246547460556):   0%|[34m          [0m| 0/4 [04:29<?, ?it/s] Training Epoch: 1/15, step 6/66 completed (loss: 0.040934331715106964):   0%|[34m          [0m| 0/4 [04:17<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.049326952546834946):   0%|[34m          [0m| 0/4 [04:20<?, ?it/s]Training Epoch: 1/15, step 6/66 completed (loss: 0.03747839853167534):   0%|[34m          [0m| 0/4 [04:24<?, ?it/s]Training Epoch: 1/15, step 7/66 completed (loss: 0.043845344334840775):   0%|[34m          [0m| 0/4 [05:01<?, ?it/s]Training Epoch: 1/15, step 7/66 completed (loss: 0.02904447354376316):   0%|[34m          [0m| 0/4 [04:55<?, ?it/s] Training Epoch: 1/15, step 7/66 completed (loss: 0.04705390706658363):   0%|[34m          [0m| 0/4 [05:04<?, ?it/s]Training Epoch: 1/15, step 7/66 completed (loss: 0.036695487797260284):   0%|[34m          [0m| 0/4 [04:55<?, ?it/s]Training Epoch: 1/15, step 7/66 completed (loss: 0.06743691861629486):   0%|[34m          [0m| 0/4 [04:40<?, ?it/s]Training Epoch: 1/15, step 7/66 completed (loss: 0.07420913130044937):   0%|[34m          [0m| 0/4 [04:52<?, ?it/s] Training Epoch: 1/15, step 7/66 completed (loss: 0.05386016517877579):   0%|[34m          [0m| 0/4 [04:45<?, ?it/s] Training Epoch: 1/15, step 7/66 completed (loss: 0.05437220633029938):   0%|[34m          [0m| 0/4 [04:59<?, ?it/s]Training Epoch: 1/15, step 7/66 completed (loss: 0.04635977745056152):   0%|[34m          [0m| 0/4 [04:54<?, ?it/s] Training Epoch: 1/15, step 7/66 completed (loss: 0.05645056068897247):   0%|[34m          [0m| 0/4 [04:55<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.047304198145866394):   0%|[34m          [0m| 0/4 [05:34<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.042055606842041016):   0%|[34m          [0m| 0/4 [05:20<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.06131449341773987):   0%|[34m          [0m| 0/4 [05:27<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.034148745238780975):   0%|[34m          [0m| 0/4 [05:30<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.039120543748140335):   0%|[34m          [0m| 0/4 [05:30<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.04127882421016693):   0%|[34m          [0m| 0/4 [05:16<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.04212096706032753):   0%|[34m          [0m| 0/4 [05:29<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.05227399244904518):   0%|[34m          [0m| 0/4 [05:40<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.04689538851380348):   0%|[34m          [0m| 0/4 [05:30<?, ?it/s]Training Epoch: 1/15, step 8/66 completed (loss: 0.03987973555922508):   0%|[34m          [0m| 0/4 [05:36<?, ?it/s] 
