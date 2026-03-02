@@ -16,7 +16,7 @@ from contextlib import nullcontext
 import sys
 sys.path.append('../..')
 from src.model_checkpointing import save_model_checkpoint, save_model_and_optimizer_sharded, save_optimizer_checkpoint
-from src.policies import fpSixteen,bfSixteen_mixed, get_llama_wrapper, get_mistral_wrapper
+from src.policies import fpSixteen,bfSixteen_mixed, get_llama_wrapper, get_mistral_wrapper, get_wrapper_by_model_name
 from src.utils.memory_utils import MemoryTrace
 from src.utils.inference_utils import eval_inference
 from src.model_checkpointing import *
@@ -608,9 +608,9 @@ def print_model_size(model, config, rank: int = 0) -> None:
 
 
 
-def get_policies(cfg, rank):
+def get_policies(cfg, rank, model_name=""):
     """Get the policies for mixed precision and fsdp wrapping"""
-    
+
     verify_bfloat_support = (
     torch.version.cuda
     and torch.cuda.is_bf16_supported()
@@ -637,8 +637,7 @@ def get_policies(cfg, rank):
                 print(f"FP16 enabled")
         else:
             print(f"bFloat16 support not present. Using FP32, and not mixed precision")
-    wrapping_policy = get_llama_wrapper() # llama default
-    # wrapping_policy = get_mistral_wrapper() # if you use other base llm, you should modify this
+    wrapping_policy = get_wrapper_by_model_name(model_name)
     return mixed_precision_policy, wrapping_policy
 
 def save_train_params(train_config, fsdp_config, rank):

@@ -20,7 +20,10 @@ from transformers import (
     default_data_collator,
 )
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
- 
+from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
+from transformers.models.qwen2.modeling_qwen2 import Qwen2DecoderLayer
+from transformers.models.phi3.modeling_phi3 import Phi3DecoderLayer
+
 from src.configs import fsdp_config, train_config, inference_config
 from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
 
@@ -278,9 +281,18 @@ def main(**kwargs):
 
             freeze_transformer_layers(train_config.num_freeze_layers)
 
-        # 여기 걸림
-        mixed_precision_policy, wrapping_policy = get_policies(fsdp_config, rank)
-        my_auto_wrapping_policy = fsdp_auto_wrap_policy(model, LlamaDecoderLayer)
+        # 모델 이름으로 DecoderLayer 자동 선택
+        mixed_precision_policy, wrapping_policy = get_policies(fsdp_config, rank, train_config.model_name)
+        model_name_lower = train_config.model_name.lower()
+        if "mistral" in model_name_lower:
+            decoder_layer_cls = MistralDecoderLayer
+        elif "qwen" in model_name_lower:
+            decoder_layer_cls = Qwen2DecoderLayer
+        elif "phi" in model_name_lower:
+            decoder_layer_cls = Phi3DecoderLayer
+        else:
+            decoder_layer_cls = LlamaDecoderLayer
+        my_auto_wrapping_policy = fsdp_auto_wrap_policy(model, decoder_layer_cls)
         print("to fsdp")
         # use_orig_params=True
         model = FSDP(

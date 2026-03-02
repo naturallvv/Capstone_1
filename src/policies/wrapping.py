@@ -5,6 +5,8 @@ import functools
 
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
+from transformers.models.qwen2.modeling_qwen2 import Qwen2DecoderLayer
+from transformers.models.phi3.modeling_phi3 import Phi3DecoderLayer
 from torch.distributed.fsdp.wrap import (
     transformer_auto_wrap_policy,
     size_based_auto_wrap_policy,
@@ -34,8 +36,6 @@ def get_llama_wrapper():
     return llama_auto_wrap_policy
 
 def get_mistral_wrapper():
-    # if you use another base llm, you should modify this
-
     mistral_auto_wrap_policy = functools.partial(
         transformer_auto_wrap_policy,
         transformer_layer_cls={
@@ -44,3 +44,37 @@ def get_mistral_wrapper():
     )
 
     return mistral_auto_wrap_policy
+
+def get_qwen_wrapper():
+    qwen_auto_wrap_policy = functools.partial(
+        transformer_auto_wrap_policy,
+        transformer_layer_cls={
+            Qwen2DecoderLayer,
+        },
+    )
+
+    return qwen_auto_wrap_policy
+
+def get_phi_wrapper():
+    phi_auto_wrap_policy = functools.partial(
+        transformer_auto_wrap_policy,
+        transformer_layer_cls={
+            Phi3DecoderLayer,
+        },
+    )
+
+    return phi_auto_wrap_policy
+
+
+def get_wrapper_by_model_name(model_name):
+    """모델 이름으로 적절한 wrapping policy 자동 선택"""
+    name_lower = model_name.lower()
+    if "mistral" in name_lower:
+        return get_mistral_wrapper()
+    elif "qwen" in name_lower:
+        return get_qwen_wrapper()
+    elif "phi" in name_lower:
+        return get_phi_wrapper()
+    else:
+        # Llama, TinyLlama 등 기본값
+        return get_llama_wrapper()
