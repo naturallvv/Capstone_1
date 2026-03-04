@@ -1,4 +1,44 @@
-W0224 15:30:40.771000 3400263 site-packages/torch/distributed/run.py:803] 
-W0224 15:30:40.771000 3400263 site-packages/torch/distributed/run.py:803] *****************************************
-W0224 15:30:40.771000 3400263 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0224 15:30:40.771000 3400263 site-packages/torch/distributed/run.py:803] *****************************************
+W0304 00:08:30.562000 4160162 site-packages/torch/distributed/run.py:803] 
+W0304 00:08:30.562000 4160162 site-packages/torch/distributed/run.py:803] *****************************************
+W0304 00:08:30.562000 4160162 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0304 00:08:30.562000 4160162 site-packages/torch/distributed/run.py:803] *****************************************
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
