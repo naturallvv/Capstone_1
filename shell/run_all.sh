@@ -11,7 +11,7 @@
 # ./run_all.sh "meta-llama/Llama-3.1-8B" 완
 # ./run_all.sh "meta-llama/Llama-2-13b-hf" 진행중(13번 서버)
 # ./run_all.sh "TinyLlama/TinyLlama_v1.1" 완
-# ./run_all.sh "mistralai/Mistral-7B-v0.1" 진행중(11번 서버)
+# ./run_all.sh "mistralai/Mistral-7B-v0.1" 완
 # ./run_all.sh "Qwen/Qwen3-0.6B"
 # ./run_all.sh "Qwen/Qwen3-1.7B"
 # ./run_all.sh "Qwen/Qwen3-4B"
