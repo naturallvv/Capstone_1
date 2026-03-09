@@ -10,21 +10,19 @@ from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
 )
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
-from transformers.models.qwen2.modeling_qwen2 import Qwen2DecoderLayer
-from transformers.models.phi3.modeling_phi3 import Phi3DecoderLayer
+from transformers.models.qwen3.modeling_qwen3 import Qwen3DecoderLayer
+from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
 
 non_reentrant_wrapper = partial(
     checkpoint_wrapper,
     checkpoint_impl=CheckpointImpl.NO_REENTRANT,
 )
 
-# 지원하는 모든 모델의 디코더 레이어 타입을 포함
-# Llama (1/2/3/TinyLlama), Mistral, Qwen2/3, Phi3/4
 _SUPPORTED_DECODER_LAYERS = (
     LlamaDecoderLayer,
     MistralDecoderLayer,
-    Qwen2DecoderLayer,
-    Phi3DecoderLayer,
+    Qwen3DecoderLayer,
+    Phi4DecoderLayer,
 )
 
 check_fn = lambda submodule: isinstance(submodule, _SUPPORTED_DECODER_LAYERS)
