@@ -1,0 +1,551 @@
+W0309 14:35:21.924000 1714469 site-packages/torch/distributed/run.py:803] 
+W0309 14:35:21.924000 1714469 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 14:35:21.924000 1714469 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0309 14:35:21.924000 1714469 site-packages/torch/distributed/run.py:803] *****************************************
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import packaging
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
+  from torch.distributed._shard.checkpoint import (
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 4
+rank 4
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 9
+rank 9
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 2
+rank 2
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 0
+rank 0
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 3
+rank 3
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 6
+rank 6
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 8
+rank 8
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 5
+rank 5
+world size 10
+local rank 7
+rank 7
+world size 10
+Warning: unknown parameter fsdp_activation_checkpointing
+Warning: unknown parameter pure_bf16
+Warning: unknown parameter optimizer
+Warning: unknown parameter peft_model
+Warning: unknown parameter max_new_tokens
+Warning: unknown parameter prompt_file
+Warning: unknown parameter do_sample
+Warning: unknown parameter min_length
+Warning: unknown parameter use_cache
+Warning: unknown parameter top_p
+Warning: unknown parameter temperature
+Warning: unknown parameter top_k
+Warning: unknown parameter repetition_penalty
+Warning: unknown parameter length_penalty
+Warning: unknown parameter enable_azure_content_safety
+Warning: unknown parameter enable_sensitive_topics
+Warning: unknown parameter enable_salesforce_content_safety
+Warning: unknown parameter max_padding_length
+local rank 1
+rank 1
+world size 10
+Clearing GPU cache for all ranks
+--> Running with torch dist debug set to detail
+--> Training Set Length = 2603
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.32s/it]Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.31s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.16s/it]
+Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.28s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.16s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.14s/it]
+Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.29s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.14s/it]
+Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.27s/it]Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.27s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.14s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.14s/it]
+Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.30s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.15s/it]
+Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.33s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.16s/it]
+Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.36s/it]Fetching 2 files:  50%|█████     | 1/2 [00:40<00:40, 40.34s/it]Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.17s/it]
+Fetching 2 files: 100%|██████████| 2/2 [00:40<00:00, 20.18s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.91s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.73s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.75s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.82s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.74s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.80s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.81s/it]Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.80s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.11s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.38s/it]
+train cfg ckpt_continue: None
+[rank7]: Traceback (most recent call last):
+[rank7]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank7]:     fire.Fire(main)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank7]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank7]:     component, remaining_args = _CallAndUpdateTrace(
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank7]:     component = fn(*varargs, **kwargs)
+[rank7]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank7]:     model = get_peft_model(model, peft_config)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank7]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank7]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank7]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank7]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank7]:     raise ValueError(error_msg)
+[rank7]: ValueError: Target modules {'q_proj', 'v_proj'} not found in the base model. Please check the target modules and try again.
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.63s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.95s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.98s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.99s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.99s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.65s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  4.00s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.95s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.96s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.67s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.99s/it]
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.99s/it]
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+[rank5]: Traceback (most recent call last):
+[rank5]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank5]:     fire.Fire(main)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank5]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank5]:     component, remaining_args = _CallAndUpdateTrace(
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank5]:     component = fn(*varargs, **kwargs)
+[rank5]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank5]:     model = get_peft_model(model, peft_config)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank5]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank5]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank5]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank5]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank5]:     raise ValueError(error_msg)
+[rank5]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+[rank3]: Traceback (most recent call last):
+[rank3]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank3]:     fire.Fire(main)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank3]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank3]:     component, remaining_args = _CallAndUpdateTrace(
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank3]:     component = fn(*varargs, **kwargs)
+[rank3]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank3]:     model = get_peft_model(model, peft_config)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank3]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank3]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank3]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank3]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank3]:     raise ValueError(error_msg)
+[rank3]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+train cfg ckpt_continue: None
+[rank8]: Traceback (most recent call last):
+[rank8]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank8]:     fire.Fire(main)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank8]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank8]:     component, remaining_args = _CallAndUpdateTrace(
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank8]:     component = fn(*varargs, **kwargs)
+[rank8]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank8]:     model = get_peft_model(model, peft_config)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank8]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank8]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank8]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank8]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank8]:     raise ValueError(error_msg)
+[rank8]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+train cfg ckpt_continue: None
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank1]:     fire.Fire(main)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank1]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank1]:     component, remaining_args = _CallAndUpdateTrace(
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank1]:     component = fn(*varargs, **kwargs)
+[rank1]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank1]:     model = get_peft_model(model, peft_config)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank1]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank1]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank1]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank1]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank1]:     raise ValueError(error_msg)
+[rank1]: ValueError: Target modules {'q_proj', 'v_proj'} not found in the base model. Please check the target modules and try again.
+train cfg ckpt_continue: None
+[rank6]: Traceback (most recent call last):
+[rank6]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank6]:     fire.Fire(main)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank6]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank6]:     component, remaining_args = _CallAndUpdateTrace(
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank6]:     component = fn(*varargs, **kwargs)
+[rank6]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank6]:     model = get_peft_model(model, peft_config)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank6]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank6]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank6]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank6]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank6]:     raise ValueError(error_msg)
+[rank6]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+train cfg ckpt_continue: None
+train cfg ckpt_continue: None
+--> Model microsoft/Phi-4-mini-instruct
+
+--> microsoft/Phi-4-mini-instruct has 3836.02176 Million params
+
+train cfg ckpt_continue: None
+[rank9]: Traceback (most recent call last):
+[rank9]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank9]:     fire.Fire(main)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank9]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank9]:     component, remaining_args = _CallAndUpdateTrace(
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank9]:     component = fn(*varargs, **kwargs)
+[rank9]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank9]:     model = get_peft_model(model, peft_config)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank9]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank9]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank9]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank9]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank9]:     raise ValueError(error_msg)
+[rank9]: ValueError: Target modules {'q_proj', 'v_proj'} not found in the base model. Please check the target modules and try again.
+[rank4]: Traceback (most recent call last):
+[rank4]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank4]:     fire.Fire(main)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank4]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank4]:     component, remaining_args = _CallAndUpdateTrace(
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank4]:     component = fn(*varargs, **kwargs)
+[rank4]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank4]:     model = get_peft_model(model, peft_config)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank4]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank4]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank4]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank4]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank4]:     raise ValueError(error_msg)
+[rank4]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank0]:     fire.Fire(main)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank0]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank0]:     component, remaining_args = _CallAndUpdateTrace(
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank0]:     component = fn(*varargs, **kwargs)
+[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank0]:     model = get_peft_model(model, peft_config)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank0]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank0]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank0]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank0]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank0]:     raise ValueError(error_msg)
+[rank0]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+train cfg ckpt_continue: None
+[rank2]: Traceback (most recent call last):
+[rank2]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
+[rank2]:     fire.Fire(main)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
+[rank2]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
+[rank2]:     component, remaining_args = _CallAndUpdateTrace(
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
+[rank2]:     component = fn(*varargs, **kwargs)
+[rank2]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 271, in main
+[rank2]:     model = get_peft_model(model, peft_config)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/mapping_func.py", line 122, in get_peft_model
+[rank2]:     return MODEL_TYPE_TO_PEFT_MODEL_MAPPING[peft_config.task_type](
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1885, in __init__
+[rank2]:     super().__init__(model, peft_config, adapter_name, **kwargs)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 129, in __init__
+[rank2]:     self.base_model = cls(model, {adapter_name: peft_config}, adapter_name)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 295, in __init__
+[rank2]:     self.inject_adapter(self.model, adapter_name, low_cpu_mem_usage=low_cpu_mem_usage, state_dict=state_dict)
+[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 877, in inject_adapter
+[rank2]:     raise ValueError(error_msg)
+[rank2]: ValueError: Target modules {'v_proj', 'q_proj'} not found in the base model. Please check the target modules and try again.
+[rank0]:[W309 14:36:30.355986098 ProcessGroupNCCL.cpp:1524] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0309 14:36:30.140000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714580 closing signal SIGTERM
+W0309 14:36:30.141000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714581 closing signal SIGTERM
+W0309 14:36:30.141000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714582 closing signal SIGTERM
+W0309 14:36:30.142000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714583 closing signal SIGTERM
+W0309 14:36:30.142000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714584 closing signal SIGTERM
+W0309 14:36:30.143000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714585 closing signal SIGTERM
+W0309 14:36:30.143000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714586 closing signal SIGTERM
+W0309 14:36:30.143000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714588 closing signal SIGTERM
+W0309 14:36:30.143000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1714589 closing signal SIGTERM
+E0309 14:36:31.877000 1714469 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 7 (pid: 1714587) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
+Traceback (most recent call last):
+  File "/home/Tenemin/miniconda3/envs/myenv/bin/torchrun", line 7, in <module>
+    sys.exit(main())
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 357, in wrapper
+    return f(*args, **kwargs)
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/run.py", line 936, in main
+    run(args)
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/run.py", line 927, in run
+    elastic_launch(
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 156, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 293, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+./finetuning.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-03-09_14:36:30
+  host      : node1.cluster.local
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 1714587)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

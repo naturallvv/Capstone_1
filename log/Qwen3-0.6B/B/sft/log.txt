@@ -1,7 +1,7 @@
-W0309 14:31:22.653000 1700028 site-packages/torch/distributed/run.py:803] 
-W0309 14:31:22.653000 1700028 site-packages/torch/distributed/run.py:803] *****************************************
-W0309 14:31:22.653000 1700028 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0309 14:31:22.653000 1700028 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] 
+W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] *****************************************
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   from pkg_resources import packaging
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
@@ -22,1024 +22,96 @@ W0309 14:31:22.653000 1700028 site-packages/torch/distributed/run.py:803] ******
   from pkg_resources import packaging
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   from pkg_resources import packaging
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-/ceph_data/Tenemin/Project/CasCoD/src/model_checkpointing/checkpoint_handler.py:18: DeprecationWarning: `torch.distributed._shard.checkpoint` will be deprecated, use `torch.distributed.checkpoint` instead
-  from torch.distributed._shard.checkpoint import (
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 6
-rank 6
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 4
-rank 4
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 5
-rank 5
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 8
-rank 8
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 0
-rank 0
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 1
-rank 1
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 7
-rank 7
-world size 10
-Clearing GPU cache for all ranks
---> Running with torch dist debug set to detail
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 3
-rank 3
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 9
-rank 9
-world size 10
-Warning: unknown parameter fsdp_activation_checkpointing
-Warning: unknown parameter pure_bf16
-Warning: unknown parameter optimizer
-Warning: unknown parameter peft_model
-Warning: unknown parameter max_new_tokens
-Warning: unknown parameter prompt_file
-Warning: unknown parameter do_sample
-Warning: unknown parameter min_length
-Warning: unknown parameter use_cache
-Warning: unknown parameter top_p
-Warning: unknown parameter temperature
-Warning: unknown parameter top_k
-Warning: unknown parameter repetition_penalty
-Warning: unknown parameter length_penalty
-Warning: unknown parameter enable_azure_content_safety
-Warning: unknown parameter enable_sensitive_topics
-Warning: unknown parameter enable_salesforce_content_safety
-Warning: unknown parameter max_padding_length
-local rank 2
-rank 2
-world size 10
---> Training Set Length = 2604
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
---> Model Qwen/Qwen3-0.6B
-
---> Qwen/Qwen3-0.6B has 596.04992 Million params
-
-train cfg ckpt_continue: None
-train cfg ckpt_continue: None
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-bFloat16 enabled for mixed precision - using bfSixteen policy
-to fsdp
-train cfg ckpt_continue: None
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
-train cfg ckpt_continue: None
-trainable params: 9,175,040 || all params: 605,224,960 || trainable%: 1.5160
-to fsdp
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]--> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
---> applying fsdp activation checkpointing...
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s]/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/cuda/memory.py:491: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
-  warnings.warn(
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:00<?, ?it/s][rank1]: Traceback (most recent call last):
-[rank1]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank1]:     fire.Fire(main)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank1]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank1]:     component, remaining_args = _CallAndUpdateTrace(
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank1]:     component = fn(*varargs, **kwargs)
-[rank1]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank1]:     results = train(
-[rank1]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank1]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank1]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank1]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank1]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank1]:     return self.base_model(
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank1]:     return self.model.forward(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank1]:     output = func(self, *args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank1]:     outputs: BaseModelOutputWithPast = self.model(
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank1]:     outputs = func(self, *args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank1]:     hidden_states = decoder_layer(
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank1]:     return super().__call__(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank1]:     return func(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank1]:     hidden_states = self.mlp(hidden_states)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank1]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank1]:     return self._call_impl(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank1]:     return forward_call(*args, **kwargs)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank1]:     return nn.functional.silu(input)
-[rank1]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank1]:     return torch._C._nn.silu(input)
-[rank1]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 1 has a total capacity of 47.54 GiB of which 101.88 MiB is free. Including non-PyTorch memory, this process has 47.43 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank2]: Traceback (most recent call last):
-[rank2]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank2]:     fire.Fire(main)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank2]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank2]:     component, remaining_args = _CallAndUpdateTrace(
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank2]:     component = fn(*varargs, **kwargs)
-[rank2]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank2]:     results = train(
-[rank2]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank2]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank2]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank2]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank2]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank2]:     return self.base_model(
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank2]:     return self.model.forward(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank2]:     output = func(self, *args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank2]:     outputs: BaseModelOutputWithPast = self.model(
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank2]:     outputs = func(self, *args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank2]:     hidden_states = decoder_layer(
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank2]:     return super().__call__(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank2]:     return func(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank2]:     hidden_states = self.mlp(hidden_states)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank2]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank2]:     return self._call_impl(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank2]:     return forward_call(*args, **kwargs)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank2]:     return nn.functional.silu(input)
-[rank2]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank2]:     return torch._C._nn.silu(input)
-[rank2]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 2 has a total capacity of 47.54 GiB of which 117.88 MiB is free. Including non-PyTorch memory, this process has 47.41 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank0]: Traceback (most recent call last):
-[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank0]:     fire.Fire(main)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank0]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank0]:     component, remaining_args = _CallAndUpdateTrace(
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank0]:     component = fn(*varargs, **kwargs)
-[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank0]:     results = train(
-[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank0]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank0]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank0]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank0]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank0]:     return self.base_model(
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank0]:     return self.model.forward(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank0]:     output = func(self, *args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank0]:     outputs: BaseModelOutputWithPast = self.model(
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank0]:     outputs = func(self, *args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank0]:     hidden_states = decoder_layer(
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank0]:     return super().__call__(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank0]:     return func(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank0]:     hidden_states = self.mlp(hidden_states)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank0]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank0]:     return self._call_impl(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank0]:     return forward_call(*args, **kwargs)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank0]:     return nn.functional.silu(input)
-[rank0]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank0]:     return torch._C._nn.silu(input)
-[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 47.54 GiB of which 117.88 MiB is free. Including non-PyTorch memory, this process has 47.41 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank6]: Traceback (most recent call last):
-[rank6]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank6]:     fire.Fire(main)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank6]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank6]:     component, remaining_args = _CallAndUpdateTrace(
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank6]:     component = fn(*varargs, **kwargs)
-[rank6]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank6]:     results = train(
-[rank6]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank6]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank6]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank6]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank6]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank6]:     return self.base_model(
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank6]:     return self.model.forward(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank6]:     output = func(self, *args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank6]:     outputs: BaseModelOutputWithPast = self.model(
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank6]:     outputs = func(self, *args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank6]:     hidden_states = decoder_layer(
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank6]:     return super().__call__(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank6]:     return func(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank6]:     hidden_states = self.mlp(hidden_states)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank6]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank6]:     return self._call_impl(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank6]:     return forward_call(*args, **kwargs)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank6]:     return nn.functional.silu(input)
-[rank6]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank6]:     return torch._C._nn.silu(input)
-[rank6]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 6 has a total capacity of 47.54 GiB of which 101.88 MiB is free. Including non-PyTorch memory, this process has 47.43 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank5]: Traceback (most recent call last):
-[rank5]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank5]:     fire.Fire(main)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank5]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank5]:     component, remaining_args = _CallAndUpdateTrace(
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank5]:     component = fn(*varargs, **kwargs)
-[rank5]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank5]:     results = train(
-[rank5]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank5]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank5]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank5]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank5]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank5]:     return self.base_model(
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank5]:     return self.model.forward(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank5]:     output = func(self, *args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank5]:     outputs: BaseModelOutputWithPast = self.model(
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank5]:     outputs = func(self, *args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank5]:     hidden_states = decoder_layer(
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank5]:     return super().__call__(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank5]:     return func(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank5]:     hidden_states = self.mlp(hidden_states)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank5]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank5]:     return self._call_impl(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank5]:     return forward_call(*args, **kwargs)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank5]:     return nn.functional.silu(input)
-[rank5]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank5]:     return torch._C._nn.silu(input)
-[rank5]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 5 has a total capacity of 47.54 GiB of which 117.88 MiB is free. Including non-PyTorch memory, this process has 47.41 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank3]: Traceback (most recent call last):
-[rank3]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank3]:     fire.Fire(main)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank3]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank3]:     component, remaining_args = _CallAndUpdateTrace(
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank3]:     component = fn(*varargs, **kwargs)
-[rank3]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank3]:     results = train(
-[rank3]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank3]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank3]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank3]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank3]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank3]:     return self.base_model(
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank3]:     return self.model.forward(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank3]:     output = func(self, *args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank3]:     outputs: BaseModelOutputWithPast = self.model(
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank3]:     outputs = func(self, *args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank3]:     hidden_states = decoder_layer(
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank3]:     return super().__call__(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank3]:     return func(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank3]:     hidden_states = self.mlp(hidden_states)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank3]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank3]:     return self._call_impl(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank3]:     return forward_call(*args, **kwargs)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank3]:     return nn.functional.silu(input)
-[rank3]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank3]:     return torch._C._nn.silu(input)
-[rank3]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 3 has a total capacity of 47.54 GiB of which 97.88 MiB is free. Including non-PyTorch memory, this process has 47.43 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank9]: Traceback (most recent call last):
-[rank9]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank9]:     fire.Fire(main)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank9]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank9]:     component, remaining_args = _CallAndUpdateTrace(
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank9]:     component = fn(*varargs, **kwargs)
-[rank9]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank9]:     results = train(
-[rank9]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank9]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank9]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank9]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank9]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank9]:     return self.base_model(
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank9]:     return self.model.forward(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank9]:     output = func(self, *args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank9]:     outputs: BaseModelOutputWithPast = self.model(
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank9]:     outputs = func(self, *args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank9]:     hidden_states = decoder_layer(
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank9]:     return super().__call__(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank9]:     return func(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank9]:     hidden_states = self.mlp(hidden_states)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank9]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank9]:     return self._call_impl(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank9]:     return forward_call(*args, **kwargs)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank9]:     return nn.functional.silu(input)
-[rank9]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank9]:     return torch._C._nn.silu(input)
-[rank9]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 9 has a total capacity of 47.54 GiB of which 101.88 MiB is free. Including non-PyTorch memory, this process has 47.43 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank4]: Traceback (most recent call last):
-[rank4]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank4]:     fire.Fire(main)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank4]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank4]:     component, remaining_args = _CallAndUpdateTrace(
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank4]:     component = fn(*varargs, **kwargs)
-[rank4]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank4]:     results = train(
-[rank4]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank4]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank4]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank4]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank4]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank4]:     return self.base_model(
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank4]:     return self.model.forward(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank4]:     output = func(self, *args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank4]:     outputs: BaseModelOutputWithPast = self.model(
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank4]:     outputs = func(self, *args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank4]:     hidden_states = decoder_layer(
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank4]:     return super().__call__(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank4]:     return func(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank4]:     hidden_states = self.mlp(hidden_states)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank4]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank4]:     return self._call_impl(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank4]:     return forward_call(*args, **kwargs)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank4]:     return nn.functional.silu(input)
-[rank4]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank4]:     return torch._C._nn.silu(input)
-[rank4]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 4 has a total capacity of 47.54 GiB of which 101.88 MiB is free. Including non-PyTorch memory, this process has 47.43 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank8]: Traceback (most recent call last):
-[rank8]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank8]:     fire.Fire(main)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank8]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank8]:     component, remaining_args = _CallAndUpdateTrace(
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank8]:     component = fn(*varargs, **kwargs)
-[rank8]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank8]:     results = train(
-[rank8]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank8]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank8]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank8]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank8]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank8]:     return self.base_model(
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank8]:     return self.model.forward(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank8]:     output = func(self, *args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank8]:     outputs: BaseModelOutputWithPast = self.model(
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank8]:     outputs = func(self, *args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank8]:     hidden_states = decoder_layer(
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank8]:     return super().__call__(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank8]:     return func(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank8]:     hidden_states = self.mlp(hidden_states)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank8]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank8]:     return self._call_impl(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank8]:     return forward_call(*args, **kwargs)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank8]:     return nn.functional.silu(input)
-[rank8]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank8]:     return torch._C._nn.silu(input)
-[rank8]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 8 has a total capacity of 47.54 GiB of which 97.88 MiB is free. Including non-PyTorch memory, this process has 47.43 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-[rank7]: Traceback (most recent call last):
-[rank7]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 371, in <module>
-[rank7]:     fire.Fire(main)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 135, in Fire
-[rank7]:     component_trace = _Fire(component, args, parsed_flag_args, context, name)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 468, in _Fire
-[rank7]:     component, remaining_args = _CallAndUpdateTrace(
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/fire/core.py", line 684, in _CallAndUpdateTrace
-[rank7]:     component = fn(*varargs, **kwargs)
-[rank7]:   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 348, in main
-[rank7]:     results = train(
-[rank7]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/train_utils.py", line 190, in train
-[rank7]:     loss, rationale_loss, answer_loss = llmst_tool.compute_loss(model, batch_)
-[rank7]:   File "/ceph_data/Tenemin/Project/CasCoD/src/utils/method_utils.py", line 189, in compute_loss
-[rank7]:     loss = model(**to_cuda(inputs, self.train_config.enable_fsdp, self.local_rank)).loss
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/distributed/fsdp/fully_sharded_data_parallel.py", line 851, in forward
-[rank7]:     output = self._fsdp_wrapped_module(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/peft_model.py", line 1923, in forward
-[rank7]:     return self.base_model(
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/peft/tuners/tuners_utils.py", line 308, in forward
-[rank7]:     return self.model.forward(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 918, in wrapper
-[rank7]:     output = func(self, *args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 480, in forward
-[rank7]:     outputs: BaseModelOutputWithPast = self.model(
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/generic.py", line 1072, in wrapper
-[rank7]:     outputs = func(self, *args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 410, in forward
-[rank7]:     hidden_states = decoder_layer(
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/modeling_layers.py", line 94, in __call__
-[rank7]:     return super().__call__(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
-[rank7]:     return func(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 275, in forward
-[rank7]:     hidden_states = self.mlp(hidden_states)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/models/qwen3/modeling_qwen3.py", line 82, in forward
-[rank7]:     down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
-[rank7]:     return self._call_impl(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
-[rank7]:     return forward_call(*args, **kwargs)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/transformers/activations.py", line 99, in forward
-[rank7]:     return nn.functional.silu(input)
-[rank7]:   File "/home/Tenemin/miniconda3/envs/myenv/lib/python3.10/site-packages/torch/nn/functional.py", line 2371, in silu
-[rank7]:     return torch._C._nn.silu(input)
-[rank7]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 7 has a total capacity of 47.54 GiB of which 117.88 MiB is free. Including non-PyTorch memory, this process has 47.41 GiB memory in use. Of the allocated memory 46.98 GiB is allocated by PyTorch, and 12.08 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:13<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:14<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:14<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-Training Epoch: 1:   0%|[34m          [0m| 0/4 [00:15<?, ?it/s]
-W0309 14:31:56.063000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700230 closing signal SIGTERM
-W0309 14:31:56.065000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700231 closing signal SIGTERM
-W0309 14:31:56.066000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700232 closing signal SIGTERM
-W0309 14:31:56.066000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700234 closing signal SIGTERM
-W0309 14:31:56.066000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700235 closing signal SIGTERM
-W0309 14:31:56.067000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700236 closing signal SIGTERM
-W0309 14:31:56.067000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700237 closing signal SIGTERM
-W0309 14:31:56.067000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700238 closing signal SIGTERM
-W0309 14:31:56.068000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1700239 closing signal SIGTERM
-E0309 14:31:57.614000 1700028 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 3 (pid: 1700233) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+W0309 15:01:02.054000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736000 closing signal SIGTERM
+W0309 15:01:02.056000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736001 closing signal SIGTERM
+W0309 15:01:02.056000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736003 closing signal SIGTERM
+W0309 15:01:02.057000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736004 closing signal SIGTERM
+W0309 15:01:02.057000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736005 closing signal SIGTERM
+W0309 15:01:02.057000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736006 closing signal SIGTERM
+W0309 15:01:02.058000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736007 closing signal SIGTERM
+W0309 15:01:02.058000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736008 closing signal SIGTERM
+W0309 15:01:02.059000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736009 closing signal SIGTERM
+E0309 15:01:02.174000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 2 (pid: 1736002) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
 Traceback (most recent call last):
   File "/home/Tenemin/miniconda3/envs/myenv/bin/torchrun", line 7, in <module>
     sys.exit(main())
@@ -1062,10 +134,10 @@ Failures:
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2026-03-09_14:31:56
+  time      : 2026-03-09_15:01:02
   host      : node1.cluster.local
-  rank      : 3 (local_rank: 3)
-  exitcode  : 1 (pid: 1700233)
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1736002)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ============================================================
