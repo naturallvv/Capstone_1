@@ -1,7 +1,7 @@
-W0309 15:00:22.554000 1735287 site-packages/torch/distributed/run.py:803] 
-W0309 15:00:22.554000 1735287 site-packages/torch/distributed/run.py:803] *****************************************
-W0309 15:00:22.554000 1735287 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0309 15:00:22.554000 1735287 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 15:04:33.791000 1739648 site-packages/torch/distributed/run.py:803] 
+W0309 15:04:33.791000 1739648 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 15:04:33.791000 1739648 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0309 15:04:33.791000 1739648 site-packages/torch/distributed/run.py:803] *****************************************
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   from pkg_resources import packaging
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
@@ -26,92 +26,77 @@ Traceback (most recent call last):
   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
     from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
   File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from src.policies.wrapping import *
-      File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError    : from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-No module named 'transformers.models.phi4'
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError    : No module named 'transformers.models.phi4'from src.policies.wrapping import *
-
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
     from src.policies.wrapping import *
   File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
     from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
 ModuleNotFoundError: No module named 'transformers.models.phi4'
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
     from src.policies.wrapping import *
   File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
     from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
 ModuleNotFoundError: No module named 'transformers.models.phi4'
-W0309 15:00:52.287000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735416 closing signal SIGTERM
-W0309 15:00:52.289000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735417 closing signal SIGTERM
-W0309 15:00:52.289000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735419 closing signal SIGTERM
-W0309 15:00:52.290000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735420 closing signal SIGTERM
-W0309 15:00:52.290000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735421 closing signal SIGTERM
-W0309 15:00:52.290000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735422 closing signal SIGTERM
-W0309 15:00:52.291000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735423 closing signal SIGTERM
-W0309 15:00:52.291000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735424 closing signal SIGTERM
-W0309 15:00:52.292000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1735425 closing signal SIGTERM
-E0309 15:00:52.457000 1735287 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 2 (pid: 1735418) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+W0309 15:04:39.573000 1739648 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1739771 closing signal SIGTERM
+W0309 15:04:39.575000 1739648 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1739772 closing signal SIGTERM
+E0309 15:04:39.639000 1739648 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 2 (pid: 1739773) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
 Traceback (most recent call last):
   File "/home/Tenemin/miniconda3/envs/myenv/bin/torchrun", line 7, in <module>
     sys.exit(main())
@@ -130,14 +115,62 @@ torch.distributed.elastic.multiprocessing.errors.ChildFailedError:
 ./finetuning.py FAILED
 ------------------------------------------------------------
 Failures:
-  <NO_OTHER_FAILURES>
+[1]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 1739774)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 4 (local_rank: 4)
+  exitcode  : 1 (pid: 1739775)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 5 (local_rank: 5)
+  exitcode  : 1 (pid: 1739776)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[4]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 6 (local_rank: 6)
+  exitcode  : 1 (pid: 1739777)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[5]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 7 (local_rank: 7)
+  exitcode  : 1 (pid: 1739778)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[6]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 8 (local_rank: 8)
+  exitcode  : 1 (pid: 1739779)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[7]:
+  time      : 2026-03-09_15:04:39
+  host      : node1.cluster.local
+  rank      : 9 (local_rank: 9)
+  exitcode  : 1 (pid: 1739780)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2026-03-09_15:00:52
+  time      : 2026-03-09_15:04:39
   host      : node1.cluster.local
   rank      : 2 (local_rank: 2)
-  exitcode  : 1 (pid: 1735418)
+  exitcode  : 1 (pid: 1739773)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ============================================================

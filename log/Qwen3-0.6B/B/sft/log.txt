@@ -1,7 +1,7 @@
-W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] 
-W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] *****************************************
-W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
-W0309 15:00:54.748000 1735838 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 15:04:44.325000 1739947 site-packages/torch/distributed/run.py:803] 
+W0309 15:04:44.325000 1739947 site-packages/torch/distributed/run.py:803] *****************************************
+W0309 15:04:44.325000 1739947 site-packages/torch/distributed/run.py:803] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0309 15:04:44.325000 1739947 site-packages/torch/distributed/run.py:803] *****************************************
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
   from pkg_resources import packaging
 /ceph_data/Tenemin/Project/CasCoD/./finetuning.py:3: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
@@ -26,6 +26,22 @@ Traceback (most recent call last):
   File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
     from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
   File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+Traceback (most recent call last):
+  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from src.policies.wrapping import *
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
+    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
+  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+ModuleNotFoundError: No module named 'transformers.models.phi4'
     from src.policies.wrapping import *
   File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
     from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
@@ -86,32 +102,15 @@ Traceback (most recent call last):
   File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
     from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
 ModuleNotFoundError: No module named 'transformers.models.phi4'
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-Traceback (most recent call last):
-  File "/ceph_data/Tenemin/Project/CasCoD/./finetuning.py", line 28, in <module>
-    from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/__init__.py", line 6, in <module>
-    from src.policies.wrapping import *
-  File "/ceph_data/Tenemin/Project/CasCoD/src/policies/wrapping.py", line 9, in <module>
-    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
-ModuleNotFoundError: No module named 'transformers.models.phi4'
-W0309 15:01:02.054000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736000 closing signal SIGTERM
-W0309 15:01:02.056000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736001 closing signal SIGTERM
-W0309 15:01:02.056000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736003 closing signal SIGTERM
-W0309 15:01:02.057000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736004 closing signal SIGTERM
-W0309 15:01:02.057000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736005 closing signal SIGTERM
-W0309 15:01:02.057000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736006 closing signal SIGTERM
-W0309 15:01:02.058000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736007 closing signal SIGTERM
-W0309 15:01:02.058000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736008 closing signal SIGTERM
-W0309 15:01:02.059000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1736009 closing signal SIGTERM
-E0309 15:01:02.174000 1735838 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 2 (pid: 1736002) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
+W0309 15:04:51.396000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740052 closing signal SIGTERM
+W0309 15:04:51.397000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740053 closing signal SIGTERM
+W0309 15:04:51.398000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740055 closing signal SIGTERM
+W0309 15:04:51.398000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740056 closing signal SIGTERM
+W0309 15:04:51.398000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740057 closing signal SIGTERM
+W0309 15:04:51.399000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740058 closing signal SIGTERM
+W0309 15:04:51.399000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740059 closing signal SIGTERM
+W0309 15:04:51.399000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:908] Sending process 1740060 closing signal SIGTERM
+E0309 15:04:51.476000 1739947 site-packages/torch/distributed/elastic/multiprocessing/api.py:882] failed (exitcode: 1) local_rank: 0 (pid: 1740051) of binary: /home/Tenemin/miniconda3/envs/myenv/bin/python3.10
 Traceback (most recent call last):
   File "/home/Tenemin/miniconda3/envs/myenv/bin/torchrun", line 7, in <module>
     sys.exit(main())
@@ -130,14 +129,20 @@ torch.distributed.elastic.multiprocessing.errors.ChildFailedError:
 ./finetuning.py FAILED
 ------------------------------------------------------------
 Failures:
-  <NO_OTHER_FAILURES>
+[1]:
+  time      : 2026-03-09_15:04:51
+  host      : node1.cluster.local
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 1740054)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ------------------------------------------------------------
 Root Cause (first observed failure):
 [0]:
-  time      : 2026-03-09_15:01:02
+  time      : 2026-03-09_15:04:51
   host      : node1.cluster.local
-  rank      : 2 (local_rank: 2)
-  exitcode  : 1 (pid: 1736002)
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1740051)
   error_file: <N/A>
   traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
 ============================================================
