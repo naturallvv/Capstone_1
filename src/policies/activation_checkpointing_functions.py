@@ -11,7 +11,6 @@ from torch.distributed.algorithms._checkpoint.checkpoint_wrapper import (
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
 from transformers.models.qwen3.modeling_qwen3 import Qwen3DecoderLayer
-from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
 
 non_reentrant_wrapper = partial(
     checkpoint_wrapper,
@@ -22,7 +21,6 @@ _SUPPORTED_DECODER_LAYERS = (
     LlamaDecoderLayer,
     MistralDecoderLayer,
     Qwen3DecoderLayer,
-    Phi4DecoderLayer,
 )
 
 check_fn = lambda submodule: isinstance(submodule, _SUPPORTED_DECODER_LAYERS)

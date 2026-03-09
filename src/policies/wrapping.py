@@ -6,7 +6,6 @@ import functools
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
 from transformers.models.qwen3.modeling_qwen3 import Qwen3DecoderLayer
-from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
 from torch.distributed.fsdp.wrap import (
     transformer_auto_wrap_policy,
     size_based_auto_wrap_policy,
@@ -56,6 +55,7 @@ def get_qwen_wrapper():
     return qwen_auto_wrap_policy
 
 def get_phi_wrapper():
+    from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
     phi_auto_wrap_policy = functools.partial(
         transformer_auto_wrap_policy,
         transformer_layer_cls={
