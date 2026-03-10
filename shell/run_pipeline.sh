@@ -93,8 +93,12 @@ if [ -z "$PARAM_SIZE" ]; then
     fi
 fi
 
-# ≤3B: 64, 4~8B: 32, 9B+: 16
-LABEL_BATCH=$(echo "$PARAM_SIZE" | awk '{if ($1 >= 9) print 16; else if ($1 >= 4) print 32; else print 64}')
+# ≤3B: 64, 4~8B: 32, 9B+: 16 / Qwen3: ≤3B: 32, 4~8B: 16, 9B+: 8
+if echo "$MODEL_NAME" | grep -qi 'qwen'; then
+    LABEL_BATCH=$(echo "$PARAM_SIZE" | awk '{if ($1 >= 9) print 8; else if ($1 >= 4) print 16; else print 32}')
+else
+    LABEL_BATCH=$(echo "$PARAM_SIZE" | awk '{if ($1 >= 9) print 16; else if ($1 >= 4) print 32; else print 64}')
+fi
 echo "  [라벨링] 모델 크기: ${PARAM_SIZE}B → batch_size=${LABEL_BATCH}"
 
 # 평가 GPU/포트 설정
