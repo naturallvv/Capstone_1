@@ -21,8 +21,7 @@ from transformers import (
 )
 from transformers.models.llama.modeling_llama import LlamaDecoderLayer
 from transformers.models.mistral.modeling_mistral import MistralDecoderLayer
-from transformers.models.qwen2.modeling_qwen2 import Qwen2DecoderLayer
-from transformers.models.phi3.modeling_phi3 import Phi3DecoderLayer
+from transformers.models.qwen3.modeling_qwen3 import Qwen3DecoderLayer
 
 from src.configs import fsdp_config, train_config, inference_config
 from src.policies import AnyPrecisionAdamW, apply_fsdp_checkpointing
@@ -287,9 +286,10 @@ def main(**kwargs):
         if "mistral" in model_name_lower:
             decoder_layer_cls = MistralDecoderLayer
         elif "qwen" in model_name_lower:
-            decoder_layer_cls = Qwen2DecoderLayer
+            decoder_layer_cls = Qwen3DecoderLayer
         elif "phi" in model_name_lower:
-            decoder_layer_cls = Phi3DecoderLayer
+            from transformers.models.phi4.modeling_phi4 import Phi4DecoderLayer
+            decoder_layer_cls = Phi4DecoderLayer
         else:
             decoder_layer_cls = LlamaDecoderLayer
         my_auto_wrapping_policy = fsdp_auto_wrap_policy(model, decoder_layer_cls)
